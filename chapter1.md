@@ -1,52 +1,67 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+title_meta: Capítulo 1
+title       : Conceptos básicos de Python
+description : Una introducción a los conceptos básicos de Python. Aprende como utilizar Python de forma interactiva y a tráves de una consola. Crea tus primeras variables y familiarícese con los tipos de datos básicos en Python.
 
 ---
-## A really bad movie
+## La interfaz de Python
 
 ```yaml
-type: MultipleChoiceExercise
+type: NormalExercise
 lang: python
-xp: 50
-skills: 1
-key: 6ea75552a1
+xp: 100
+skills: 2
+key: d76620b245
 ```
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+En el editor de Python a la derecha, puedes escribir código para resolver los ejercicios. Al hacer click en _Submit Answer_ (Enviar respuesta), tu código python (`script.py`) se ejecutará y la salida se muestra en la consola de Python (IPython Shell). Datacamp revisa si tu respuesta fue correcta o no y te dará una realimentación.
+
+Puedes hacer click en _Submit Answer_ cuantas veces quieras. Si te sientes atascado, puedes hacer click en _Get Hint_ (Obtener sugerencia), y en últimas a _Get Solution_ (Obtener solución). 
+
+También puedes usar la consola de Python simplemente escribiendo comandos y presionando _Enter_. Cuando trabajas en la consola directamente, tu código no será calificado para la evaluación asi que es una buena forma de experimentar con Python.
 
 `@instructions`
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
+- Experimenta con la consola de Python; escribe `5 / 8`, por ejemplo.
+- Agrega otra línea de código al guión (_script_ en inglés): `print(7 + 10)`.
+- Haz click en _Submit Answer_ para ejecutar el código python y recibir realimentación.
 
 `@hint`
-Have a look at the plot. Do you see a trend in the dots?
+Simplemente agrega `print(7 + 10)` al guión de la derecga y haz click en `Submit Answer`.
 
 `@pre_exercise_code`
 ```{python}
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
+```
 
-import pandas as pd
-import matplotlib.pyplot as plt
+`@sample_code`
+```{python}
+# Ejemplo, ¡no modificar!
+print(5 / 8)
 
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+# Escribe el cdódigo abajo
 
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
+```
+
+`@solution`
+```{python}
+# Ejemplo, ¡no modificar!
+print(5 / 8)
+
+# Escribe el cdódigo abajo
+print(7 + 10)
 ```
 
 `@sct`
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
+msg = "No borres la primera declaración. ¡Este es un ejemplo programado para ti!"
+test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
+
+msg = "¿Haz agregado `print(7 + 10)` al guión, en adición al comando `print()` que ya se encontraba?"
+test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
+success_msg("Great!")
 ```
 
 ---
