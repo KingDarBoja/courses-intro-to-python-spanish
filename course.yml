@@ -1,6 +1,9 @@
-title                : courses intro to python spanish
-description          : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
-university           : DataCamp
-difficulty_level     : 2
-time_needed          : 1 hour
+title                : Introducción a Python
+description          : Python es un lenguaje de programación de propósito general que cada vez es más popular para hacer ciencia de datos. Empresas alrededor del mundo utilizan Python para recolectar información de sus datos y obtener una ventaja competitiva. A diferencia de otros tutoriales de Python, este curso se enfoca específicamente en Python para la ciencia de datos. 
+En nuestra clase de Introducción a Python, aprenderás acerca de poderosas maneras de almacenar y manipular datos, así como también geniales herramientas de ciencia de datos para comenzar tus propios análisis. 
+Ingresa al currículo en línea de Datacamp para Python.
+
+university           : Universidad Del Norte
+difficulty_level     : 0
+time_needed          : 4 horas
 programming_language : python
