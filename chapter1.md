@@ -112,7 +112,7 @@ skills: 2
 key: 1ec47310f6
 ```
 
-Algo que no hemos mencionado hasta ahora es la habilidad de agregar **comentarios** a tus códigos en Python. Los comentarios son importantes porque permiten tanto para ti como a los demás entender la funcionalidad del código. 
+Algo que no hemos mencionado hasta ahora es la habilidad de agregar **comentarios** a tus códigos en Python. Los comentarios son importantes porque permiten tanto para ti como a los demás entender la funcionalidad del código.
 
 Para agregar comentarios a tu código en Python, utilizas la etiqueta `#`. Estos comentarios no serán ejecutados como código, por lo que no afectaran tus resultados. Como ejemplo, toma el comentario a la derecha, `# Probando la division`; este es completamente ignorado durante la ejecución.
 
@@ -170,7 +170,7 @@ Python es perfectamente adecuado para hacer cálculos básicos. Aparte de la adi
 El código en el guión a la derecha muestra algunos ejemplos.
 
 `@instructions`
-Supongamos que tienes $100, de los cuales puedes invertir con un retorno del 10% cada año. Después de un año, este será de $100 multiplicado por 1.1 = $110 dólares, y después de dos años será de $100 multiplicado por 1.1 multiplicado por 1.1 = $121 dólares. Agrega código a la derecha para calcular cuanto dinero tendrás despúes de 7 años. 
+Supongamos que tienes $100, de los cuales puedes invertir con un retorno del 10% cada año. Después de un año, este será de $100 multiplicado por 1.1 = $110 dólares, y después de dos años será de $100 multiplicado por 1.1 multiplicado por 1.1 = $121 dólares. Agrega código a la derecha para calcular cuanto dinero tendrás despúes de 7 años.
 
 `@hint`
 Después de dos años tendrás $100 multiplicado por 1.1 multiplicado por 1.1 = 100 multiplicado por 1.1^2 dólares. ¿Cuánto tienes después de 7 años? Utiliza `*` y `**`.
@@ -381,11 +381,11 @@ Seguido de los datos de tipo númerico, hay otros dos tipos de datos muy comunes
 
 `@instructions`
 - Crea una nueva cadena, `desc`, con el valor `"interes compuesto"`.
-- Crea un booleano, `profitable`, con el valor `True`. 
+- Crea un booleano, `profitable`, con el valor `True`.
 
 `@hint`
 - Para crear una variable en Python, usa `=`. Asegúrate de envolver tu cadena en comillas simples o dobles.
-- Solamente existen dos valores de booleano en Python: `True` y `False`. `TRUE`, `true`, `FALSE`, `false` y otras versiones no serán aceptadas. 
+- Solamente existen dos valores de booleano en Python: `True` y `False`. `TRUE`, `true`, `FALSE`, `false` y otras versiones no serán aceptadas.
 
 `@pre_exercise_code`
 ```{python}
@@ -419,7 +419,7 @@ success_msg("¡Bien!")
 ```
 
 ---
-## Guess the type
+## Adivina el tipo
 
 ```yaml
 type: MultipleChoiceExercise
@@ -429,22 +429,22 @@ skills: 2
 key: e6f71d65dc
 ```
 
-To find out the type of a value or a variable that refers to that value, you can use the [`type()`](https://docs.python.org/3/library/functions.html#type) function. Suppose you've defined a variable `a`, but you forgot the type of this variable. To determine the type of `a`, simply execute:
+Para saber el tipo de dato de un valor o una variable referida a ese valor, puedes utilizar la función [`type()`](https://docs.python.org/3/library/functions.html#type). Supongamos que has definido la variable `a`, pero olvidaste el tipo de la variable. Para determinar el tipo de `a`, simplemente ejecuta:
 
 ```
 type(a)
 ```
 
-We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
+Nosotros ya nos adelantamos y hemos creado tres variables: `a`, `b` y `c`. Puedes utilizar la consola de Python a tu derecha para descubrir su tipo. ¿Cuál de las siguientes opciones es la correcta?
 
 `@instructions`
-- `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
-- `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
-- `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
-- `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
+- `a` es de tipo `int`, `b` es de tipo `str`, `c` es de tipo `bool`
+- `a` es de tipo `float`, `b` es de tipo `bool`, `c` es de tipo `str`
+- `a` es de tipo `float`, `b` es de tipo `str`, `c` es de tipo `bool`
+- `a` es de tipo `int`, `b` es de tipo `bool`, `c` es de tipo `str`
 
 `@hint`
-Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out about the variables' types.
+Utiliza `type(a)`, `type(b)` y `type(c)` dentro de la consola de Python para conocer los tipos de variables.
 
 `@pre_exercise_code`
 ```{python}
@@ -455,15 +455,15 @@ c = False
 
 `@sct`
 ```{python}
-msg1 = "The type of `a` is not `int`. Try out `type(a)` and see for yourself."
-msg2 = "`b` is not a `bool`, it's a `str`! The fact that `True` is wrapped in double quotes makes it a string."
-msg3 = "Correcto perfecto!"
-msg4 = "None of the variable's types is correct here. Try `type(a)` and see what type this variable is."
+msg1 = "El tipo de `a` no es un `int`. Prueba `type(a)` y mira por ti mismo."
+msg2 = "`b` no es un `bool`, ¡es un `str`! El hecho que `True` este encerrado entre comillas dobles lo hace una cadena de texto."
+msg3 = "¡Correcto!"
+msg4 = "Ninguno de los tipos de variables es correcto. Prueba `type(a)` y mira el tipo de variable que es."
 test_mc(3,[msg1, msg2, msg3, msg4])
 ```
 
 ---
-## Operations with other types
+## Operaciones con otros tipos
 
 ```yaml
 type: NormalExercise
@@ -473,23 +473,23 @@ skills: 2
 key: 1cf2d880b2
 ```
 
-Filip mentioned that different types behave differently in Python.
+Cabe mencionar que los diferentes tipos de variables se comportan de diferentes maneras en Python.
 
-When you sum two strings, for example, you'll get different behavior than when you sum two integers or two booleans.
+Por ejemplo, cuando sumas dos cadenas (_str_), obtienes un comportamiento diferente que cuando sumas dos enteros o dos booleanos.
 
-In the script some variables with different types have already been created. It's up to you to use them.
+En el guión, algunas variables han sido creadas con diferentes tipos. Depende de ti utilizarlas.
 
 `@instructions`
-- Calculate the product of `savings` and `factor`. Store the result in `year1`.
-- What do you think the resulting type will be? Find out by printing out the type of `year1`.
-- Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
-- Print out `doubledesc`. Did you expect this?
+- Calcula el producto de `savings` y `factor`. Guarda el resultado en `year1`.
+- ¿Cuál crees que será el tipo de dato resultante? Averigualo imprimiendo el tipo de `year1`.
+- Calcula la suma de `desc` y `desc`. Almacena el resultado en una nueva variable llamada `doubledesc`.
+- Imprime `doubledesc`. ¿Se esperaba esto?
 
 `@hint`
-- Assign `factor * savings` to a new variable, `year1`.
-- To print the type of a variable `x`, use `print(type(x))`.
-- Assign `desc + desc` to a new variable, `doubledesc`.
-- To print a variable `x`, write `print(x)` in the script.
+- Asigna `factor * savings` a una nueva variable, `year1`.
+- Para imprimir el tipo de una variable `x`, usa `print(type(x))`.
+- Asigna `desc + desc` a una nueva variable, `doubledesc`.
+- Para imprimir una variable `x`, escribe `print(x)` en el guión.
 
 `@pre_exercise_code`
 ```{python}
@@ -498,61 +498,61 @@ In the script some variables with different types have already been created. It'
 
 `@sample_code`
 ```{python}
-# Several variables to experiment with
+# Varias variables con las que experimentar
 savings = 100
 factor = 1.1
 desc = "compound interest"
 
-# Assign product of factor and savings to year1
+# Asigna el producto entre savings y factor a year1
 
 
-# Print the type of year1
+# Imprime el tipo de year1
 
 
-# Assign sum of desc and desc to doubledesc
+# Asigna la suma entre desc y desc a doubledesc
 
 
-# Print out doubledesc
+# Imprime doubledesc
 
 ```
 
 `@solution`
 ```{python}
-# Several variables to experiment with
+# Varias variables con las que experimentar
 savings = 100
 factor = 1.1
 desc = "compound interest"
 
-# Assign product of savings and factor to year1
+# Asigna el producto entre savings y factor a year1
 year1 = savings * factor
 
-# Print the type of year1
+# Imprime el tipo de year1
 print(type(year1))
 
-# Assign sum of desc and desc to doubledesc
+# Asigna la suma entre desc y desc a doubledesc
 doubledesc = desc + desc
 
-# Print out doubledesc
+# Imprime doubledesc
 print(doubledesc)
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que cambiar o remover las variables predefinidas."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
 test_object("factor", undefined_msg = msg, incorrect_msg = msg)
 test_object("desc", undefined_msg = msg, incorrect_msg = msg)
-test_object("year1", incorrect_msg = "Multiply `savings` and `factor` to create the `year1` variable.")
-msg = "Make sure to print out the type of `year1` like this: `print(type(year1))`."
+test_object("year1", incorrect_msg = "Multiplica `savings` y `factor` para crear la variable `year1`.")
+msg = "Asegúrate de imprimir el tipo de dato de `year1` como este: `print(type(year1))`."
 test_function("print", 1, incorrect_msg = msg)
 test_function("type", incorrect_msg = msg)
-test_object("doubledesc", incorrect_msg  = "Have you stored the result of `desc + desc` in `doubledesc`?")
-test_function("print", 2, incorrect_msg = "Be sure to print out `doubledesc`.")
-success_msg("Nice. Notice how `desc + desc` causes `\"compound interest\"` and `\"compound interest\"` to be pasted together.")
+test_object("doubledesc", incorrect_msg  = "¿Guardaste el resultado de `desc + desc` en `doubledesc`?")
+test_function("print", 2, incorrect_msg = "Asegúrate de imprimir `doubledesc`.")
+success_msg("¡Bien!. Date cuenta como `desc + desc` causa que `\"compound interest\"` y `\"compound interest\"` sean juntadas.")
 ```
 
 ---
-## Type conversion
+## Conversión de tipos
 
 ```yaml
 type: NormalExercise
@@ -562,28 +562,28 @@ skills: 2
 key: ebc6a5f1d2
 ```
 
-Using the `+` operator to paste together two strings can be very useful in building custom messages.
+Usando el operador `+` para juntar dos cadenas de texto puede ser muy útil a la hora de construir mensajes.
 
-Suppose, for example, that you've calculated the return of your investment and want to summarize the results in a string. Assuming the floats `savings` and `result` are defined, you can try something like this:
+Supóngase, por ejemplo, que has calculado el retorno de tu inversión y quieres resumir los resultados en una cadena. Asumiendo que los las variables flotantes `savings` y `result` están definidas, puedes intentar algo como esto:
 
 ```
-print("I started with $" + savings + " and now have $" + result + ". Awesome!")
+print("Yo comencé con $" + savings + " y ahora tengo $" + result + ". ¡Impresionante!")
 ```
 
-This will not work, though, as you cannot simply sum strings and floats.
+Sin embargo, esto no funcionará debido a que no puedes simplemente sumar variables de tipo _str_ con _float_.
 
-To fix the error, you'll need to explicitly convert the types of your variables. More specifically, you'll need [`str()`](https://docs.python.org/3/library/functions.html#func-str), to convert a value into a string. `str(savings)`, for example, will convert the float `savings` to a string.
+Para arreglar este error, necesitarás convertir explícitamente los tipos de tus variables. Más específicamente, necesitarás [`str()`](https://docs.python.org/3/library/functions.html#func-str) para convertir un valor en una cadena. Por ejemplo, `str(savings)` convertirá el número flotante `savings` en una cadena.
 
-Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
+Funciones similares como [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) y [`bool()`](https://docs.python.org/3/library/functions.html#bool) te ayudarán a convertir valores de Python en cualquier tipo.
 
 `@instructions`
-- Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
-- Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
-- Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
+- Haz click en _Submit Answer_ para ejecutar el código. Trata de entender el mensaje de error.
+- Arregla el código a tu derecha tal que se ejecute sin errores. Usa la función [`str()`](https://docs.python.org/3/library/functions.html#func-str) para convertir las variables a cadenas.
+- Convierte la variable `pi_string` a un número flotante (_float_) y guarda el resultado en una nueva variable, `pi_float`.
 
 `@hint`
-- You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
-- Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
+- Deberías utilizar [`str()`](https://docs.python.org/3/library/functions.html#func-str) dos veces.
+- Usa [`float()`](https://docs.python.org/3/library/functions.html#float) en `pi_string` y guarda el resultado en `pi_float`.
 
 `@pre_exercise_code`
 ```{python}
@@ -592,66 +592,66 @@ Similar functions such as [`int()`](https://docs.python.org/3/library/functions.
 
 `@sample_code`
 ```{python}
-# Definition of savings and result
+# Definiciones de savings y result
 savings = 100
 result = 100 * 1.10 ** 7
 
-# Fix the printout
-print("I started with $" + savings + " and now have $" + result + ". Awesome!")
+# Arregla la impresión
+print("Yo comencé con $" + savings + " y ahora tengo $" + result + ". ¡Impresionante!")
 
-# Definition of pi_string
+# Definición de pi_string
 pi_string = "3.1415926"
 
-# Convert pi_string into float: pi_float
+# Convierte pi_string en un número flotante: pi_float
 
 ```
 
 `@solution`
 ```{python}
-# Definition of savings and result
+# Definiciones de savings y result
 savings = 100
 result = 100 * 1.10 ** 7
 
-# Fix the printout
-print("I started with $" + str(savings) + " and now have $" + str(result) + ". Awesome!")
+# Arregla la impresión
+print("Yo comencé con $" + str(savings) + " y ahora tengo $" + str(result) + ". ¡Impresionante!")
 
-# Definition of pi_string
+# Definición de pi_string
 pi_string = "3.1415926"
 
-# Convert pi_string into float: pi_float
+# Convierte pi_string en un número flotante: pi_float
 pi_float = float(pi_string)
 ```
 
 `@sct`
 ```{python}
 
-# ensure predefined values are unmodified
-msg = "You don't have to change or remove the predefined variables."
+# Asegura que los valores predefinidos no son modificados
+msg = "No tienes que modificar o borrar los valores predefinidos."
 test_object("savings", undefined_msg = msg, incorrect_msg = msg)
 test_object("result", undefined_msg = msg, incorrect_msg = msg)
 
-# check correctly converted `result` and `savings` in printed string.
-test_function("str", 1, incorrect_msg = "On the line with `print()`, make sure to change `savings` to `str(savings)`.")
-test_function("str", 2, incorrect_msg = "On the line with `print()`, make sure to changed `result` to  `str(result)`.")
-test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
+# Revisa la conversión de `result` y `savings` en la cadena impresa.
+test_function("str", 1, incorrect_msg = "En la línea de `print()`, asegúrate de cambiar `savings` a `str(savings)`.")
+test_function("str", 2, incorrect_msg = "On the line with `print()`, asegúrate de cambiar `result` a `str(result)`.")
+test_function("print", incorrect_msg = "La cadena que estas intentando imprimir no es correcta. Revisa de nuevo la descripción del problema.")
 
-# ensure predefined pi_string is unmodified
-msg = "You shouldn't have to change or remove the predefined variable `pi_string`."
+# Asegura que el valor predefinido de pi_string no es modificado
+msg = "No tienes que modificar o borrar la variable predefinida `pi_string`."
 test_object("pi_string", undefined_msg = msg, incorrect_msg = msg)
 
-# check pi_float
+# Revisa pi_float
 test_function("float",
-              not_called_msg = "In order to convert `pi_string` to a float, be sure to use the `float()` function.",
-              incorrect_msg = "Pass `pi_string` to [`float()`](https://docs.python.org/3/library/functions.html#float) in order to convert it to a float.")
+              not_called_msg = "Para convertir `pi_string` a un flotante, asegúrate de usar la función `float()`.",
+              incorrect_msg = "Coloca la variable `pi_string` en [`float()`](https://docs.python.org/3/library/functions.html#float) para convertirla a un flotante.")
 test_object("pi_float",
-             incorrect_msg = "It looks like you used `float` correctly, but the value of `pi_float` is incorrect.",
-             undefined_msg = "It looks like you used `float` correctly, but did not assign the result to `pi_float`")
+             incorrect_msg = "Parece que utilizaste `float` correctamente, pero el valor de `pi_float` es incorrecto.",
+             undefined_msg = "Parece que utilizaste `float` correctamente, pero no asignaste el resultado a `pi_float`")
 
-success_msg("Great! You have a profit of around $95; that's pretty awesome indeed!")
+success_msg("¡Genial! Tienes un beneficio alrededor de $95; ¡Muy impresionante!")
 ```
 
 ---
-## Can Python handle everything?
+## ¿Python puede manejar todo?
 
 ```yaml
 type: MultipleChoiceExercise
@@ -661,17 +661,17 @@ skills: 2
 key: cfe0587ac9
 ```
 
-Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
-Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
+Ahora que sabes algo sobre combinar diferentes fuentes de información, revisa las cuatro expresiones de Python de abajo.
+¿cuál de ellas arrojará un error? Recuerda que puedes copiar y pegar este código en la consola de Python para probar.
 
 `@instructions`
-- `"I can add integers, like "  + str(5) + " to strings."`
-- `"I said " + ("Hey " * 2) + "Hey!"`
-- `"The correct answer to this multiple choice exercise is answer number " + 2`
+- `"Yo puedo sumar enteros como "  + str(5) + " a cadenas."`
+- `"Yo dije " + ("Oye " * 2) + "Oye!"`
+- `"La respuesta correcta a este ejercicio es la número " + 2`
 - `True + False`
 
 `@hint`
-Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
+Copia y pega las diferentes expresiones en la consola de Python y trata de averiguar cual de todas arroja un error.
 
 `@pre_exercise_code`
 ```{python}
@@ -680,7 +680,7 @@ Copy and paste the different expressions into the IPython Shell and try to figur
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg4 = "Incorrect, this command runs perfectly fine."
-msg3 = "Correct! Because you're not converting `2` to a string with [`str()`](https://docs.python.org/3/library/functions.html#func-str), this will give an error."
+msg1 = msg2 = msg4 = "Incorrecto, este comando funciona perfectamente bien."
+msg3 = "¡Correcto! Debido a que no estas convirtiendo `2` a una cadena con [`str()`](https://docs.python.org/3/library/functions.html#func-str), por ende esto arrojará un error."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
