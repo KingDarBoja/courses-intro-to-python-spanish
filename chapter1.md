@@ -39,7 +39,7 @@ Simplemente agrega `print(7 + 10)` al guión de la derecga y haz click en `Submi
 # Ejemplo, ¡no modificar!
 print(5 / 8)
 
-# Escribe el cdódigo abajo
+# Escribe el código abajo
 
 ```
 
@@ -48,7 +48,7 @@ print(5 / 8)
 # Ejemplo, ¡no modificar!
 print(5 / 8)
 
-# Escribe el cdódigo abajo
+# Escribe el código abajo
 print(7 + 10)
 ```
 
@@ -120,7 +120,7 @@ Para agregar comentarios a tu código en Python, utilizas la etiqueta `#`. Estos
 Por encima de `print(7 + 10)`, agrega el comentario `# Adicion funciona tambien`.
 
 `@hint`
-For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
+Para este ejercicio, debes simplemente agregar una linea de comentario. No se ejecutará como código Python. Agrega `# Adicion funciona tambien` justo por encima de `print(7 + 10)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -147,7 +147,7 @@ print(7 + 10)
 
 `@sct`
 ```{python}
-test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Aseguraté de agregar el comentario indicado justo antes de `print(7+10)`.")
+test_student_typed("#\s*(\w+) funciona (\w+)[\s.!?]*print\(7", not_typed_msg = "Aseguraté de agregar el comentario indicado justo antes de `print(7+10)`.")
 success_msg("¡Excelente!")
 ```
 
@@ -286,7 +286,7 @@ success_msg("¡Fabuloso! Vamos a probar algunos cálculos con esta variable a co
 ```
 
 ---
-## Calculations with variables
+## Cálculos con variables
 
 ```yaml
 type: NormalExercise
@@ -296,23 +296,23 @@ skills: 2
 key: 38dec2b0b8
 ```
 
-Remember how you calculated the money you ended up with after 7 years of investing $100? You did something like this:
+¿Recuerdas cómo calculaste el dinero que obtendrias después de 7 años al invertir $100 dólares? Hiciste algo más o menos así:
 
 ```
 100 * 1.10 ** 7
 ```
 
-Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
+En vez de calcular con los valores actuales, puedes utilizar variables en su lugar. La variable `savings` que creaste en el ejercicio anterior representa los $100 iniciales. Depende de ti crear una nueva variable para representar `1.10` y luego ¡rehacer los cálculos!
 
 `@instructions`
-- Create a variable `factor`, equal to `1.10`.
-- Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
-- Print out the value of `result`.
+- Crea una variable `factor` igual a `1.10`.
+- Utiliza `savings`y `factor`para calcular la cantidad de dinero que tendrás en 7 años. Guarda el resultado en una nueva variable, `result`.
+- Imprime el valor de `result`.
 
 `@hint`
-- To create the variable `factor`, use `factor = 1.10`.
-- In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
-- Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
+- Para crear la variable `factor`, utiliza `factor = 1.10`.
+- En el bloque de código ejemplo, reemplaza `100` con `savings` y `1.10` con `factor`: `savings * factor ** 7`.
+- Utiliza la función [`print()`](https://docs.python.org/3/library/functions.html#print) para imprimir el valor de una variable.
 
 `@pre_exercise_code`
 ```{python}
@@ -321,46 +321,46 @@ Instead of calculating with the actual values, you can use variables instead. Th
 
 `@sample_code`
 ```{python}
-# Create a variable savings
+# Crea la variable savings
 savings = 100
 
-# Create a variable factor
+# Crea la variable factor
 
 
-# Calculate result
+# Calcula el resultado: result
 
 
-# Print out result
+# Imprime result
 ```
 
 `@solution`
 ```{python}
-# Create a variable savings
+# Crea la variable savings
 savings = 100
 
-# Create a variable factor
+# Crea la variable factor
 factor = 1.1
 
-# Calculate result
+# Calcula el resultado: result
 result = savings * factor ** 7
 
-# Print out result
+# Imprime result
 print(result)
 ```
 
 `@sct`
 ```{python}
-test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
-                       incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
-test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
-test_object("result", incorrect_msg = "Have you used `*` and `**` to calculate `result`?")
-msg = "Don't forget to print out `result` after assigning it."
+test_object("savings", undefined_msg = "La variable `savings` la definistes tú, ¡No la borres!",
+                       incorrect_msg = "La variable `savings` debería ser `100`, como la habias definido.")
+test_object("factor", incorrect_msg = "El valor de `factor` debería ser `1.1`.")
+test_object("result", incorrect_msg = "¿Haz utilizado `*` y `**` para calcular `result`?")
+msg = "No te olvides de imprimir `result` después de asignarlo."
 test_print(not_called_msg = msg, incorrect_msg = msg)
-success_msg("Great!")
+success_msg("¡Genial!")
 ```
 
 ---
-## Other variable types
+## Otros tipos de variable
 
 ```yaml
 type: NormalExercise
@@ -370,23 +370,22 @@ skills: 2
 key: a67d0ce6b2
 ```
 
-In the previous exercise, you worked with two Python data types:
+En los ejercicios anteriores, trabajaste con dos tipos de datos en Python:
 
-- `int`, or integer: a number without a fractional part. `savings`, with the value `100`, is an example of an integer.
-- `float`, or floating point: a number that has both an integer and fractional part, separated by a point. `factor`, with the value `1.10`, is an example of a float.
+- `int`, o enteros: Un número sin parte fraccionaria. `savings`, con el valor `100`, es un ejemplo de un entero.
+- `float`, o punto flotante: Un número que tiene parte entera y parte fraccionaria, separados por un punto. `factor`, con el valor `1.10`, es un ejemplo de este tipo.
 
-Next to numerical data types, there are two other very common data types:
-
-- `str`, or string: a type to represent text. You can use single or double quotes to build a string.
-- `bool`, or boolean: a type to represent logical values. Can only be `True` or `False` (the capitalization is important!).
+Seguido de los datos de tipo númerico, hay otros dos tipos de datos muy comunes:
+- `str`, o cadena de caracteres: Un tipo usado para representar texto. Puedes utilizar comillas simples ('') o dobles ("") para construir una cadena (o _string_ en inglés).
+- `bool`, o booleano: Un tipo utilizado para representar valores lógicos. Solamente pueden ser `True` o `False` (¡La capitalización es importante!).  
 
 `@instructions`
-- Create a new string, `desc`, with the value `"compound interest"`.
-- Create a new boolean, `profitable`, with the value `True`.
+- Crea una nueva cadena, `desc`, con el valor `"interes compuesto"`.
+- Crea un booleano, `profitable`, con el valor `True`. 
 
 `@hint`
-- To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
-- Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
+- Para crear una variable en Python, usa `=`. Asegúrate de envolver tu cadena en comillas simples o dobles.
+- Solamente existen dos valores de booleano en Python: `True` y `False`. `TRUE`, `true`, `FALSE`, `false` y otras versiones no serán aceptadas. 
 
 `@pre_exercise_code`
 ```{python}
@@ -395,28 +394,28 @@ Next to numerical data types, there are two other very common data types:
 
 `@sample_code`
 ```{python}
-# Create a variable desc
+# Crea la variable desc
 
 
-# Create a variable profitable
+# Crea la variable profitable
 
 ```
 
 `@solution`
 ```{python}
-# Create a variable desc
-desc = "compound interest"
+# Crea la variable desc
+desc = "interes compuesto"
 
-# Create a variable profitable
+# Crea la variable profitable
 profitable = True
 ```
 
 `@sct`
 ```{python}
-test_object("desc", incorrect_msg = "Assign the value `\"compound interest\"` to the variable `desc`.")
-test_object("profitable", incorrect_msg = "Assign the value `True` to the variable `profitable`.")
+test_object("desc", incorrect_msg = "Asigna el valor `\"interes compuesto\"` a la variable `desc`.")
+test_object("profitable", incorrect_msg = "Asigna el valor `True` a la variable `profitable`.")
 
-success_msg("Nice!")
+success_msg("¡Bien!")
 ```
 
 ---
