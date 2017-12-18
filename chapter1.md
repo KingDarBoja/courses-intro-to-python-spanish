@@ -20,12 +20,12 @@ Puedes hacer click en _Submit Answer_ cuantas veces quieras. Si te sientes atasc
 
 También puedes usar la consola de Python simplemente escribiendo comandos y presionando _Enter_. Cuando trabajas en la consola directamente, tu código no será calificado para la evaluación asi que es una buena forma de experimentar con Python.
 
-`@instrucciones`
+`@instructions`
 - Experimenta con la consola de Python; escribe `5 / 8`, por ejemplo.
 - Agrega otra línea de código al guión (_script_ en inglés): `print(7 + 10)`.
 - Haz click en _Submit Answer_ para ejecutar el código python y recibir realimentación.
 
-`@Consejo`
+`@hint`
 Simplemente agrega `print(7 + 10)` al guión de la derecga y haz click en `Submit Answer`.
 
 `@pre_exercise_code`
@@ -77,13 +77,13 @@ key: dd9fbad3d7
 
 Python es un lenguaje  de programación muy versatil. ¿Para cuáles aplicaciones puedes utilizar Python?
 
-`@instrucciones`
+`@instructions`
 - Quieres hacer algunos cálculos rápidos.
 - Para su nuevo negocio, desea desarrollar un sitio web basado en bases de datos.
 - Su jefe le solicita limpiar y analizar los resultados de la última encuesta de satisfacción.
 - Todas las anteriores.
 
-`@Consejo`
+`@hint`
 Python puede ser usado para diseñar cualquier pieza de software.
 
 `@pre_exercise_code`
@@ -112,14 +112,14 @@ skills: 2
 key: 1ec47310f6
 ```
 
-Something that Filip didn't mention in his videos is that you can add **comments** to your Python scripts. Comments are important to make sure that you and others can understand what your code is about.
+Algo que no hemos mencionado hasta ahora es la habilidad de agregar **comentarios** a tus códigos en Python. Los comentarios son importantes porque permiten tanto para ti como a los demás entender la funcionalidad del código. 
 
-To add comments to your Python script, you can use the `#` tag. These comments are not run as Python code, so they will not influence your result. As an example, take the comment on the right, `# Just testing division`; it is completely ignored during execution.
+Para agregar comentarios a tu código en Python, utilizas la etiqueta `#`. Estos comentarios no serán ejecutados como código, por lo que no afectaran tus resultados. Como ejemplo, toma el comentario a la derecha, `# Probando la division`; este es completamente ignorado durante la ejecución.
 
-`@instrucciones`
-Above the `print(7 + 10)`, add the comment `# Addition works too`.
+`@instructions`
+Por encima de `print(7 + 10)`, agrega el comentario `# Adicion funciona tambien`.
 
-`@Consejo`
+`@hint`
 For this exercise you only have to add one line of comments. It won't run as Python code. Add `# Addition works too` right above `print(7 + 10)`.
 
 `@pre_exercise_code`
@@ -129,7 +129,7 @@ For this exercise you only have to add one line of comments. It won't run as Pyt
 
 `@sample_code`
 ```{python}
-# Just testing division
+# Probando la division
 print(5 / 8)
 
 
@@ -138,21 +138,21 @@ print(7 + 10)
 
 `@solution`
 ```{python}
-# Just testing division
+# Probando la division
 print(5 / 8)
 
-# Addition works too
+# Adicion funciona tambien
 print(7 + 10)
 ```
 
 `@sct`
 ```{python}
-test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Make sure to add the instructed comment right before `print(7+10)`.")
-success_msg("Great!")
+test_student_typed("#\s*(\w+) works (\w+)[\s.!?]*print\(7", not_typed_msg = "Aseguraté de agregar el comentario indicado justo antes de `print(7+10)`.")
+success_msg("¡Excelente!")
 ```
 
 ---
-## Python as a calculator
+## Python como calculadora
 
 ```yaml
 type: NormalExercise
@@ -162,18 +162,18 @@ skills: 2
 key: b133ea8ea2
 ```
 
-Python is perfectly suited to do basic calculations. Apart from addition, subtraction, multiplication and division, there is also support for more advanced operations such as:
+Python es perfectamente adecuado para hacer cálculos básicos. Aparte de la adicción, la substracción, la multiplicación y la división, también hay soporte para funciones más avanzadas como:
 
-- Exponentiation: `**`. This operator raises the number to its left to the power of the number to its right. For example `4**2` will give `16`.
-- Modulo: `%`. This operator returns the remainder of the division of the number to the left by the number on its right. For example `18 % 7` equals `4`.
+- Exponenciación: `**`. Este operador eleva el número de la izquierda a la potencia del número a la derecha. Por ejemplo `4**2` arrojará `16`.
+- Módulo: `%`. Este operador devuelve el residuo de la divisón del número a la izquierda entre el número a la derecha. Por ejemplo `18 % 7` es igual a `4`.
 
-The code in the script on the right gives some examples.
+El código en el guión a la derecha muestra algunos ejemplos.
 
-`@instrucciones`
-Suppose you have $100, which you can invest with a 10% return each year. After one year, it's $100 \times 1.1 = 110$ dollars, and after two years it's $100 \times 1.1 \times 1.1 = 121$. Add code on the right to calculate how much money you end up with after 7 years.
+`@instructions`
+Supongamos que tienes $100, de los cuales puedes invertir con un retorno del 10% cada año. Después de un año, este será de $100 multiplicado por 1.1 = $110 dólares, y después de dos años será de $100 multiplicado por 1.1 multiplicado por 1.1 = $121 dólares. Agrega código a la derecha para calcular cuanto dinero tendrás despúes de 7 años. 
 
-`@Consejo`
-After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How much do you have after 7 years than? Use `*` and `**`.
+`@hint`
+Después de dos años tendrás $100 multiplicado por 1.1 multiplicado por 1.1 = 100 multiplicado por 1.1^2 dólares. ¿Cuánto tienes después de 7 años? Utiliza `*` y `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -182,52 +182,52 @@ After two years you have $100 \times 1.1 \times 1.1 = 100 \times 1.1^2$. How muc
 
 `@sample_code`
 ```{python}
-# Addition and subtraction
+# Adición y substracción
 print(5 + 5)
 print(5 - 5)
 
-# Multiplication and division
+# Multiplicación y división
 print(3 * 5)
 print(10 / 2)
 
-# Exponentiation
+# Exponenciación
 print(4 ** 2)
 
-# Modulo
+# Módulo
 print(18 % 7)
 
-# How much is your $100 worth after 7 years?
+# ¿Cuánto valen tus $100 después de 7 años?
 
 ```
 
 `@solution`
 ```{python}
-# Addition and subtraction
+# Adición y substracción
 print(5 + 5)
 print(5 - 5)
 
-# Multiplication and division
+# Multiplicación y división
 print(3 * 5)
 print(10 / 2)
 
-# Exponentiation
+# Exponenciación
 print(4 ** 2)
 
-# Modulo
+# Módulo
 print(18 % 7)
 
-# How much is your $100 worth after 7 years?
+# ¿Cuánto valen tus $100 después de 7 años?
 print(100 * 1.1 ** 7)
 ```
 
 `@sct`
 ```{python}
-test_output_contains("194\\.8", no_output_msg = "Have you used the operation `100 * 1.1 ** 7` in a `print()` call?")
+test_output_contains("194\\.8", no_output_msg = "¿Utilizaste la operación `100 * 1.1 ** 7` dentro de un comando `print()`?")
 success_msg("Time for another video!")
 ```
 
 ---
-## Variable Assignment
+## Asignación de variables
 
 ```yaml
 type: NormalExercise
@@ -237,23 +237,23 @@ skills: 2
 key: 1ad048e471
 ```
 
-In Python, a variable allows you to refer to a value with a name. To create a variable use `=`, like this example:
+En Python, una variable permite referirnos a un valor con un nombre. Para crear una variable, utiliza `=`, como en el siguiente ejemplo:
 
 ```
 x = 5
 ```
 
-You can now use the name of this variable, `x`, instead of the actual value, `5`.
+Ahora puedes utilizar el nombre de esta variable, `x`, en vez del valor actual, `5`.
 
-Remember, `=` in Python means _assignment_, it doesn't test equality!
+Recuerda, `=` en Python significa _asignación_, ¡esto no verifica una igualdad!
 
-`@instrucciones`
-- Create a variable `savings` with the value 100.
-- Check out this variable by typing `print(savings)` in the script.
+`@instructions`
+- Crea una variable llamada `savings` con el valor 100.
+- Comprueba la variable escribiendo `print(savings)` en el guión.
 
-`@Consejo`
-- Type `savings = 100` to create the variable `savings`.
-- After creating the variable `savings`, you can type `print(savings)`.
+`@hint`
+- Escribe `savings = 100` para crear la variable `savings`.
+- Después de creada la variable `savings`, puedes escribir `print(savings)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -262,27 +262,27 @@ Remember, `=` in Python means _assignment_, it doesn't test equality!
 
 `@sample_code`
 ```{python}
-# Create a variable savings
+# Crea la variable savings
 
 
-# Print out savings
+# Imprime la variable savings
 
 ```
 
 `@solution`
 ```{python}
-# Create a variable savings
+# Crea la variable savings
 savings = 100
 
-# Print out savings
+# Imprime la variable savings
 print(savings)
 ```
 
 `@sct`
 ```{python}
-test_object("savings", incorrect_msg = "Assign `100` to the variable `savings`.")
-test_function("print", incorrect_msg = "Print out `savings`, the variable you created, using `print(savings)`.")
-success_msg("Great! Let's try to do some calculations with this variable now!")
+test_object("savings", incorrect_msg = "Asigna `100` a la variable `savings`.")
+test_function("print", incorrect_msg = "Imprime `savings`, la variable que creaste, utilizando `print(savings)`.")
+success_msg("¡Fabuloso! Vamos a probar algunos cálculos con esta variable a continuación.")
 ```
 
 ---
@@ -304,12 +304,12 @@ Remember how you calculated the money you ended up with after 7 years of investi
 
 Instead of calculating with the actual values, you can use variables instead. The `savings` variable you've created in the previous exercise represents the $100 you started with. It's up to you to create a new variable to represent `1.10` and then redo the calculations!
 
-`@instrucciones`
+`@instructions`
 - Create a variable `factor`, equal to `1.10`.
 - Use `savings` and `factor` to calculate the amount of money you end up with after 7 years. Store the result in a new variable, `result`.
 - Print out the value of `result`.
 
-`@Consejo`
+`@hint`
 - To create the variable `factor`, use `factor = 1.10`.
 - In the example code block of the assignment, replace `100` with `savings` and `1.10` with `factor`: `savings * factor ** 7`.
 - Use the [`print()`](https://docs.python.org/3/library/functions.html#print) function to print the value of a variable.
@@ -380,11 +380,11 @@ Next to numerical data types, there are two other very common data types:
 - `str`, or string: a type to represent text. You can use single or double quotes to build a string.
 - `bool`, or boolean: a type to represent logical values. Can only be `True` or `False` (the capitalization is important!).
 
-`@instrucciones`
+`@instructions`
 - Create a new string, `desc`, with the value `"compound interest"`.
 - Create a new boolean, `profitable`, with the value `True`.
 
-`@Consejo`
+`@hint`
 - To create a variable in Python, use `=`. Make sure to wrap your string in single or double quotes.
 - Only two boolean values exist in Python: `True` and `False`. `TRUE`, `true`, `FALSE`, `false` and other versions will not be accepted.
 
@@ -438,13 +438,13 @@ type(a)
 
 We already went ahead and created three variables: `a`, `b` and `c`. You can use the IPython shell on the right to discover their type. Which of the following options is correct?
 
-`@instrucciones`
+`@instructions`
 - `a` is of type `int`, `b` is of type `str`, `c` is of type `bool`
 - `a` is of type `float`, `b` is of type `bool`, `c` is of type `str`
 - `a` is of type `float`, `b` is of type `str`, `c` is of type `bool`
 - `a` is of type `int`, `b` is of type `bool`, `c` is of type `str`
 
-`@Consejo`
+`@hint`
 Use `type(a)`, `type(b)` and `type(c)` inside the IPython Shell to find out about the variables' types.
 
 `@pre_exercise_code`
@@ -480,13 +480,13 @@ When you sum two strings, for example, you'll get different behavior than when y
 
 In the script some variables with different types have already been created. It's up to you to use them.
 
-`@instrucciones`
+`@instructions`
 - Calculate the product of `savings` and `factor`. Store the result in `year1`.
 - What do you think the resulting type will be? Find out by printing out the type of `year1`.
 - Calculate the sum of `desc` and `desc` and store the result in a new variable `doubledesc`.
 - Print out `doubledesc`. Did you expect this?
 
-`@Consejo`
+`@hint`
 - Assign `factor * savings` to a new variable, `year1`.
 - To print the type of a variable `x`, use `print(type(x))`.
 - Assign `desc + desc` to a new variable, `doubledesc`.
@@ -577,12 +577,12 @@ To fix the error, you'll need to explicitly convert the types of your variables.
 
 Similar functions such as [`int()`](https://docs.python.org/3/library/functions.html#int), [`float()`](https://docs.python.org/3/library/functions.html#float) and [`bool()`](https://docs.python.org/3/library/functions.html#bool) will help you convert Python values into any type.
 
-`@instrucciones`
+`@instructions`
 - Hit _Submit Answer_ to run the code on the right. Try to understand the error message.
 - Fix the code on the right such that the printout runs without errors; use the function [`str()`](https://docs.python.org/3/library/functions.html#func-str) to convert the variables to strings.
 - Convert the variable `pi_string` to a float and store this float as a new variable, `pi_float`.
 
-`@Consejo`
+`@hint`
 - You should use [`str()`](https://docs.python.org/3/library/functions.html#func-str) twice!
 - Use [`float()`](https://docs.python.org/3/library/functions.html#float) on `pi_string` and store the result in `pi_float`.
 
@@ -665,13 +665,13 @@ key: cfe0587ac9
 Now that you know something more about combining different sources of information, have a look at the four Python expressions below.
 Which one of these will throw an error? You can always copy and paste this code in the IPython Shell to find out!
 
-`@instrucciones`
+`@instructions`
 - `"I can add integers, like "  + str(5) + " to strings."`
 - `"I said " + ("Hey " * 2) + "Hey!"`
 - `"The correct answer to this multiple choice exercise is answer number " + 2`
 - `True + False`
 
-`@Consejo`
+`@hint`
 Copy and paste the different expressions into the IPython Shell and try to figure out which one throws an error.
 
 `@pre_exercise_code`
