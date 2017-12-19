@@ -272,6 +272,7 @@ room = "poolhouse"
 # Imprime room y room_up
 
 
+
 # Imprime el número de o's en room
 
 ```

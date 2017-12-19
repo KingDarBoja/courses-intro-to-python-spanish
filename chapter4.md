@@ -38,10 +38,10 @@ import numpy as np
 # Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
-# Import the numpy package as np
+# Import the Numpy package as np
 
 
-# Create a numpy array from baseball: np_baseball
+# Create a Numpy array from baseball: np_baseball
 
 
 # Print out type of np_baseball
@@ -53,7 +53,7 @@ baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 # Create list baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
-# Import the numpy package as np
+# Import the Numpy package as np
 import numpy as np
 
 # Create a Numpy array from baseball: np_baseball

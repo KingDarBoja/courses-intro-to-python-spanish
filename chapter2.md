@@ -257,6 +257,8 @@ house = [["hallway", hall],
          ["kitchen", kit],
          ["living room", liv]]
 
+
+
 # Imprime house
 
 
