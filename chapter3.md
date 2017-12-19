@@ -4,7 +4,7 @@ title       : Funciones y paquetes
 description : Para aprovechar el código que los desarrolladores de Python han escrito, aprenderás sobre funciones, métodos y paquetes. ¡Esto te ayudará a reducir la cantidad de código que necesitas para resolver problemas!
 
 ---
-## Familiar functions
+## Funciones familiares
 
 ```yaml
 type: NormalExercise
@@ -14,29 +14,29 @@ skills: 2
 key: c422ee929b
 ```
 
-Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: [`print()`](https://docs.python.org/3/library/functions.html#print) and [`type()`](https://docs.python.org/3/library/functions.html#type). You've also used the functions [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) and [`float()`](https://docs.python.org/3/library/functions.html#float) to switch between data types. These are built-in functions as well.
+Fuera de la caja, Python ofrece un conjunto de funciones integradas para hacer tu vida más fácil como científico de datos. Ya conoces dos de esas funciones: [`print()`](https://docs.python.org/3/library/functions.html#print) y [`type()`](https://docs.python.org/3/library/functions.html#type). También has utilizado las funciones [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) y [`float()`](https://docs.python.org/3/library/functions.html#float) para convertir entre los distintos tipos de datos. Estas también son funciones integradas en Python.
 
-Calling a function is easy. To get the type of `3.0` and store the output as a new variable, `result`, you can use the following:
+Utilizar una función es muy sencillo. Para obtener el tipo de dato de `3.0` y guardarlo en una nueva variable, `result`, puedes utilizar el siguiente comando:
 
 ```
 result = type(3.0)
 ```
 
-The general recipe for calling functions and saving the result to a variable is thus:
+La forma general para llamar una función y guardar el resultado en una variable es la siguiente:
 
 ```
 output = function_name(input)
 ```
 
 `@instructions`
-- Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) to print out the type of `var1`.
-- Use [`len()`](https://docs.python.org/3/library/functions.html#len) to get the length of the list `var1`. Wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call to directly print it out.
-- Use [`int()`](https://docs.python.org/3/library/functions.html#int) to convert `var2` to an integer. Store the output as `out2`.
+- Utiliza [`print()`](https://docs.python.org/3/library/functions.html#print) en combinación con [`type()`](https://docs.python.org/3/library/functions.html#type) para imprimir el tipo de dato de `var1`.
+- Utiliza [`len()`](https://docs.python.org/3/library/functions.html#len) para obtener el tamaño de `var1`. Encierralo con un llamado de [`print()`](https://docs.python.org/3/library/functions.html#print) para imprimirlo enseguida.
+- Utiliza [`int()`](https://docs.python.org/3/library/functions.html#int) para convertir `var2` a un entero. Guarda el resultado como `out2`.
 
 `@hint`
-- Call the [`type()`](https://docs.python.org/3/library/functions.html#type) function like this: `type(var1)`.
-- Call [`print()`](https://docs.python.org/3/library/functions.html#print) like you did so many times before. Simply put the variable you want to print in parentheses.
-- `int(x)` will convert `x` to an integer.
+- Llama la función [`type()`](https://docs.python.org/3/library/functions.html#type) de esta forma: `type(var1)`.
+- Llama [`print()`](https://docs.python.org/3/library/functions.html#print) como lo has hecho anteriormente. Simplemente coloca la variable que deseas imprimir dentro del paréntesis.
+- `int(x)` convertirá `x` en un entero.
 
 `@pre_exercise_code`
 ```{python}
@@ -45,62 +45,62 @@ output = function_name(input)
 
 `@sample_code`
 ```{python}
-# Create variables var1 and var2
+# Crea las variables var1 y var2
 var1 = [1, 2, 3, 4]
 var2 = True
 
-# Print out type of var1
+# Imprime el tipo de var1
 
 
-# Print out length of var1
+# Imprime el tamaño de var1
 
 
-# Convert var2 to an integer: out2
+# Convierte var2 en un entero: out2
 
 ```
 
 `@solution`
 ```{python}
-# Create variables var1 and var2
+# Crea las variables var1 y var2
 var1 = [1, 2, 3, 4]
 var2 = True
 
-# Print out type of var1
+# Imprime el tipo de var1
 print(type(var1))
 
-# Print out length of var1
+# Imprime el tamaño de var1
 print(len(var1))
 
-# Convert var2 to an integer: out2
+# Convierte var2 en un entero: out2
 out2 = int(var2)
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("var1", undefined_msg = msg, incorrect_msg = msg)
 test_object("var2", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Make sure to print out the type of `var1` like this: `print(type(var1))`."
+msg = "Asegúrate de imprimir el tipo de dato de `var1` así: `print(type(var1))`."
 test_function("type", 1, incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
 
-msg = "Make sure to print out the length of `var1` like this: `print(len(var1))`."
+msg = "Asegúrate de imprimir el tamaño de `var1` así: `print(len(var1))`."
 test_function("len", 1, incorrect_msg = msg)
 test_function("print", 2, incorrect_msg = msg)
 
 test_object("out2", do_eval = False)
 
-test_function("int", not_called_msg = "Use [`int()`](https://docs.python.org/3/library/functions.html#int) to make an integer of `var2` and assign to `out2`.",
-                     incorrect_msg = "Use [`int()`](https://docs.python.org/3/library/functions.html#int) with the correct variables. You should pass `var2` to it."
+test_function("int", not_called_msg = "Usa [`int()`](https://docs.python.org/3/library/functions.html#int) para convertir a entero `var2` y asignalo a `out2`.",
+                     incorrect_msg = "Usa [`int()`](https://docs.python.org/3/library/functions.html#int) con las variables correctas. Deberías colocar `var2` dentro de la función."
 )
-test_object("out2", incorrect_msg = "Make sure to assign the correct value to `out2`.")
-success_msg("Great job! The [`len()`](https://docs.python.org/3/library/functions.html#len) function is extremely useful; it also works on strings to count the number of characters!")
+test_object("out2", incorrect_msg = "Asegúrate de asignar el valor correcto a `out2`.")
+success_msg("¡Buen trabajo! La función [`len()`](https://docs.python.org/3/library/functions.html#len) es extremadamente útil; ¡También funciona con cadenas para contar el número de caracteres!")
 ```
 
 
 ---
-## Help!
+## ¡Ayuda!
 
 ```yaml
 type: MultipleChoiceExercise
@@ -110,25 +110,25 @@ skills: 2
 key: 679b852978
 ```
 
-Maybe you already know the name of a Python function, but you still have to figure out how to use it. Ironically, you have to ask for information about a function with another function: [`help()`](https://docs.python.org/3/library/functions.html#help). In IPython specifically, you can also use `?` before the function name.
+Quizás ya conoces el nombre de una función en Python, pero aún asi debes saber como utilizarla. Ironicamente, para pedir información respecto a una función necesitas utilizar otra función: [`help()`](https://docs.python.org/3/library/functions.html#help). Especificamente en Python, también puedes utilizar `?` antes del nombre de la función.
 
-To get help on the [`max()`](https://docs.python.org/3/library/functions.html#max) function, for example, you can use one of these calls:
+Para obtener ayuda de la función [`max()`](https://docs.python.org/3/library/functions.html#max), por ejemplo, puedes utilizar cualquiera de los siguientes llamados:
 
 ```
 help(max)
 ?max
 ```
 
-Use the Shell on the right to open up the documentation on [`complex()`](https://docs.python.org/3/library/functions.html#complex). Which of the following statements is true?
+Utiliza la consola a tu derecha para abrir la documentación de [`complex()`](https://docs.python.org/3/library/functions.html#complex). ¿Cuál de los siguientes enunciados es cierto?
 
 `@instructions`
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes exactly two arguments: `real` and `[, imag]`.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. Both these arguments are required.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. `real` is a required argument, `imag` is an optional argument.
-- [`complex()`](https://docs.python.org/3/library/functions.html#complex) takes two arguments: `real` and `imag`. If you don't specify `imag`, it is set to 1 by Python.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma exactamente dos argumentos: `real` e `[, imag]`.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma dos argumentos: `real` e `imag`. Ambos son requeridos.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma dos argumentos: `real` e `imag`. `real` es requerido, `imag` es opcional.
+- [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma dos argumentos: `real` e `imag`. Si no especificas `imag`, Python lo establece en 1.
 
 `@hint`
-The help file shows `complex(real[, imag])`. Do you remember what Filip told you about these square brackets?
+La documentación muestra `complex(real[, imag])`. ¿Recuerdas lo que hacen los corchetes?
 
 `@pre_exercise_code`
 ```{python}
@@ -137,15 +137,15 @@ The help file shows `complex(real[, imag])`. Do you remember what Filip told you
 
 `@sct`
 ```{python}
-msg1 = "Incorrect. `[, imag]` shows that `imag` is an optional argument."
-msg2 = "This statement is false. `imag` is not a required argument."
-msg3 = "Perfect!"
-msg4 = "This is almost true, but not entirely. If you don't specify `image`, it is set to 0."
+msg1 = "Incorrecto. `[, imag]` muestra que `imag` es un argumento opcional."
+msg2 = "Esta sentencia es falsa. `imag` no es un argumento requerido."
+msg3 = "¡Perfecto!"
+msg4 = "Es casi cierto pero no del todo. Si no especificas el argumento `imag`, entonces se establece en cero."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
-## Multiple arguments
+## Multiples argumentos
 
 ```yaml
 type: NormalExercise
@@ -155,33 +155,33 @@ skills: 2
 key: e30486d7c1
 ```
 
-In the previous exercise, the square brackets around `imag` in the documentation showed us that the `imag` argument is optional. But Python also uses a different way to tell users about arguments being optional.
+En los ejercicios anteriores, los corchetes alrededor de `imag` en la documentaciín nos mostraron que el argumento `imag` es opcional. Pero Python también utiliza otra forma de decirle al usuario sobre argumentos opcionales.
 
-Have a look at the documentation of [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) by typing `help(sorted)` in the IPython Shell.
+Echale una mirada a la documentación de [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) escribiendo `help(sorted)` en la consola de Python.
 
-You'll see that [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) takes three arguments: `iterable`, `key` and `reverse`.
+Verás que la función [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) toma tres argumentos: `iterable`, `key` y `reverse`.
 
-`key=None` means that if you don't specify the `key` argument, it will be `None`. `reverse=False` means that if you don't specify the `reverse` argument, it will be `False`.
+`key=None` significa que si no especificas el argumento `key`, será por defecto igual a `None`. `reverse=False` significa que si no especificas el argumento `reverse`, será por defecto igual a `False`.
 
-In this exercise, you'll only have to specify `iterable` and `reverse`, not `key`. The first input you pass to [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) will be matched to the `iterable` argument, but what about the second input? To tell Python you want to specify `reverse` without changing anything about `key`, you can use `=`:
+En este ejercicio, solamente tendrás que especificar los argumentos `iterable` y `reverse`, pero no el argumento `key`. La primera entrada que pasas a [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) será emparejada con el argumento `iterable`, pero ¿Qué hay acerca de la segunda entrada? Para decirle a Python que quieres especificar `reverse` sin tener que cambiar `key`, puedes hacer uso de `=`:
 
 ```
 sorted(___, reverse = ___)
 ```
 
-Two lists have been created for you on the right. Can you paste them together and sort them in descending order?
+Dos listas han sido creadas para ti a tu derecha. ¿Puedes juntarlas y ordenarlas de manera descendente?
 
-Note: For now, we can understand an [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) as being any collection of objects, e.g. a List.
+Nota: Por ahora, entendemos [_iterable_](https://docs.python.org/2/glossary.html#term-iterable) como cualquier colección de objetos, como por ejemplo, una lista.
 
 `@instructions`
-- Use `+` to merge the contents of `first` and `second` into a new list: `full`.
-- Call [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) on `full` and specify the `reverse` argument to be `True`. Save the sorted list as `full_sorted`.
-- Finish off by printing out `full_sorted`.
+- Utiliza `+` para unir los contenidos de `first` y `second` en una nueva lista: `full`.
+- Llama la función [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) en `full` y especifica el argumento para ordenar `reverse` igual a `True`. Guarda la lista ordenada como `full_sorted`.
+- Termina el código imprimiendo `full_sorted`.
 
 `@hint`
-- Simply sum `first` and `second` as if they are two numbers and assign the result to `full`.
-- Use [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) with two inputs: `full` and `reverse = True`.
-- To print out a variable, use [`print()`](https://docs.python.org/3/library/functions.html#print).
+- Simplemente suma `first` y `second` como si fueran dos números y asigna el resultado a `full`.
+- Usa [`sorted()`](https://docs.python.org/3/library/functions.html#sorted) con dos entradas: `full` y `reverse = True`.
+- Para imprimir una variable, usa [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@pre_exercise_code`
 ```{python}
@@ -190,49 +190,49 @@ Note: For now, we can understand an [_iterable_](https://docs.python.org/2/gloss
 
 `@sample_code`
 ```{python}
-# Create lists first and second
+# Crea las listas first y second
 first = [11.25, 18.0, 20.0]
 second = [10.75, 9.50]
 
-# Paste together first and second: full
+# Une las listas first y second: full
 
 
-# Sort full in descending order: full_sorted
+# Ordena full en orden descendente: full_sorted
 
 
-# Print out full_sorted
+# Imprime full_sorted
 
 ```
 
 `@solution`
 ```{python}
-# Create lists first and second
+# Crea las listas first y second
 first = [11.25, 18.0, 20.0]
 second = [10.75, 9.50]
 
-# Paste together first and second: full
+# Une las listas first y second: full
 full = first + second
 
-# Sort full in descending order: full_sorted
+# Ordena full en orden descendente: full_sorted
 full_sorted = sorted(full, reverse = True)
 
-# Print out full_sorted
+# Imprime full_sorted
 print(full_sorted)
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("first", undefined_msg = msg, incorrect_msg = msg)
 test_object("second", undefined_msg = msg, incorrect_msg = msg)
 test_object("full")
 test_function_v2("sorted", params = ['iterable', 'reverse'])
-test_object("full_sorted", incorrect_msg = "Assign the result of the `sorted()` function to `full_sorted`.")
-success_msg("Cool! Head over to the video on Python methods.")
+test_object("full_sorted", incorrect_msg = "Asigna el resultado de la función `sorted()` a `full_sorted`.")
+success_msg("¡Cool! Continúa aprendiendo sobre los métodos en Python.")
 ```
 
 ---
-## String Methods
+## Métodos de cadenas
 
 ```yaml
 type: NormalExercise
