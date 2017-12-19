@@ -234,7 +234,7 @@ No te confundas: `"hallway"` es una cadena mientras que `hall` es una variable q
 - Imprime el tipo de dato de `house`. ¿Aún estás lidiando con una lista?
 
 `@hint`
-- Agrega una _sublista_ a la lista `house` agregando `["bedroom", bed]` y `["bathroom", bath]` dentro de los corchetes cuadrados.
+- Agrega una _sublista_ a la lista `house` agregando `["bedroom", bed]` y `["bathroom", bath]` dentro de los corchetes.
 - Para imprimir la variable `x`, escribe `print(x)` en una nueva línea de código.
 - Para imprimir el tipo de variable de `x`, puedes utilizar `print(type(x))`.
 
@@ -611,7 +611,7 @@ success_msg("¡Maravilloso!")
 ```
 
 ---
-## Subsetting lists of lists
+## Seleccionando lista de listas
 
 ```yaml
 type: MultipleChoiceExercise
@@ -621,7 +621,7 @@ skills: 2
 key: dbbbd306cf
 ```
 
-You saw before that a Python list can contain practically anything; even other lists! To subset lists of lists, you can use the same technique as before: square brackets. Try out the commands in the following code sample in the IPython Shell:
+Anteriormente viste como una lista en Python puede contener prácticamente cualquier cosa; ¡Incluso otras listas! Para seleccionar listas de listas, puedes utilizar la misma técnica de antes: corchetes. Prueba los siguientes comandos de ejemplo en la consola de Python:
 
 ```
 x = [["a", "b", "c"],
@@ -631,18 +631,18 @@ x[2][0]
 x[2][:2]
 ```
 
-`x[2]` results in a list, that you can subset again by adding additional square brackets.
+`x[2]` es una lista que puedes seleccionar de nuevo agregando otros corchetes adicionales.
 
-What will `house[-1][1]` return? `house`, the list of lists that you created before, is already defined for you in the workspace. You can experiment with it in the IPython Shell.
+¿Qué resultado arrojará `house[-1][1]`? `house`, la lista de listas que creaste anteriormente, ya esta definida en el espacio de trabajo (_workspace_ en inglés). Puedes probarlo en la consola de Python.
 
 `@instructions`
-- A float: the kitchen area
-- A string: `"kitchen"`
-- A float: the bathroom area
-- A string: `"bathroom"`
+- Un flotante: el area de la cocina (_kitchen_)
+- Una cadena: `"kitchen"`
+- Un flotante: el area del baño (_bathroom_)
+- Una cadena: `"bathroom"`
 
 `@hint`
-`house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`. What's the result if you then subset this sublist with `[1]`? You can always try out the command in the IPython Shell!
+`house[-1]` selecciona el último elemento de `house`, que sería la lista `["bathroom", 9.50]`. ¿Qué resultado se obtiene si seleccionas `[1]` de esta sublista? ¡Recuerda que puedes probar en la consola de Python!
 
 `@pre_exercise_code`
 ```{python}
@@ -655,14 +655,14 @@ house = [["hallway", 11.25],
 
 `@sct`
 ```{python}
-msg1 = msg2 = "Wrong. `house[-1]` selects the last element of `house`, which is the list `[\"bathroom\", 9.50]`."
-msg3 = "Correctomundo! The last piece of the list puzzle is manipulation."
-msg4 = "Incorrect. `house[-1]` indeed selects the list that represents the bathroom information, but `[1]` selects the second element of the sublist, not the first. Python uses zero-based indexing!"
+msg1 = msg2 = "¡Equivocado!. `house[-1]` selecciona el último elemento de `house`, el cual es la lista `[\"bathroom\", 9.50]`."
+msg3 = "¡Correcto! La última pieza del acertijo sobre listas es manipulación."
+msg4 = "Incorrecto. De hecho, `house[-1]` selecciona la lista que representa la información del baño, pero `[1]` selecciona el segundo elemento de la lista, no el primero. ¡Los indices en Python comienzan en cero!"
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
-## Replace list elements
+## Reemplazando elementos en la lista
 
 ```yaml
 type: NormalExercise
@@ -672,9 +672,9 @@ skills: 2
 key: 4e1bba1b55
 ```
 
-Replacing list elements is pretty easy. Simply subset the list and assign new values to the subset. You can select single elements or you can change entire list slices at once.
+Reemplazar elementos en una lista es muy sencillo. Simplemente _rebana_ la lista y asigna nuevos valores a esa selección. Puedes seleccionar un elemento o modificar pedazos enteros de la lista de una sola vez.
 
-Use the IPython Shell to experiment with the commands below. Can you tell what's happening and why?
+Usa la consola de Python para experimentar con los siguientes comandos. ¿Puedes decir que está sucediendo y porqué?
 
 ```
 x = ["a", "b", "c", "d"]
@@ -682,15 +682,15 @@ x[1] = "r"
 x[2:] = ["s", "t"]
 ```
 
-For this and the following exercises, you'll continue working on the `areas` list that contains the names and areas of different rooms in a house.
+Para este ejercicio y los siguientes, seguirás trabajando con la lista `areas` que contiene los nombres y las áreas de diferentes cuartos en una casa.
 
 `@instructions`
-- You did a miscalculation when determining the area of the bathroom; it's 10.50 square meters instead of 9.50. Can you make the changes?
-- Make the `areas` list more trendy! Change "living room" to "chill zone".
+- Hiciste un error de cálculo al determinar el area del baño; eran 10.50 metros cuadrados en vez de 9.50. ¿Puedes hacer los cambios?
+- ¡Haz la lista `areas` más elegante! Cambia "living room" a "chill zone".
 
 `@hint`
-- To select the bathroom area, you can use `[-1]`.
-- To select the `"living room"` element, you can use `[4]`. Next, use `= "chill zone"` to change this element.
+- Para seleccionar el area del baño, utiliza `[-1]`.
+- Para seleccionar el elemento `"living room"`, puedes usar `[4]`. Luego, utiliza `= "chill zone"` para modificar este elemento.
 
 `@pre_exercise_code`
 ```{python}
@@ -699,37 +699,37 @@ For this and the following exercises, you'll continue working on the `areas` lis
 
 `@sample_code`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Correct the bathroom area
+# Corrije el area del baño
 
 
-# Change "living room" to "chill zone"
+# Cambia "living room" a "chill zone"
 
 ```
 
 `@solution`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Correct the bathroom area
+# Corrije el area del baño
 areas[-1] = 10.50
 
-# Change "living room" to "chill zone"
+# Cambia "living room" a "chill zone"
 areas[4] = "chill zone"
 ```
 
 `@sct`
 ```{python}
 test_object("areas",
-            incorrect_msg = "Your changes to `areas` did not result in the correct list. Are you sure you used the correct subset operations? When in doubt, you can use a hint!")
-success_msg("Sweet! As the code sample showed, you can also slice a list and replace it with another list to update multiple elements in a single command.")
+            incorrect_msg = "Tus cambios en `areas` no fueron los esperados. ¿Estás seguro que utilizaste las operaciones de selección correctas? Si tienes dudas, ¡Puedes utilizar una ayuda (_hint_)!")
+success_msg("¡Cool! Como en el código de ejemplo, también puedes rebanar una lista y asignarle otra lista para actualizar múltiples elementos a la vez.")
 ```
 
 ---
-## Extend a list
+## Extiende una lista
 
 ```yaml
 type: NormalExercise
@@ -739,22 +739,22 @@ skills: 2
 key: ff0fe8d967
 ```
 
-If you can change elements in a list, you sure want to be able to add elements to it, right? You can use the `+` operator:
+Si puedes modificar elementos en una lista, también puedes agregar elementos a ella, ¿cierto? Puedes utilizar el operador `+`:
 
 ```
 x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-You just won the lottery, awesome! You decide to build a poolhouse and a garage. Can you add the information to the `areas` list?
+¡Te acabas de ganar la lotería, Wohoo! Haz decidido construir en tu casa una piscina (_poolhouse_) y una cochera (_garage_). ¿Puedes agregar la información a la lista `areas`?
 
 `@instructions`
-- Use the `+` operator to paste the list `["poolhouse", 24.5]` to the end of the `areas` list. Store the resulting list as `areas_1`.
-- Further extend `areas_1` by adding data on your garage. Add the string `"garage"` and float `15.45`. Name the resulting list `areas_2`.
+- Utiliza el operador `+` para pegar la lista `["poolhouse", 24.5]` al final de la lista `areas`. Guarda la lista resultante como `areas_1`.
+- Etiende aun más la lista `areas_1` agregando información a tu cochera. Agrega la cadena `"garage"` y el flotante `15.45`. Nombra el resultado `areas_2`.
 
 `@hint`
-- Follow the code sample in the assignment. `x` is `areas` here, and `["e", "f"]` is `["poolhouse", 24.5]`.
-- To add more elements to `areas_1`, use `areas_1 + ["element", 123]`.
+- Guiate del código ejemplo. `x` vendría siendo `areas`, y `["e", "f"]` son respectivamente `["poolhouse", 24.5]`.
+- Para agregar más elementos a `areas_1`, usa `areas_1 + ["element", 123]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -763,41 +763,41 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 
 `@sample_code`
 ```{python}
-# Create the areas list and make some changes
+# Crea la lista areas y haz algunos cambios
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
 
-# Add poolhouse data to areas, new list is areas_1
+# Agrega los datos de la piscina en areas, la nueva lista es areas_1
 
 
-# Add garage data to areas_1, new list is areas_2
+# Agrega la cochera a areas_1, la nueva lista es areas_2
 
 ```
 
 `@solution`
 ```{python}
-# Create the areas list (updated version)
+# Crea la lista areas y haz algunos cambios
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
 
-# Add poolhouse data to areas, new list is areas_1
+# Agrega los datos de la piscina en areas, la nueva lista es areas_1
 areas_1 = areas + ["poolhouse", 24.5]
 
-# Add garage data to areas_1, new list is areas_2
+# Agrega la cochera a areas_1, la nueva lista es areas_2
 areas_2 = areas_1 + ["garage", 15.45]
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "No modifiques o elimines la lista predefinida `areas`."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_object("areas_1", incorrect_msg = "Use the '+' operator to add `[\"poolhouse\", 24.5]` to `areas_1`. Watch out for typos!")
-test_object("areas_2", incorrect_msg = "Use the '+' operator to add `[\"garage\", 15.45]` to `areas_2`. Watch out for typos.")
-success_msg("Cool! The list is shaping up nicely!")
+test_object("areas_1", incorrect_msg = "Utiliza el operador '+' para agregar `[\"poolhouse\", 24.5]` a `areas_1`. ¡Ten cuidado con los errores tipográficos!")
+test_object("areas_2", incorrect_msg = "Utiliza el operador '+' para agregar `[\"garage\", 15.45]` a `areas_2`. ¡Ten cuidado con los errores tipográficos!")
+success_msg("¡Cool! ¡La lista se está perfilando muy bien!")
 ```
 
 ---
-## Delete list elements
+## Elimina elementos de una lista
 
 ```yaml
 type: MultipleChoiceExercise
@@ -807,16 +807,16 @@ skills: 2
 key: 85f792356e
 ```
 
-Finally, you can also remove elements from your list. You can do this with the `del` statement:
+Finalmente, puedes eliminar elementos de una lista. Puedes hacerlo con la declaración `del`:
 
 ```
 x = ["a", "b", "c", "d"]
 del(x[1])
 ```
 
-Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+Presta atención: tan pronto como elimines un elemento de una lista, ¡los indices de los elementos que le siguen cambian!
 
-The updated and extended version of `areas` that you've built in the previous exercises is coded below. You can copy and paste this into the IPython Shell to play around with the result.
+La versión actualizada y extendida de `areas` que creaste anteriormente en los ejercicios previos ya se encuentra programada. Puedes copiarla y pegarla en la consola de Python para probar los resultados.
 
 ```
 areas = ["hallway", 11.25, "kitchen", 18.0,
@@ -825,20 +825,20 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
          "garage", 15.45]
 ```
 
-There was a mistake! The amount you won with the lottery is not that big after all and it looks like the poolhouse isn't going to happen. You decide to remove the corresponding string and float from the `areas` list.
+¡Hay un error! La cantidad de dinero que ganaste en la lotería no fue tan grande después de todo y parece ser que la piscina no se va a construir. Entonces decides remover la correspondiente cadena y flotante de la lista `areas`.
 
-The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
+El signo `;` es utilizado para colocar comandos en la misma linea. Los siguientes pedazos de código son equivalentes:
 
 ```
-# Same line
+# Misma línea
 command1; command2
 
-# Separate lines
+# Líneas separadas
 command1
 command2
 ```
 
-Which of the code chunks will do the job for us?
+¿Cuál de los siguientes pedazos de código hará nuestro trabajo?
 
 `@instructions`
 - `del(areas[10]); del(areas[11])`
@@ -847,7 +847,7 @@ Which of the code chunks will do the job for us?
 - `del(areas[-3]); del(areas[-4])`
 
 `@hint`
-You can simply try all the different options to see if they work. Just make sure to re-initialize the `areas` list again before you try a new option.
+Puedes simplemente probar las diferentes opciones para ver si funcionan. Solo tienes que asegurarte de reinicializar la lista `areas` cada vez que quieras probar una nueva opción.
 
 `@pre_exercise_code`
 ```{python}
@@ -859,13 +859,13 @@ areas = ["hallway", 11.25, "kitchen", 18.0,
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg4 = "This code chunk will not correctly remove the poolhouse-related information. Try again."
-msg3 = "Correct! You'll learn about easier ways to remove specific elements from Python lists later on."
+msg1 = msg2 = msg4 = "Este pedazo de código no eliminará correctamente la información de la piscina. Intenta de nuevo."
+msg3 = "¡Correcto! Después aprenderás formas más fáciles de eliminar elementos en específico  de una lista en Python."
 test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
-## Inner workings of lists
+## Funcionamiento interno de listas
 
 ```yaml
 type: NormalExercise
@@ -875,18 +875,18 @@ skills: 2
 key: af72db9915
 ```
 
-At the end of the video, Filip explained how Python lists work behind the scenes. In this exercise you'll get some hands-on experience with this.
+En este último tema del capítulo aprenderás como las listas de Python funcionan detrás de escena.
 
-The Python code in the script already creates a list with the name `areas` and a copy named `areas_copy`. Next, the first element in the `areas_copy` list is changed and the `areas` list is printed out. If you hit _Submit Answer_ you'll see that, although you've changed `areas_copy`, the change also takes effect in the `areas` list. That's because `areas` and `areas_copy` point to the same list.
+El código de Python en el guión ya tiene creada una lista con el nombre de `areas` y una copia llamada `areas_copy`. Después, el primer elemento de la lista `areas_copy` es modificado y la lista `areas` es impresa. Si le das click a _Submit Answer_, verás que aunque cambiaste `areas_copy`, el cambio también afectó a la lista `areas`. Esto se debe a que `areas` y `areas_copy` apuntan a la misma lista.
 
-If you want to prevent changes in `areas_copy` to also take effect in `areas`, you'll have to do a more explicit copy of the `areas` list. You can do this with [`list()`](https://docs.python.org/3/library/functions.html#func-list) or by using `[:]`.
+Si quieres prevenir que los cambios en `areas_copy` tomen efecto en `areas`, necesitarás hacer una copia explícita de la lista `areas`. Puedes hacerlo utilizando [`list()`](https://docs.python.org/3/library/functions.html#func-list) o `[:]`.
 
 `@instructions`
-- Change the second command, that creates the variable `areas_copy`, such that `areas_copy` is an explicit copy of `areas`
-- Now, changes made to `areas_copy` shouldn't affect `areas`. Hit _Submit Answer_ to check this.
+- Modifica el segundo comando, el cual crea la variable `areas_copy` tal que la lista `areas_copy` es una copia explícita de `areas`.
+- A continuación, la lista `areas_copy` no deberia afectar a la lista `areas`. Haz click en _Submit Answer_ para verificar.
 
 `@hint`
-Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assign `list(areas)` or `areas[:]`.
+Modifica la línea `areas_copy = areas`. En vez de asignarle `areas`, puedes asignarle `list(areas)` o `areas[:]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -895,42 +895,42 @@ Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assi
 
 `@sample_code`
 ```{python}
-# Create list areas
+# Crea la lista areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
-# Create areas_copy
+# Crea la lista areas_copy
 areas_copy = areas
 
-# Change areas_copy
+# Modifica areas_copy
 areas_copy[0] = 5.0
 
-# Print areas
+# Imprime areas
 print(areas)
 ```
 
 `@solution`
 ```{python}
-# Create list areas
+# Crea la lista areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
-# Create areas_copy
+# Crea la lista areas_copy
 areas_copy = list(areas)
 
-# Change areas_copy
+# Modifica areas_copy
 areas_copy[0] = 5.0
 
-# Print areas
+# Imprime areas
 print(areas)
 ```
 
 `@sct`
 ```{python}
-test_object("areas", undefined_msg = "Don't remove the predefined `areas` list.",
-                     incorrect_msg = "Be sure to edit ONLY the copy, not the original `areas` list. Have another look at the exercise description if you're unsure how to create a copy.")
-test_object("areas_copy", undefined_msg = "Define `areas_copy`, a copy of `areas`",
-                          incorrect_msg = "Be sure to edit `areas_copy`, as instructed.")
+test_object("areas", undefined_msg = "No modifiques o elimines la lista predefinida `areas`.",
+                     incorrect_msg = "Asegúrate de editar SOLAMENTE la copia, no la lista original `areas`. Revisa de nuevo la descripción del ejercicio si no estás seguro de como crear una copia.")
+test_object("areas_copy", undefined_msg = "Define `areas_copy`, una copia de `areas`",
+                          incorrect_msg = "Aseguraté de modificar `areas_copy`, como se indica.")
 
-test_function("print", incorrect_msg = "Print out the original list `areas` by using `print(areas)`.")
+test_function("print", incorrect_msg = "Imprime la lista original `areas` utilizando `print(areas)`.")
 
-success_msg("Nice! The difference between explicit and reference-based copies is subtle, but can be really important. Try to keep in mind how a list is stored in the computer's memory.")
+success_msg("¡Excelente! La diferencia entre copias explícitas y referenciadas es sútil pero es muy importante. Trata de tener en mente como una lista está almacenada en la memoria del computador.")
 ```
