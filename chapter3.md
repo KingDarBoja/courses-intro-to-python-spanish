@@ -242,19 +242,19 @@ skills: 2
 key: 4039302ee0
 ```
 
-Strings come with a bunch of methods. Follow the instructions closely to discover some of them. If you want to discover them in more detail, you can always type `help(str)` in the IPython Shell.
+Las cadenas vienen con un montón de métodos. Sigue las instrucciones al pie de la letra para descubrir algunas de ellas. Si quieres descubrirlas con mayor detalle, siempre puedes escribir `help(str)` en la consola de Python.
 
-A string `room` has already been created for you to experiment with.
+Una cadena de texto `room` ha sido creada para que experimentes con métodos.
 
 `@instructions`
-- Use the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` and store the result in `room_up`. Use the syntax for calling methods that you learned in the previous video.
-- Print out `room` and `room_up`. Did both change?
-- Print out the number of o's on the variable `room` by calling [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `room` and passing the letter `"o"` as an input to the method. We're talking about the variable `room`, not the word `"room"`!
+- Utiliza el método [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) en `room` y guarda el resultado en `room_up`. Utiliza la sintaxis para utilizar métodos de la siguiente manera: `output = variable.method_name(input)`.
+- Imprime `room` y `room_up`. ¿Ambos cambiaron?
+- Imprime el número de letras **o** en la variable `room` llamando el método [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) en `room` y `"o"` como entrada en el método. ¡Estamos hablando de la variable `room`, no de la palabra `"room"`!
 
 `@hint`
-- You can call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method on `room` without any additional inputs.
-- To print out a variable `x`, you can write `print(x)`.
-- Make sure to wrap your `room.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function so that you print it out.
+- Puedes llamar el método [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) en `room` sin necesidad de entradas adicionales.
+- Para imprimir la variable `x`, puedes escribir `print(x)`.
+- Asegúrate de escribir `room.count(___)` dentro de la función [`print()`](https://docs.python.org/3/library/functions.html#print) para imprimirla.
 
 `@pre_exercise_code`
 ```{python}
@@ -263,60 +263,59 @@ A string `room` has already been created for you to experiment with.
 
 `@sample_code`
 ```{python}
-# string to experiment with: room
+# Cadena para experimentar: room
 room = "poolhouse"
 
-# Use upper() on room: room_up
+# Usa upper() en room: room_up
 
 
-# Print out room and room_up
+# Imprime room y room_up
 
 
-# Print out the number of o's in room
+# Imprime el número de o's en room
 
 ```
 
 `@solution`
 ```{python}
-# string to experiment with: room
+# Cadena para experimentar: room
 room = "poolhouse"
 
-# Use upper() on room: room_up
+# Usa upper() en room: room_up
 room_up = room.upper()
 
-# Print out room and room_up
+# Imprime room y room_up
 print(room)
 print(room_up)
 
-# Print out the number of o's in room
+# Imprime el número de o's en room
 print(room.count("o"))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("room", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("room.upper", not_called_msg = "Don't forget to call the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method of the `room` object using the `.` notation. Watch out here, don't forget the parentheses after upper: `room.upper()`.")
-test_object("room_up", incorrect_msg = "Assign the result of your `room.upper()` call to `room_up`.")
+test_function("room.upper", not_called_msg = "No te olvides de llamar el método [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) del objeto `room` utilizando la notación `.`. ¡Cuidado!, no te olvides del paréntesis despúes del nombre del método: `room.upper()`.")
+test_object("room_up", incorrect_msg = "Asigna el resultado de `room.upper()` a `room_up`.")
 
-msg = "For the second instruction, print out `%s` using [`print()`](https://docs.python.org/3/library/functions.html#print)"
+msg = "Para la segunda instrucción, imprime `%s` utilizando [`print()`](https://docs.python.org/3/library/functions.html#print)"
 test_function("print", 1, incorrect_msg = msg % "room")
 test_function("print", 2, incorrect_msg = msg % "room_up")
 
-msg = "Don't forget to count the o's in `room` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument. Make sure to place the `\"o\"` between double quotes."
+msg = "No te olvides de contar el número de o's en `room` llamando el método [`count()`](https://docs.python.org/3/library/functions.html#count) con los argumentos correctos. Asegúrate de colocar `\"o\"` entre comillas dobles."
 test_function("room.count",
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 3, not_called_msg = "Don't forget to print out the number of o's in `room`.")
+test_function("print", 3, not_called_msg = "No te olvides de contar el número de o's en `room`.")
 
 
-success_msg("Nice! Notice from the printouts that the [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) method does not change the object it is called on. This will be different for lists in the next exercise!")
+success_msg("¡Bien! Date cuenta de como el método [`upper()`](https://docs.python.org/3/library/stdtypes.html#str.upper) no modifica el objeto en el que es aplicado. ¡Será diferente para las listas en el siguiente ejercicio!")
 ```
 
-
 ---
-## List Methods
+## Métodos de listas
 
 ```yaml
 type: NormalExercise
@@ -326,20 +325,20 @@ skills: 2
 key: 0dbe8ed695
 ```
 
-Strings are not the only Python types that have methods associated with them. Lists, floats, integers and booleans are also types that come packaged with a bunch of useful methods. In this exercise, you'll be experimenting with:
+Las cadenas no son el único tipo de datos en Python que tienen métodos asociados a ellas. listas, flotantes, enteros y booleanos también son tipos que poseen una gran cantidad de métodos útiles. En este ejercicio, experimentarás con:
 
-- [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index), to get the index of the first element of a list that matches its input and
-- [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count), to get the number of times an element appears in a list.
+- [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index), para obtener el indice del primer elemento de la lista que coincide con su entrada.
+- [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count), para obtener el número de veces que un elemento aparece en una lista.
 
-You'll be working on the list with the area of different parts of a house: `areas`.
+Estarás trabajando con la lista que contiene el área de diferentes partes de una casa: `areas`.
 
 `@instructions`
-- Use the [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index) method to get the index of the element in `areas` that is equal to `20.0`. Print out this index.
-- Call [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) on `areas` to find out how many times `14.5` appears in the list. Again, simply print out this number.
+- Utiliza el método [`index()`](https://docs.python.org/3/library/stdtypes.html#str.index) mpara obtener el indice del elemento en `areas` igual a `20.0`. Imprime este indice.
+- Llama [`count()`](https://docs.python.org/3/library/stdtypes.html#str.count) en `areas` para saber cuantas veces `14.5` aparece en la lista. De nuevo, imprime este número.
 
 `@hint`
-- To print out the index, wrap the `areas.index(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
-- To print out the number of times an element `x` occurs in the list, wrap the `areas.count(___)` call in a [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+- Para imprimir el indice, encierra el llamado `areas.index(___)` dentro de una función [`print()`](https://docs.python.org/3/library/functions.html#print).
+- Para imprimir el número de veces que un elemento `x` ocurre en una lista, encierra el llamado `areas.count(___)` dentro de una función [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@pre_exercise_code`
 ```{python}
@@ -348,51 +347,51 @@ You'll be working on the list with the area of different parts of a house: `area
 
 `@sample_code`
 ```{python}
-# Create list areas
+# Crea la lista areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
-# Print out the index of the element 20.0
+# Imprime el indice del elemento 20.0
 
 
-# Print out how often 14.5 appears in areas
+# Imprime la cantidad de veces que aparece 14.5 en areas
 
 
 ```
 
 `@solution`
 ```{python}
-# Create list areas
+# Crea la lista areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
-# Print out the index of the element 20.0
+# Imprime el indice del elemento 20.0
 print(areas.index(20.0))
 
-# Print out how often 14.5 appears in areas
+# Imprime la cantidad de veces que aparece 14.5 en areas
 print(areas.count(14.5))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Don't forget to find the index of `20.0` in `areas` by calling the [`index()`](https://docs.python.org/3/library/functions.html#index) method on it with the correct argument."
+msg = "No te olvides de buscar el indice `20.0` en `areas` llamando el método [`index()`](https://docs.python.org/3/library/functions.html#index) en este último con los argumentos adecuados."
 test_function("areas.index",
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 1, not_called_msg = "Don't forget to print out the index of `20.0` in `areas`.", incorrect_msg = "For the first printout, you should use `print(areas.index(20.0))`.")
+test_function("print", 1, not_called_msg = "No te olvides de imprimir el indice de `20.0` en `areas`.", incorrect_msg = "Para la primera impresión, deberías utilizar `print(areas.index(20.0))`.")
 
-msg = "Don't forget to count the number of times `14.5` appears in `areas` by calling the [`count()`](https://docs.python.org/3/library/functions.html#count) method on it with the correct argument."
+msg = "No te olvides de contar el número de veces que aparece `14.5` en `areas` llamando el método [`count()`](https://docs.python.org/3/library/functions.html#count) en este último con los argumentos adecuados."
 test_function("areas.count",
               not_called_msg = msg,
               incorrect_msg = msg)
-test_function("print", 2, not_called_msg = "Don't forget to print out the count of `14.5` in `areas`.", incorrect_msg = "For the second printout, you should use `print(areas.count(14.5))`.")
+test_function("print", 2, not_called_msg = "No te olvides de imprimir el número de veces de `14.5` en `areas`.", incorrect_msg = "Para la segunda impresión, deberías utilizar `print(areas.count(14.5))`.")
 
-success_msg("Nice! These were examples of `list` methods that did not change the list they were called on.")
+success_msg("¡Grandioso! Estos fueron ejemplos de métodos de listas (`list`) que no modificaron la lista a la que fueron aplicados.")
 ```
 
 ---
-## List Methods (2)
+## Métodos de listas (2)
 
 ```yaml
 type: NormalExercise
@@ -402,25 +401,25 @@ skills: 2
 key: 1fbeab82d0
 ```
 
-Most list methods will change the list they're called on. Examples are:
+Más de un método de listas modifican la lista en las que son utilizados. Por ejemplo:
 
-- [`append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that adds an element to the list it is called on,
-- [`remove()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that removes the first element of a list that matches the input, and
-- [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), that reverses the order of the elements in the list it is called on.
+- [`append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), el cual agrega un elemento a la lista en la que es llamado,
+- [`remove()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), el cual elimina el primer elemento de una lista que coincide con su entrada, y
+- [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable), que invierte el orden de los elementos en la lista.
 
-You'll be working on the list with the area of different parts of the house: `areas`.
+Seguirás trabajando con la lista que contiene el área de diferentes partes de una casa: `areas`.
 
 `@instructions`
-- Use [`append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) twice to add the size of the poolhouse and the garage again: `24.5` and `15.45`, respectively. Make sure to add them in this order.
-- Print out `areas`
-- Use the [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method to reverse the order of the elements in `areas`.
-- Print out `areas` once more.
+- Usa [`append()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) dos veces para agregar el tamaño de la piscina y la cochera de nuevo: `24.5` y `15.45`, respectivamente. Asegúrate de incluirlas en ese orden.
+- Imprime `areas`
+- Utiliza el método [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) para invertir el orden de los elementos en `areas`.
+- Imprime una vez más `areas`.
 
 `@hint`
-- For the first instruction, use the `areas.append(___)` call twice.
-- To print out a variable `x`, simply write `print(x)`.
-- The [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) method does not require additional inputs; just use the dot notation and empty parentheses: `.reverse()`.
-- To print out a variable `x`, simply write `print(x)`.
+- Para la primera instrucción, utiliza el llamado `areas.append(___)` dos veces.
+- Para imprimir una variable `x`, escribe `print(x)`.
+- El método [`reverse()`](https://docs.python.org/3/library/stdtypes.html#typesseq-mutable) no requiere entradas adicionales; solo utiliza la notación de puntos y paréntesis vacío: `.reverse()`.
+- Para imprimir una variable `x`, escribe `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -429,44 +428,44 @@ You'll be working on the list with the area of different parts of the house: `ar
 
 `@sample_code`
 ```{python}
-# Create list areas
+# Crea la lista areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
-# Use append twice to add poolhouse and garage size
+# Utiliza append dos veces para agregar el tamaño de la piscina y la cochera
 
 
 
-# Print out areas
+# Imprime areas
 
 
-# Reverse the orders of the elements in areas
+# Invierte el orden de elementos en areas
 
 
-# Print out areas
+# Imprime areas
 ```
 
 `@solution`
 ```{python}
-# Create list areas
+# Crea la lista areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
-# Use append twice to add poolhouse and garage size
+# Utiliza append dos veces para agregar el tamaño de la piscina y la cochera
 areas.append(24.5)
 areas.append(15.45)
 
-# Print out areas
+# Imprime areas
 print(areas)
 
-# Reverse the orders of the elements in areas
+# Invierte el orden de elementos en areas
 areas.reverse()
 
-# Print out areas
+# Imprime areas
 print(areas)
 ```
 
 `@sct`
 ```{python}
-msg = "Use the `append()` method on `areas` to expand with `%s` the %s time."
+msg = "Usa el método `append()` en `areas` para expandir `%s` %s veces."
 test_function("areas.append", 1,
               not_called_msg = msg % ( "24.5", "first"),
               incorrect_msg = msg % ( "24.5", "first"))
@@ -474,24 +473,24 @@ test_function("areas.append", 2,
               not_called_msg = msg % ("15.45", "second"),
               incorrect_msg = msg % ("15.45", "second"))
 
-msg = "Use the `reverse()` method on `areas` to reverse it. Don't forget the parantheses!"
+msg = "Usa el método `reverse()` en `areas` para invertir su orden. ¡No te olvides de los parentesis!"
 test_function("areas.reverse",
               not_called_msg = msg,
               incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
+test_function("print", 1, incorrect_msg = "No te olvides de imprimir `areas` dos veces utilizando `print(areas)`.")
 
 
 
-test_function("print", 2, incorrect_msg = "Don't forget to print out `areas` two times using `print(areas)`.")
+test_function("print", 2, incorrect_msg = "No te olvides de imprimir `areas` dos veces utilizando `print(areas)`.")
 
-test_object("areas", incorrect_msg = "The final value of `areas` is not correct although you did the correct operations. Did you change the predefined variables?", undefined_msg = "Don't remove `areas`.")
+test_object("areas", incorrect_msg = "El valor final de `areas` n oes correcto aún cuando hiciste los cálculos indicados. ¿Cambiaste los valores predefinidos?", undefined_msg = "No elimines `areas`.")
 
-success_msg("Great!")
+success_msg("¡Genial!")
 ```
 
 ---
-## Import package
+## Importando paquetes
 
 ```yaml
 type: NormalExercise
@@ -577,7 +576,7 @@ success_msg("Nice!")
 ```
 
 ---
-## Selective import
+## Importación selectiva
 
 ```yaml
 type: NormalExercise
@@ -657,7 +656,7 @@ success_msg("Nice! Head over to the next exercise.")
 ```
 
 ---
-## Different ways of importing
+## Diferentes maneras de importar
 
 ```yaml
 type: MultipleChoiceExercise
