@@ -644,7 +644,7 @@ print(dist)
 msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("r", undefined_msg = msg, incorrect_msg = msg)
 
-test_import("math.radians", not_imported_msg = "Asegúrate de importar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Deberías usar la notación `from ___ import ___`", incorrect_as_msg = "No le des un "alias" a la función [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Solo escribe `from math import radians`.")
+test_import("math.radians", not_imported_msg = "Asegúrate de importar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Deberías usar la notación `from ___ import ___`", incorrect_as_msg = "No le des un alias a la función [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Solo escribe `from math import radians`.")
 
 test_object("dist", do_eval = False)
 test_function("math.radians", 1, incorrect_msg = "Llama [`radians()`](https://docs.python.org/3/library/math.html#math.radians) con el argumento `12`.", not_called_msg = "El calculo de `dist` no es correcto. Deberías usar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Si lo importaste correctamente, no debes usar la notación (`.`).")
