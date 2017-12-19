@@ -500,24 +500,24 @@ skills: 2
 key: 7432a6376f
 ```
 
-As a data scientist, some notions of geometry never hurt. Let's refresh some of the basics.
+Como un científico de datos, algunas nociones de geometría nunca caen mal. Vamos a repasar algunas de las básicas.
 
-For a fancy clustering algorithm, you want to find the circumference, $C$, and area, $A$, of a circle. When the radius of the circle is `r`, you can calculate $C$ and $A$ as:
+Para un sofisticado algoritmo de agrupamiento, quieres encontrar la circunferencia, $C$, y el área, $A$, de un círculo. Siendo el radio del círculo igual a `r`, puedes calcular $C$ y $A$ como:
 
 $$C = 2 \pi r$$
 $$A = \pi r^2 $$
 
-To use the constant `pi`, you'll need the `math` package. A variable `r` is already coded in the script. Fill in the code to calculate `C` and `A` and see how the [`print()`](https://docs.python.org/3/library/functions.html#print) functions create some nice printouts.
+Para usar la constante `pi`, necesitarás el paquete `math`. La variable `r` ya está definida en el código. Termina el código para calcular `C` y `A` y mira como la función [`print()`](https://docs.python.org/3/library/functions.html#print) imprime unos buenos resultados.
 
 `@instructions`
-- Import the `math` package. Now you can access the constant `pi` with `math.pi`.
-- Calculate the circumference of the circle and store it in `C`.
-- Calculate the area of the circle and store it in `A`.
+- Importa el paquete `math`. Ahora puedes acceder a la constante `pi` con `math.pi`.
+- Calcula la circunferencia del círculo y guárdalo en `C`.
+- Calcula el área del círculo y guárdalo en `A`.
 
 `@hint`
-- You can simply use `import math`, and then refer to `pi` with `math.pi`.
-- Use the equation in the assignment to find `C`. Use `*`
-- Use the equation in the assignment to find `A`. Use `*` and `**`.
+- Puedes simplemente escribir `import math`, y luego referirte a `pi` con `math.pi`.
+- Utiliza la ecuación en las instrucciones para encontrar `C`. Usa `*`
+- Utiliza la ecuación en las instrucciones para encontrar `A`. Usa `*` y `**`.
 
 `@pre_exercise_code`
 ```{python}
@@ -526,53 +526,53 @@ To use the constant `pi`, you'll need the `math` package. A variable `r` is alre
 
 `@sample_code`
 ```{python}
-# Definition of radius
+# Definición del radio
 r = 0.43
 
-# Import the math package
+# Importa el paquete math
 
 
-# Calculate C
+# Calcula C
 C = 0
 
-# Calculate A
+# Calcula A
 A = 0
 
-# Build printout
+# Imprime los resultados
 print("Circumference: " + str(C))
 print("Area: " + str(A))
 ```
 
 `@solution`
 ```{python}
-# Definition of radius
+# Definición del radio
 r = 0.43
 
-# Import the math package
+# Importa el paquete math
 import math
 
-# Calculate C
+# Calcula C
 C = 2 * r * math.pi
 
-# Calculate A
+# Calcula A
 A = math.pi * r ** 2
 
-# Build printout
+# Imprime los resultados
 print("Circumference: " + str(C))
 print("Area: " + str(A))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("r", undefined_msg = msg, incorrect_msg = msg)
 test_import("math", same_as = False)
-test_object("C", incorrect_msg = "Your calculation of `C` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
-test_object("A", incorrect_msg = "Your calculation of `A` is not quite correct. You should use `pi` of the `math` package using the dot notation (`.`).")
-msg = "You don't have to change or remove the predefined `print()` functions at the end."
+test_object("C", incorrect_msg = "El cálculo de `C` no es correcto. Debes utilizar `pi` del paquete `math` utilizando la notación (`.`).")
+test_object("A", incorrect_msg = "El cálculo de `A` no es correcto. Debes utilizar `pi` del paquete `math` utilizando la notación (`.`).")
+msg = "No tienes que modificar o eliminar la función `print()` predefinida al final."
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
-success_msg("Nice!")
+success_msg("¡Bien!")
 ```
 
 ---
@@ -586,23 +586,23 @@ skills: 2
 key: fe65eff50a
 ```
 
-General imports, like `import math`, make **all** functionality from the `math` package available to you. However, if you decide to only use a specific part of a package, you can always make your import more selective:
+Importaciones genéricas como `import math`, permiten disponder de **todas** las funcionalidades del paquete `math`. Sin embargo, si tu decides utilizar solo una parte en especifico de un paquete, siempre puedes hacer tu importación más selectiva:
 
 ```
 from math import pi
 ```
 
-Let's say the Moon's orbit around planet Earth is a perfect circle, with a radius `r` (in km) that is defined in the script.
+Digamos que la órbita de la Luna alrededor de la Tierra es perfectamente circular, con un radio de `r` (en km), ya definido en el guión.
 
 `@instructions`
-- Perform a selective import from the `math` package where you only import the `radians` function.
-- Calculate the distance travelled by the Moon over 12 degrees of its orbit. Assign the result to `dist`. You can calculate this as `r * phi`, where `r` is the radius and `phi` is the angle in radians. To convert an angle in degrees to an angle in radians, use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function, which you just imported.
-- Print out `dist`.
+- Realice una importación selectiva desde el paquete `math` donde solo se importa la función `radians`.
+- Calcula la distancia recorrida por la Luna en 12 grados de su órbita. Asigna el resultado a `dist`. Puedes calcularlo como `r * phi`, donde `r` es el radio y `phi` es el ángulo en radianes. Para convertir un ángulo en grados a radianes, usa la función [`radians()`](https://docs.python.org/3/library/math.html#math.radians), la cual acabas de importar.
+- Imprime `dist`.
 
 `@hint`
-- Use `from math import radians` to do the selective import.
-- You can simply use the [`radians()`](https://docs.python.org/3/library/math.html#math.radians) function now. Pass the function the number 12 to get the angle in radians.
-- To print out a variable `x`, simply type `print(x)`.
+- Usa `from math import radians` para hacer una importación selectiva.
+- Ahora puedes utilizar la función [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Pasa a la función el número 12 para obtener el ángulo en radianes.
+- Para imprimir una variable `x`, simplemente escribe `print(x)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -611,48 +611,48 @@ Let's say the Moon's orbit around planet Earth is a perfect circle, with a radiu
 
 `@sample_code`
 ```{python}
-# Definition of radius
+# Definición de radio
 r = 192500
 
-# Import radians function of math package
+# Importa la función radians del paquete math
 
 
-# Travel distance of Moon over 12 degrees. Store in dist.
+# Distancia recorrida por la Luna en 12 grados. Guárdala dist.
 
 
-# Print out dist
+# Imprime dist
 
 ```
 
 `@solution`
 ```{python}
-# Definition of radius
+# Definición de radio
 r = 192500
 
-# Import radians function of math package
+# Importa la función radians del paquete math
 from math import radians
 
-# Travel distance of Moon over 12 degrees. Store in dist.
+# Distancia recorrida por la Luna en 12 grados. Guárdala dist.
 dist = r * radians(12)
 
-# Print out dist
+# Imprime dist
 print(dist)
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar los valores predefinidos."
 test_object("r", undefined_msg = msg, incorrect_msg = msg)
 
-test_import("math.radians", not_imported_msg = "Be sure to import [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. You should use the `from ___ import ___` notation.", incorrect_as_msg = "Don't set any alias for [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Just type `from math import radians`.")
+test_import("math.radians", not_imported_msg = "Asegúrate de importar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Deberías usar la notación `from ___ import ___`", incorrect_as_msg = "No le des un "alias" a la función [`radians()`](https://docs.python.org/3/library/math.html#math.radians). Solo escribe `from math import radians`.")
 
 test_object("dist", do_eval = False)
-test_function("math.radians", 1, incorrect_msg = "Call [`radians()`](https://docs.python.org/3/library/math.html#math.radians) with argument `12`.", not_called_msg = "Your calculation of `dist` is not quite correct. You should use [`radians()`](https://docs.python.org/3/library/math.html#math.radians) from the `math` package. If you imported correctly, you don't have to use the dot (`.`) notation.")
-test_object("dist", incorrect_msg = "Assign the result of your calculations to `dist`.")
+test_function("math.radians", 1, incorrect_msg = "Llama [`radians()`](https://docs.python.org/3/library/math.html#math.radians) con el argumento `12`.", not_called_msg = "El calculo de `dist` no es correcto. Deberías usar [`radians()`](https://docs.python.org/3/library/math.html#math.radians) del paquete `math`. Si lo importaste correctamente, no debes usar la notación (`.`).")
+test_object("dist", incorrect_msg = "Asigna el resultado de tu calculo a `dist`.")
 
-test_function("print", incorrect_msg = "Make sure to print out `dist` using `print(dist)`.")
+test_function("print", incorrect_msg = "Asegúrate de imprimir `dist` utilizando `print(dist)`.")
 
-success_msg("Nice! Head over to the next exercise.")
+success_msg("¡Bien! Dirígete al siguiente ejercicio.")
 ```
 
 ---
@@ -666,15 +666,15 @@ skills: 2
 key: f1b2675a2a
 ```
 
-There are several ways to import packages and modules into Python. Depending on the import call, you'll have to use different Python code.
+Hay diferentes maneras de importando paquetes y módulos en Python. Dependiendo del llamado para importar, tendrás que utilizar diferentes códigos de Python.
 
-Suppose you want to use the function [`inv()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html), which is in the `linalg` subpackage of the `scipy` package. You want to be able to use this function as follows:
+Supongamos que quieres utilziar la función [`inv()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linalg.inv.html), el cual hace parte del subpaquete `linalg` del paquete `scipy`. Deseas poder utilizar dicha función de la siguiente manera:
 
 ```
 my_inv([[1,2], [3,4]])
 ```
 
-Which `import` statement will you need in order to run the above code without an error?
+¿Cuál sentencia `import` necesitas para ejecutar el código de arriba sin errores?
 
 `@instructions`
 - `import scipy`
@@ -683,7 +683,7 @@ Which `import` statement will you need in order to run the above code without an
 - `from scipy.linalg import inv as my_inv`
 
 `@hint`
-Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors.
+Prueba las diferentes sentencias de importación en la consola de Python y mira cual de ellas provoca que la línea `my_inv([[1, 2], [3, 4]])` se ejecute sin errores.
 
 `@pre_exercise_code`
 ```{python}
@@ -692,7 +692,7 @@ Try the different import statements in the IPython shell and see which one cause
 
 `@sct`
 ```{python}
-msg1 = msg2 = msg3 = "Incorrect, try again. Try the different import statements in the IPython shell and see which one causes the line `my_inv([[1, 2], [3, 4]])` to run without errors."
-msg4 = "Correct! The `as` word allows you to create a local name for the function you're importing: [`inv()`](https://docs.python.org/3/library/functions.html#inv) is now available as `my_inv()`."
+msg1 = msg2 = msg3 = "Incorrecto, vuelve a intentarlo. Prueba las diferentes sentencias de importación en la consola de Python y mira cual de ellas provoca que la línea `my_inv([[1, 2], [3, 4]])` se ejecute sin errores."
+msg4 = "Correcto! La palabra `as` te permite crear un nombre local para la función que estas importando: [`inv()`](https://docs.python.org/3/library/functions.html#inv) esta disponible ahora como `my_inv()`."
 test_mc(4, [msg1, msg2, msg3, msg4])
 ```
