@@ -22,7 +22,7 @@ b = "buena"
 my_list = ["mi", "lista", a, b]
 ```
 
-Despúes de medir la estatura de tu familia, decides coleccionar información sobre la casa donde vives. Las áreas de las diferentes partes de tu casa están guardadas en variables diferentes por ahora, como puedes notar en el código.
+después de medir la estatura de tu familia, decides coleccionar información sobre la casa donde vives. Las áreas de las diferentes partes de tu casa están guardadas en variables diferentes por ahora, como puedes notar en el código.
 
 `@instructions`
 - Crea una lista llamada `areas`, la cual contien el área del vestíbulo (`hall`), la cocina (`kit`), la sala (`liv`), el cuarto (`bed`) y el baño (`bath`), en ese orden. Usa las variables predefinidas.
@@ -308,7 +308,7 @@ success_msg("¡Genial! ¡Prepárate para conocer sobre subconjuntos de listas!")
 ```
 
 ---
-## Subset and conquer
+## Selecciona y vencerás
 
 ```yaml
 type: NormalExercise
@@ -318,25 +318,25 @@ skills: 2
 key: c3ce582e32
 ```
 
-Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
+La selección de listas en Python son una maravilla. Mira el código debajo, el cual crea una lista `x` y entonces selecciona "b" de ella. Recuerda que si es el segundo elemento, este tiene un indice de 1. También puedes utilizar indices negativos.
 
 ```
 x = ["a", "b", "c", "d"]
 x[1]
-x[-3] # same result!
+x[-3] # ¡Mismo resultado!
 ```
 
-Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+¿Recuerdas la lista `areas` de antes, la cual contenia cadenas y flotantes? Está ya se encuentra definida en el código. ¿Puedes agregar el código adecuado para hacer una selección en Python?
 
 `@instructions`
-- Print out the second element from the `areas` list, so `11.25`.
-- Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
-- Select the number representing the area of the living room and print it out.
+- Imprime el segundo elemento de la lista `areas`, es decir, `11.25`.
+- Selecciona e imprime el último elemento de `areas`, siendo este `9.50`. ¡Utilizar un indice negativo tiene más sentido acá!
+- Selecciona el número que representa el área de la sala (_living room_) e imprimelo.
 
 `@hint`
-- Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
-- Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
-- The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
+- Usa `x[1]` para seleccionar el segundo elemento de una lista `x`. Asegúrate de enmarcar tu operación de selección dentro de una función [`print()`](https://docs.python.org/3/library/functions.html#print).
+- Usa `x[-1]` para seleccionar el último elemento de una lista `x`. Asegúrate de enmarcar tu operación de selección dentro de una función [`print()`](https://docs.python.org/3/library/functions.html#print).
+- El número representando el área de la sala es el sexto elemento de la lista, así que necesitarás utilizar `[5]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -345,46 +345,46 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 
 `@sample_code`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Print out second element from areas
+# Imprime el segundo elemento de areas
 
 
-# Print out last element from areas
+# Imprime el último elemento de areas
 
 
-# Print out the area of the living room
+# Imprime el área de la sala (living room)
 
 ```
 
 `@solution`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Print out second element from areas
+# Imprime el segundo elemento de areas
 print(areas[1])
 
-# Print out last element from areas
+# Imprime el último elemento de areas
 print(areas[-1])
 
-# Print out the area of the living room
+# Imprime el área de la sala (living room)
 print(areas[5])
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "No modifiques o elimines la lista predefinida `areas`."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 test_function("print", index = 1)
 test_function("print", index = 2)
 test_function("print", index = 3)
-success_msg("Good job!")
+success_msg("¡Buen trabajo!")
 ```
 
 ---
-## Subset and calculate
+## Selecciona y calcula
 
 ```yaml
 type: NormalExercise
@@ -394,7 +394,7 @@ skills: 2
 key: 58c969f11f
 ```
 
-After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list `x` are extracted. The strings that result are pasted together using the `+` operator:
+Después de extraer los valores de una lista, también puedes hacer cálculos adicionales. Toma este ejemplo, donde el segundo y cuarto elemento de una lista `x` son extraídos. Las cadenas resultantes son juntadas utilizando el operador `+`:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -402,12 +402,12 @@ print(x[1] + x[3])
 ```
 
 `@instructions`
-- Using a combination of list subsetting and variable assignment, create a new variable, `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
-- Print the new variable `eat_sleep_area`.
+- Utilizando una combinación de selecciones de lista y asignación de variables, crea una nueva variable llamada `eat_sleep_area`, la cual contiene la suma de las áreas de la cocina y el área del dormitorio.
+- Imprime la nueva variable `eat_sleep_area`.
 
 `@hint`
-- Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
-- Print out `eat_sleep_area`: `print(eat_sleep_area)`.
+- Agrega `areas[3]` a `areas[-3]` para calcular `eat_sleep_area`.
+- Imprime `eat_sleep_area`: `print(eat_sleep_area)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -416,39 +416,39 @@ print(x[1] + x[3])
 
 `@sample_code`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Sum of kitchen and bedroom area: eat_sleep_area
+# Suma la cocina con el dormitorio: eat_sleep_area
 
 
-# Print the variable eat_sleep_area
+# Imprime la variable eat_sleep_area
 
 ```
 
 `@solution`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Sum of kitchen and bedroom area: eat_sleep_area
+# Suma la cocina con el dormitorio: eat_sleep_area
 eat_sleep_area = areas[3] + areas[-3]
 
-# Print the variable eat_sleep_area
+# Imprime la variable eat_sleep_area
 print(eat_sleep_area)
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "No modifiques o elimines la lista predefinida `areas`."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_object("eat_sleep_area", incorrect_msg = "Be sure to assign the correct value to `eat_sleep_area`. You'll need the indices `3` and `-3`.")
-test_function("print", incorrect_msg = "Print out the value you found, stored in `eat_sleep_area`. Use `print(eat_sleep_area)`.")
-success_msg("Bellissimo!")
+test_object("eat_sleep_area", incorrect_msg = "Asegúrate de asignar el valor correcto a `eat_sleep_area`. necesitarás los indices `3` and `-3`.")
+test_function("print", incorrect_msg = "Imprime el valor obtenido, guardado en `eat_sleep_area`. Usa `print(eat_sleep_area)`.")
+success_msg("¡Bellíssimo!")
 ```
 
 ---
-## Slicing and dicing
+## Rebanando y cortando
 
 ```yaml
 type: NormalExercise
@@ -458,32 +458,32 @@ skills: 2
 key: 7f08642d18
 ```
 
-Selecting single values from a list is just one part of the story. It's also possible to _slice_ your list, which means selecting multiple elements from your list. Use the following syntax:
+La selección de valores individuales de una lista es solo una parte de la historia. También es posible _rebanar_ tu lista, lo cual significa seleccionar múltiples elementos de una lista. Utiliza la siguiente sintaxis:
 
 ```
 my_list[start:end]
 ```
 
-The `start` index will be included, while the `end` index is _not_.
+El indice `start` es incluido mientras que el indice `end` _no lo es_.
 
-The code sample below shows an example. A list with `"b"` and `"c"`, corresponding to indexes 1 and 2, are selected from a list `x`:
+El código ejemplo se muestra a continuación, donde una lista con `"b"` y `"c"` (indice 1 y 2 respectivamente) son seleccionados de una lista `x`:
 
 ```
 x = ["a", "b", "c", "d"]
 x[1:3]
 ```
 
-The elements with index 1 and 2 are included, while the element with index 3 is not.
+Los elementos con indices 1 y 2 son incluidos mientras que el indice 3 no lo es.
 
 `@instructions`
-- Use slicing to create a list, `downstairs`, that contains the first 6 elements of `areas`.
-- Do a similar thing to create a new variable, `upstairs`, that contains the last 4 elements of `areas`.
-- Print both `downstairs` and `upstairs` using [`print()`](https://docs.python.org/3/library/functions.html#print).
+- Utiliza el concepto de _rebanar_ para crear una lista llamada `downstairs`, la cual contiene los primeros seis (6) elementos de `areas`.
+- Haz lo mismo para crear una nueva variable llamada `upstairs`, la cual contiene los útlimos cuatro (4) elementos de `areas`.
+- Imprime tanto `downstairs` como `upstairs` usando [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@hint`
-- Use the brackets `[0:6]` to build `downstairs`.
-- Use the brackets `[6:10]` to build `upstairs`.
-- Simply add two [`print()`](https://docs.python.org/3/library/functions.html#print) calls to the script to print out `downstairs` and `upstairs`.
+- Usa los paréntesis `[0:6]` para construir `downstairs`.
+- Usa los paréntesis `[6:10]` para construir `upstairs`.
+- Simplemente agrega dos llamados de [`print()`](https://docs.python.org/3/library/functions.html#print) al guión para imprimir `downstairs` y `upstairs`.
 
 `@pre_exercise_code`
 ```{python}
@@ -492,50 +492,50 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 
 `@sample_code`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Use slicing to create downstairs
+# Usa rebanar para crear downstairs
 
 
-# Use slicing to create upstairs
+# Usa rebanar para crear upstairs
 
 
-# Print out downstairs and upstairs
+# Imprime downstairs y upstairs
 ```
 
 `@solution`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Use slicing to create downstairs
+# Usa rebanar para crear downstairs
 downstairs = areas[0:6]
 
-# Use slicing to create upstairs
+# Usa rebanar para crear upstairs
 upstairs = areas[6:10]
 
-# Print out downstairs and upstairs
+# Imprime downstairs y upstairs
 print(downstairs)
 print(upstairs)
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "No modifiques o elimines la lista predefinida `areas`."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("downstairs", incorrect_msg = "Your definition of `downstairs` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `0:6` where the dots are, for example.")
-test_object("upstairs", incorrect_msg = "Your definition of `upstairs` is incorrect. Use `areas[...]` and slicing to select the elements you want. You could use `6:10` where the dots are, for example.")
+test_object("downstairs", incorrect_msg = "Tu definición de `downstairs` es incorrecta. Usa `areas[...]` y rebanar para seleccionar los elementos deseados. Puedes utilizar `0:6` donde están los puntos, por ejemplo.")
+test_object("upstairs", incorrect_msg = "Tu definición de `upstairs` es incorrecta. Usa `areas[...]` y rebanar para seleccionar los elementos deseados. Puedes utilizar `6:10` donde están los puntos, por ejemplo.")
 
-test_function("print", 1, incorrect_msg = "First, print out `downstairs` using `print(downstairs)`.")
-test_function("print", 2, incorrect_msg = "First, print out `upstairs` using `print(upstairs)`.")
+test_function("print", 1, incorrect_msg = "Primero, imprime `downstairs` usando `print(downstairs)`.")
+test_function("print", 2, incorrect_msg = "Primero, imprime `upstairs` usando `print(upstairs)`.")
 
-success_msg("Great!")
+success_msg("¡Estupendo!")
 ```
 
 ---
-## Slicing and dicing (2)
+## Rebanando y cortando (2)
 
 ```yaml
 type: NormalExercise
@@ -545,13 +545,13 @@ skills: 2
 key: dfc9a168a3
 ```
 
-In the video, Filip first discussed the syntax where you specify both where to begin and end the slice of your list:
+Anteriormente mencionamos la sintaxis para especificar tanto el comienzo como el fin de una rebanada de tu lista:
 
 ```
 my_list[begin:end]
 ```
 
-However, it's also possible not to specify these indexes. If you don't specify the `begin` index, Python figures out that you want to start your slice at the beginning of your list. If you don't specify the `end` index, the slice will go all the way to the last element of your list. To experiment with this, try the following commands in the IPython Shell:
+Sin embargo, también es posible no especificar esos indices. Si no especificas el indice `begin`, Python determina que deseas comenzar tu rebanada al comienzo de la lista. Si no especificas el indice `final`, la rebanada ira hasta el último elemento de la lista. Para experimentar con esto, intenta los siguientes comandos en la consola de Python:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -561,10 +561,10 @@ x[:]
 ```
 
 `@instructions`
-Use slicing to create the lists `downstairs` and `upstairs` again, but this time without using indexes if it's not necessary. Remember `downstairs` is the first 6 elements of `areas` and `upstairs` is the last 4 elements of `areas`.
+Utiliza las rebanadas para crear las listas `downstairs` y `upstairs` de nuevo, pero esta vez sin utilizar los indices si no son necesarios. Recuerda, `downstairs` serán los primeros seis (6) elementos de `areas` y `upstairs` ilos últimos cuatro (4) elementos de `areas`.
 
 `@hint`
-To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:]`.
+Para construir `downstairs`, puedes utilizar `[:6]`. Para construir `upstairs`, puedes usar `[6:]`.
 
 `@pre_exercise_code`
 ```{python}
@@ -573,41 +573,41 @@ To build `downstairs`, you can use `[:6]`. To build `upstairs`, you can use `[6:
 
 `@sample_code`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Alternative slicing to create downstairs
+# Forma alternativa de rebanar para crear downstairs
 
 
-# Alternative slicing to create upstairs
+# Forma alternativa de rebanar para crear upstairs
 
 ```
 
 `@solution`
 ```{python}
-# Create the areas list
+# Crea la lista areas
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
 
-# Alternative slicing to create downstairs
+# Forma alternativa de rebanar para crear downstairs
 downstairs = areas[:6]
 
-# Alternative slicing to create upstairs
+# Forma alternativa de rebanar para crear upstairs
 upstairs = areas[6:]
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined `areas` list."
+msg = "No modifiques o elimines la lista predefinida `areas`."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
 
-msg = "Your definition of `%s` is incorrect. Use the `areas[...]` and slicing to select the elements you want. You could use `%s` where the dots are, for example."
+msg = "Tu definición de `%s` es incorrecta. Utiliza `areas[...]` y la notación para _rebanar_ con el fin de seleccionar los elementos deseados. Puedes utilizar `%s` donde  están los puntos, por ejemplo."
 
 test_object("downstairs", incorrect_msg = msg % ("downstairs",":6"))
 test_student_typed("\[\\s*:(6|-4)\\s*\]", not_typed_msg = msg % ("downstairs",":6"))
 test_object("upstairs", incorrect_msg = msg % ("upstairs","6:"))
 test_student_typed("\[\\s*(6|-4):\\s*\]", not_typed_msg = msg % ("upstairs","6:"))
 
-success_msg("Wonderful!")
+success_msg("¡Maravilloso!")
 ```
 
 ---
