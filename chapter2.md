@@ -4,7 +4,7 @@ title       : Listas de Python
 description : "Aprende a almacenar, acceder y manipular datos en una lista: el primer paso hacia un trabajo eficiente con gran cantidad de datos."
 
 ---
-## Create a list
+## Crea una lista
 
 ```yaml
 type: NormalExercise
@@ -14,23 +14,23 @@ skills: 2
 key: e6c527bf41
 ```
 
-As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
+Contrario a `int`, `bool`, etc., una lista es un **tipo de dato compuesto**; donde puedes agrupar valores:
 
 ```
-a = "is"
-b = "nice"
-my_list = ["my", "list", a, b]
+a = "es"
+b = "buena"
+my_list = ["mi", "lista", a, b]
 ```
 
-After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
+Despúes de medir la estatura de tu familia, decides coleccionar información sobre la casa donde vives. Las áreas de las diferentes partes de tu casa están guardadas en variables diferentes por ahora, como puedes notar en el código.
 
 `@instructions`
-- Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
-- Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
+- Crea una lista llamada `areas`, la cual contien el área del vestíbulo (`hall`), la cocina (`kit`), la sala (`liv`), el cuarto (`bed`) y el baño (`bath`), en ese orden. Usa las variables predefinidas.
+- Imprime `areas` con la función [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@hint`
-- You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
-- Put `print(areas)` in your script to print out the list when submitting.
+- Puedes utilizar variables que ya han sido creadas para construir la lista: `areas = [hall, kit, ...]`.
+- Coloca `print(areas)` en tu código para imprimir la lista al hacer click en _Submit Answer_.
 
 `@pre_exercise_code`
 ```{python}
@@ -39,55 +39,55 @@ After measuring the height of your family, you decide to collect some informatio
 
 `@sample_code`
 ```{python}
-# area variables (in square meters)
+# Variables de áreas (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# Create list areas
+# Crea la lista areas
 
 
-# Print areas
+# Imprime la lista areas
 
 
 ```
 
 `@solution`
 ```{python}
-# Area variables (in square meters)
+# Variables de áreas (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# Create list areas
+# Crea la lista areas
 areas = [hall, kit, liv, bed, bath]
 
-# Print areas
+# Imprime la lista areas
 print(areas)
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined variables!"
+msg = "¡No elimines o modifiques las variables predefinidas!"
 test_object("hall", undefined_msg = msg, incorrect_msg = msg)
 test_object("kit", undefined_msg = msg, incorrect_msg = msg)
 test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typos. The list doesn't have to contain anything else.")
+test_object("areas", incorrect_msg = "Define `areas` como una lista que contiene todas las areas, en el orden correcto: `hall`, `kit`, `liv`, `bed` and `bath`. Ten cuidado con errores tipográficos. La lista no debe tener nada más.")
 
-test_function("print", incorrect_msg = "Print out the `areas` list you created by using `print(areas)`.")
+test_function("print", incorrect_msg = "Imprime la lista `areas` que haz creado utilizando `print(areas)`.")
 
-success_msg("Nice! A list is way better here, isn't it?")
+success_msg("¡Bien! Una lista es mucho mejor, ¿No crees?")
 ```
 
 ---
-## Create list with different types
+## Creando una lista con diferentes tipos
 
 ```yaml
 type: NormalExercise
@@ -97,19 +97,19 @@ skills: 2
 key: 1702a8bcdc
 ```
 
-A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
+Una lista puede contener cualquier tipo de dato de Python. Aun cuando no es muy común, una lista también puede contener una mezcla de tipos incluyendo cadenas, flotantes, booleanos, etc.
 
-The printout of the previous exercise wasn't really satisfying. It's just a list of numbers representing the areas, but you can't tell which area corresponds to which part of your house.
+El resultado del ejercicio anterior no fue tan satisfactorio. Solo eran una lista de números representado las áreas, pero no puedes decir con certeza cual área corresponde a que parte de la casa.
 
-The code on the right is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
+El código a la derecha es el comienzo de una solución. Para algunas áreas, el nombre correspondiente al cuarto ya se encuentra agregado. ¡Presta atención! `"bathroom"` es una cadena mientras que `bath` es una variable que representa el número flotante `9.50` que definiste anteriormente.
 
 `@instructions`
-- Finish the line of code that creates the `areas` list such that the list first contains the name of each room as a string and then its area. More specifically, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
-- Print `areas` again; is the printout more informative this time?
+- Termina la linea de código que crea la lista `areas` tal que la lista primero contenga el nombre de cada cuarto como una cadena y luego su correspondiente area. Siendo más específicos, agrega las cadenas `"hallway"`, `"kitchen"` y `"bedroom"` en los lugares adecuados.
+- Imprime `areas` de nuevo; ¿El resultado ahora es más informativo?
 
 `@hint`
-- The strings `"living room"` and `"bathroom"` have already been placed into the list. Do the same thing for `"hallway"`, `"kitchen"` and `"bedroom"`.
-- To print `areas`, simply type `print(areas)`.
+- Las cadenas `"living room"` y `"bathroom"` ya se han colocado en la lista. Haz lo mismo para `"hallway"`, `"kitchen"` y `"bedroom"`.
+- Para imprimir `areas`, escribe `print(areas)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -118,54 +118,54 @@ The code on the right is the start of a solution. For some of the areas, the nam
 
 `@sample_code`
 ```{python}
-# area variables (in square meters)
+# Variables de áreas (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# Adapt list areas
+# Adapta la lista areas
 areas = [hall, kit, "living room", liv, bed, "bathroom", bath]
 
-# Print areas
+# Imprime la lista areas
 
 ```
 
 `@solution`
 ```{python}
-# area variables (in square meters)
+# Variables de áreas (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# Adapt list areas
+# Adapta la lista areas
 areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "bathroom", bath]
 
-# Print areas
+# Imprime la lista areas
 print(areas)
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined variables!"
+msg = "¡No elimines o modifiques las variables predefinidas!"
 test_object("hall", undefined_msg = msg, incorrect_msg = msg)
 test_object("kit", undefined_msg = msg, incorrect_msg = msg)
 test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("areas", incorrect_msg = "You didn't assign the correct value to `areas`. Have another look at the instructions. Make sure to place the room name before the variable containing the area each time. The order matters here! Watch out for typos.")
+test_object("areas", incorrect_msg = "No asignaste el valor correcto en `areas`. Revisa de nuevo las instrucciones. Asegúrate de colocar el nombre del cuarto antes que la variable que contiene el área para cada uno. ¡El orden aquí es importante! Cuidado con los errores tipográficos.")
 
 test_function("print")
 
-success_msg("Nice! This list contains both strings and floats, but that's not a problem for Python!")
+success_msg("¡Muy bien! Esta lista contiene tanto cadenas como flotantes, pero ¡eso no es problema para Python!")
 ```
 
 ---
-## Select the valid list
+## Selecciona la lista correcta
 
 ```yaml
 type: MultipleChoiceExercise
@@ -175,13 +175,13 @@ skills: 2
 key: 416b80a405
 ```
 
-A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
+Una lista puede contener cualquier tipo de dato. Pero una lista también es un tipo de dato en Python. Eso significa que una lista ¡También puede contener una lista! Python se esta volviendo complicado en el momento, pero no temas, solo recuerda la sintaxis de una lista:
 
 ```
 my_list = [el1, el2, el3]
 ```
 
-Can you tell which ones of the following lines of Python code are valid ways to build a list?
+¿Puedes decir cuáles de las siguientes lineas de código Python son formas validas de construir una lista?
 
 A. `[1, 3, 4, 2]`
 B. `[[1, 2, 3], [4, 5, 7]]`
@@ -189,13 +189,13 @@ C. `[1 + 2, "a" * 5, 3]`
 
 
 `@instructions`
-- A, B and C
+- A, B y C
 - B
-- B and C
+- B y C
 - C
 
 `@hint`
-Try out all the different lines in the Python shell and see which ones generate an error. Maybe none of them go wrong?
+Prueba cada una de las diferentes líneas en la consola de Python y mira cuál de ellas produce un error. ¿Quizás ninguna esta errada?
 
 `@pre_exercise_code`
 ```{python}
@@ -204,15 +204,15 @@ Try out all the different lines in the Python shell and see which ones generate 
 
 `@sct`
 ```{python}
-msg1 = "Correct! As funny as they may look, all these commands are valid ways to build a Python list."
-msg2 = "Command B is valid, but it's not the only one!"
-msg3 = "Both command B and C are valid; what about command A? Try it out in the console."
-msg4 = "Command C is valid, but it's not the only one!"
+msg1 = "¡Correcto! Tan gracioso como parece, todos estos comandos son formas validas de construir una lista en Python."
+msg2 = "Comando B es válido, ¡Pero no es el único!"
+msg3 = "Tanto B como C son comandos válidos; ¿Y qué hay acerca del A? Pruébalo en la consola."
+msg4 = "Comando C es válido, ¡Pero no es el único!"
 test_mc(1,[msg1,msg2,msg3,msg4])
 ```
 
 ---
-## List of lists
+## Lista de listas
 
 ```yaml
 type: NormalExercise
@@ -222,21 +222,21 @@ skills: 2
 key: 9158c577b0
 ```
 
-As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
+Como un científico de los datos, te encontrarás con muchos datos y tendrá sentido agrupar parte de esos datos.
 
-Instead of creating a flat list containing strings and floats, representing the names and areas of the rooms in your house, you can create a list of lists. The script on the right can already give you an idea.
+En vez de crear una lista plana que contenga solo cadenas y flotantes, representando los nombres y las áreas de los cuartos en tu casa, tu puedes crear una lista de listas. El código a tu derecha te dará una idea.
 
-Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
+No te confundas: `"hallway"` es una cadena mientras que `hall` es una variable que representa un flotante `11.25` que especificaste con anterioridad.
 
 `@instructions`
-- Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
-- Print out `house`; does this way of structuring your data make more sense?
-- Print out the type of `house`. Are you still dealing with a list?
+- Termina la lista de listas para que contenga también información del cuarto `bedroom` y `bathroom`. ¡Asegúrate de escribirlos en ese orden!
+- Imprime `house`; ¿Esta manera de organizar los datos tiene más sentido?
+- Imprime el tipo de dato de `house`. ¿Aún estás lidiando con una lista?
 
 `@hint`
-- Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
-- To print a variable `x`, write `print(x)` on a new line in the Python script.
-- To print out the type of a variable `x`, you can use `print(type(x))`.
+- Agrega una _sublista_ a la lista `house` agregando `["bedroom", bed]` y `["bathroom", bath]` dentro de los corchetes cuadrados.
+- Para imprimir la variable `x`, escribe `print(x)` en una nueva línea de código.
+- Para imprimir el tipo de variable de `x`, puedes utilizar `print(type(x))`.
 
 `@pre_exercise_code`
 ```{python}
@@ -245,66 +245,66 @@ Don't get confused here: `"hallway"` is a string, while `hall` is a variable tha
 
 `@sample_code`
 ```{python}
-# area variables (in square meters)
+# Variables de áreas (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# house information as list of lists
+# Información de la casa como lista de listas
 house = [["hallway", hall],
          ["kitchen", kit],
          ["living room", liv]]
 
-# Print out house
+# Imprime house
 
 
-# Print out the type of house
+# Imprime el tipo de house
 
 ```
 
 `@solution`
 ```{python}
-# area variables (in square meters)
+# Variables de áreas (en metros cuadrados)
 hall = 11.25
 kit = 18.0
 liv = 20.0
 bed = 10.75
 bath = 9.50
 
-# house information as list of lists
+# Información de la casa como lista de listas
 house = [["hallway", hall],
          ["kitchen", kit],
          ["living room", liv],
          ["bedroom", bed],
          ["bathroom", bath]]
 
-# Print out house
+# Imprime house
 print(house)
 
-# Print out the type of house
+# Imprime el tipo de house
 print(type(house))
 ```
 
 `@sct`
 ```{python}
-msg = "Don't remove or edit the predefined variables!"
+msg = "¡No elimines o modifiques las variables predefinidas!"
 test_object("hall", undefined_msg = msg, incorrect_msg = msg)
 test_object("kit", undefined_msg = msg, incorrect_msg = msg)
 test_object("liv", undefined_msg = msg, incorrect_msg = msg)
 test_object("bed", undefined_msg = msg, incorrect_msg = msg)
 test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("house", incorrect_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!")
+test_object("house", incorrect_msg = "No asignaste el valor indicado a `house`. Revisa de nuevo las instrucciones. Extiende la lista de listas de tal manera que incluye una lista para cada par de nombre y área de cuarto. ¡Ten en cuenta el orden y los errores tipográficos!")
 
-test_function("print", 1, incorrect_msg = "For the first printout, just print out the value of `house` like this: `print(house)`.")
+test_function("print", 1, incorrect_msg = "Para la primera impresión, solo imprime el valor de `house` así: `print(house)`.")
 
-msg = "For the second printout, make sure to print out the type of `house` like this: `print(type(house))`."
+msg = "Para la segunda impresión, asegúrate de imprimir el tipo de dato de `house` así: `print(type(house))`."
 test_function("print", 2, incorrect_msg = msg)
 test_function("type", not_called_msg = msg, incorrect_msg = msg)
 
-success_msg("Great! Get ready to learn about list subsetting!")
+success_msg("¡Genial! ¡Prepárate para conocer sobre subconjuntos de listas!")
 ```
 
 ---
