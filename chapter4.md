@@ -1,10 +1,10 @@
 ---
 title_meta  : Capítulo 4
 title       : NumPy
-description : NumPy es un poderoso paquete de Python para hacer ciencia de datos eficientemente. Aprende como trabajar con arreglos de NumPy, una alternativa más rápida y poderosa a las listas, y toma tus primeros pasos en la exploración de datos.
+description : NumPy es un poderoso paquete de Python para hacer ciencia de datos eficientemente. Aprende como trabajar con arrays de NumPy, una alternativa más rápida y poderosa a las listas, y toma tus primeros pasos en la exploración de datos.
 
 ---
-## Tu primer arreglo NumPy
+## Tu primer array NumPy
 
 ```yaml
 type: NormalExercise
@@ -14,19 +14,19 @@ skills: 2
 key: 84cab9d170
 ```
 
-In this chapter, we're going to dive into the world of baseball. Along the way, you'll get comfortable with the basics of `numpy`, a powerful package to do data science.
+En este capítulo, vamos a adentrarnos en el mundo del béisbol. En el camino, te sentirás cómodo con los aspectos básicos de `Numpy`, un poderoso paquete de Python para la ciencia de datos.
 
-A list `baseball` has already been defined in the Python script, representing the height of some baseball players in centimeters. Can you add some code here and there to create a `numpy` array from it?
+Una lista `baseball` ha sido definida en el guión de Python, la cual representa la altura en centímetros de algunos jugadores de béisbol. ¿Puedes agregar algunas líneas de código para crear un _array_ `numpy` de dicha lista?
 
 `@instructions`
-- Import the `numpy` package as `np`, so that you can refer to `numpy` with `np`.
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a `numpy` array from `baseball`. Name this array `np_baseball`.
-- Print out the type of `np_baseball` to check that you got it right.
+- Importa el paquete `numpy` como `np`, asi podrás referirte a `numpy` como `np`.
+- Usa [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) para crear un _array_ `numpy` de la lista `baseball`. Llama a este _array_ `np_baseball`.
+- Imprime el tipo de dato de `np_baseball` para verificar que lo hiciste correctamente.
 
 `@hint`
-- `import numpy as np` will do the trick. Now, you have to use `np.fun_name()` whenever you want to use a `numpy` function.
-- [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) should take on input `baseball`. Assign the result of the function call to `np_baseball`.
-- To print out the type of a variable `x`, simply type `print(type(x))`.
+- `import numpy as np` hará el truco. Ahora, tienes que utilizar `np.fun_name()` cuando quieras utilizar una función del paquete `numpy`.
+- [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) debería tomar como entrada `baseball`. Asigna el resultado de la función a `np_baseball`.
+- Para imprimir el tipo de una variable `x`, escribe `print(type(x))`.
 
 `@pre_exercise_code`
 ```{python}
@@ -35,55 +35,55 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Create list baseball
+# Crea la lista baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
-# Import the Numpy package as np
+# Importa el paquete Numpy como np
 
 
-# Create a Numpy array from baseball: np_baseball
+# Crea el array Numpy de baseball: np_baseball
 
 
-# Print out type of np_baseball
+# Imprime el tipo de np_baseball
 
 ```
 
 `@solution`
 ```{python}
-# Create list baseball
+# Crea la lista baseball
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
-# Import the Numpy package as np
+# Importa el paquete Numpy como np
 import numpy as np
 
-# Create a Numpy array from baseball: np_baseball
+# Crea el array Numpy de baseball: np_baseball
 np_baseball = np.array(baseball)
 
-# Print out type of np_baseball
+# Imprime el tipo de np_baseball
 print(type(np_baseball))
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 
 test_import("numpy")
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(baseball)`.")
-test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")
+test_function("numpy.array", not_called_msg = "Asegúrate de llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                             incorrect_msg = "Debes llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) así: `np.array(baseball)`.")
+test_object("np_baseball", incorrect_msg = "Asigna el valor correcto a `np_baseball`.")
 
-msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
+msg = "Asegúrate de imprimir el tipo de `np_baseball` de esta forma: `print(type(np_baseball))`."
 test_function("type", 1, incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
 
-success_msg("Great job!")
+success_msg("¡Buen trabajo!")
 ```
 
 ---
-## Baseball players' height
+## Altura de los jugadores de béisbol
 
 ```yaml
 type: NormalExercise
@@ -93,21 +93,21 @@ skills: 2
 key: e7e25a89ea
 ```
 
-You are a huge baseball fan. You decide to call the MLB (Major League Baseball) and ask around for some more statistics on the height of the main players. They pass along data on more than a thousand players, which is stored as a regular Python list: `height`. The height is expressed in inches. Can you make a `numpy` array out of it and convert the units to meters?
+Eres un gran fan del béisbol y decidiste llamar a la MLB (Grandes Ligas de Béisbol) para preguntar sobre algunas estadisticas referentes a la altura de los jugadores principales. Ellos te pasan información sobre más de mil jugadores, los cuales están almacenados como una lista de Python: `height`. La altura está expresada en pulgadas. ¿Puedes crear un _array_ `numpy` de la lista y convertir las unidades a metros?
 
-`height` is already available and the `numpy` package is loaded, so you can start straight away (Source: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
+Tanto `height` como el paquete `numpy` se encuentran disponibles en el código, por lo que puedes empezar enseguida (Fuente: [stat.ucla.edu](http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_MLB_HeightsWeights)).
 
 `@instructions`
-- Create a `numpy` array from `height`. Name this new array `np_height`.
-- Print `np_height`.
-- Multiply `np_height` with `0.0254` to convert all height measurements from inches to meters. Store the new values in a new array, `np_height_m`.
-- Print out `np_height_m` and check if the output makes sense.
+- Crea un _array_ `numpy` de `height`. Llama a este _array_ `np_height`.
+- Imprime `np_height`.
+- Multiplica `np_height` con `0.0254` para convertir todas las medidas de altura de pulgadas a metros. Guarda estos valores en un nuevo _array_ llamado `np_height_m`.
+- Imprime `np_height_m` y revisa si el resultado tiene sentido.
 
 `@hint`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) and pass it `height`. Store the result in `np_height`.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- Perform calculations as if `np_height` is a single number: `np_height * factor` is part of the answer.
-- To print out a variable `x`, type `print(x)` in the Python script.
+- Utiliza [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) y pasa `height` como entrada. Guarda el resultado en `np_height`.
+- Para imprimir una variable `x`, escribe `print(x)` en el guión de Python.
+- Realiza cálculos como si `np_height` fuera un solo número: `np_height * factor` es parte de la respuesta.
+- Para imprimir una variable `x`, escribe `print(x)` en el guión de Python.
 
 `@pre_exercise_code`
 ```{python}
@@ -119,41 +119,41 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height is available as a regular list
+# height esta disponible como una lista
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create a numpy array from height: np_height
+# Crea un array numpy de height: np_height
 
 
-# Print out np_height
+# Imprime np_height
 
 
-# Convert np_height to m: np_height_m
+# Convierte np_height a m: np_height_m
 
 
-# Print np_height_m
+# Imprime np_height_m
 
 ```
 
 `@solution`
 ```{python}
-# height is available as a regular list
+# height esta disponible como una lista
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create a numpy array from height: np_height
+# Crea un array numpy de height: np_height
 np_height = np.array(height)
 
-# Print out np_height
+# Imprime np_height
 print(np_height)
 
-# Convert np_height to m: np_height_m
+# Convierte np_height a m: np_height_m
 np_height_m = np_height * 0.0254
 
-# Print np_height_m
+# Imprime np_height_m
 print(np_height_m)
 ```
 
@@ -163,21 +163,21 @@ print(np_height_m)
 test_import("numpy", same_as = False)
 
 test_object("np_height", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                             incorrect_msg = "You should call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) as follows: `np.array(np_height)`.")
-test_object("np_height", incorrect_msg = "Assign the correct value to `np_height`.")
+test_function("numpy.array", not_called_msg = "Asegúrate de llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                             incorrect_msg = "Deberías llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) de esta forma: `np.array(np_height)`.")
+test_object("np_height", incorrect_msg = "Asigna el valor correcto a `np_height`.")
 
-test_function("print", 1, incorrect_msg = "Print out `np_height` with `print(np_height)`.")
+test_function("print", 1, incorrect_msg = "Imprime `np_height` con `print(np_height)`.")
 
-test_object("np_height_m", incorrect_msg = "Your calculation of `np_height_m` is not quite correct, be sure to multiply `np_height` with `0.0254`.")
+test_object("np_height_m", incorrect_msg = "Tu cálculo de `np_height_m` no es correcto, asegúrate de multiplicar `np_height` con `0.0254`.")
 
-test_function("print", 2, incorrect_msg = "Print out `np_height_m` with `print(np_height_m)`.")
+test_function("print", 2, incorrect_msg = "Imprime `np_height_m` con `print(np_height_m)`.")
 
-success_msg("Nice! In the blink of an eye, `numpy` performs multiplications on more than 1000 height measurements.")
+success_msg("¡Bien! En un pestañeo, `numpy` realizó más de 1000 cálculos de medidas de altura.")
 ```
 
 ---
-## Baseball player's BMI
+## IMC de los jugadores de béisbol
 
 ```yaml
 type: NormalExercise
@@ -187,19 +187,19 @@ skills: 2
 key: 689fdbc950
 ```
 
-The MLB also offers to let you analyze their weight data. Again, both are available as regular Python lists: `height` and `weight`. `height` is in inches and `weight` is in pounds.
+La MLB también ofrece los datos de pesos de sus jugadores. De nuevo, ambos están disponibles como listas de Python: `height` y `weight`. `height` está en pulgadas y `weight` en libras.
 
-It's now possible to calculate the BMI of each baseball player. Python code to convert `height` to a `numpy` array with the correct units is already available in the workspace. Follow the instructions step by step and finish the game!
+Ahora es posible calcular el IMC (_Índice de masa corporal_ o _BMI_ en inglés) para cada jugador de béisbol. El código en Python para convertir `height` a un _array_ `numpy`con las unidades correctas ya se encuentra disponible en el espacio de trabajo. ¡Sigue las instrucciones paso a paso para termina el juego!
 
 `@instructions`
-- Create a `numpy` array from the `weight` list with the correct units. Multiply by `0.453592` to go from pounds to kilograms. Store the resulting `numpy` array as `np_weight_kg`.
-- Use `np_height_m` and `np_weight_kg` to calculate the BMI of each player. Use the following equation: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Save the resulting `numpy` array as `bmi`.
-- Print out `bmi`.
+- Crea un _array_ `numpy` de la lista `weight` con las unidades correctas. Multiplica por `0.453592` para convertir de libras a kilogramos. Guarda el resultado del _array_ `numpy` como `np_weight_kg`.
+- Utiliza `np_height_m` y `np_weight_kg` para calcular el IMC de cada jugador. Usa la siguiente ecuación: $$ \mathrm{BMI} = \frac{\mathrm{weight (kg)}}{\mathrm{height (m)}^2}$$ Guarda el _array_ `numpy` resultante como `bmi`.
+- Imprime `bmi`.
 
 `@hint`
-- Use a similar approach as the code that calculates `np_height_m`. This time, though, the you have to work with `weight` and multiply with `0.453592`.
-- To calculate the `bmi`, you will need the `/` and `**` operators.
-- To print out a variable `x`, type `print(x)` in the script.
+- Utiliza un enfoque similar al código que calcula `np_height_m`. Sin embargo, esta vez tienes que trabajar con `weight` y multiplicar por `0.453592`.
+- Para calcular el `bmi`, necesitas los operadores `/` y `**`.
+- Para imprimir una variable `x`, utiliza `print(x)` en el código.
 
 `@pre_exercise_code`
 ```{python}
@@ -212,41 +212,41 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height y weight están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create array from height with correct units: np_height_m
+# Crea un array de height con las unidades correctas: np_height_m
 np_height_m = np.array(height) * 0.0254
 
-# Create array from weight with correct units: np_weight_kg
+# Crea un array de weight con las unidades correctas: np_weight_kg
 
 
-# Calculate the BMI: bmi
+# Calcula el IMC: bmi
 
 
-# Print out bmi
+# Imprime bmi
 
 ```
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height y weight están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create array from height with correct units: np_height_m
+# Crea un array de height con las unidades correctas: np_height_m
 np_height_m = np.array(height) * 0.0254
 
-# Create array from weight with correct units: np_weight_kg
+# Crea un array de weight con las unidades correctas: np_weight_kg
 np_weight_kg = np.array(weight) * 0.453592
 
-# Calculate the BMI: bmi
+# Calcula el IMC: bmi
 bmi = np_weight_kg / np_height_m ** 2
 
-# Print out bmi
+# Imprime bmi
 print(bmi)
 ```
 
@@ -255,24 +255,24 @@ print(bmi)
 test_import("numpy", same_as = False)
 
 # check np_height_m
-msg = "The variable `np_height_m` was defined for you. You don't have to change or remove it!"
+msg = "La variable `np_height_m` ya fue definida para ti. ¡No tienes que modificarla o eliminarla!"
 test_object("np_height_m", incorrect_msg = msg, undefined_msg = msg)
 
 # test np_weight
 test_object("np_weight_kg", do_eval = False)
-test_function("numpy.array", 2, not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                                incorrect_msg = "To assign `np_weight_kg`, use `np.array(weight)`.")
-test_object("np_weight_kg", incorrect_msg = "Are you calculating `np_weight_kg` correctly? Be sure to multiply `np.array(weight)` with `0.453592`.")
+test_function("numpy.array", 2, not_called_msg = "Asegúrate de llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                                incorrect_msg = "Para asignar `np_weight_kg`, utiliza `np.array(weight)`.")
+test_object("np_weight_kg", incorrect_msg = "¿Estás calculando `np_weight_kg` correctamente? Asegúrate de multiplicar `np.array(weight)` por `0.453592`.")
 
 # check bmi
-test_object("bmi", incorrect_msg = "Are you calculating `bmi` correctly? You can use `np_weight_kg / np_height_m ** 2` for this.")
+test_object("bmi", incorrect_msg = "¿Estás calculando el `bmi` correctamente? Puedes utilizar `np_weight_kg / np_height_m ** 2` para esto.")
 
-test_function("print", 1, incorrect_msg = "Don't forget to print out `bmi`!")
-success_msg("Cool! Time to step up your game!")
+test_function("print", 1, incorrect_msg = "¡No te olvides de imprimir `bmi`!")
+success_msg("¡Cool! ¡Es hora de hacer más interesante tu juego!")
 ```
 
 ---
-## Lightweight baseball players
+## Jugadores de béisbol livianos
 
 ```yaml
 type: NormalExercise
@@ -382,7 +382,7 @@ success_msg("Wow! It appears that only 11 of the more than 1000 baseball players
 
 
 ---
-## NumPy Side Effects
+## Efectos secundarios de NumPy
 
 ```yaml
 type: MultipleChoiceExercise
@@ -429,7 +429,7 @@ test_mc(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
-## Subsetting NumPy Arrays
+## Selección en arreglos NumPy
 
 ```yaml
 type: NormalExercise
@@ -523,7 +523,7 @@ success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
 ```
 
 ---
-## Your First 2D NumPy Array
+## Tu primer array 2D con NumPy
 
 ```yaml
 type: NormalExercise
@@ -616,7 +616,7 @@ success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` 
 ```
 
 ---
-## Baseball data in 2D form
+## Datos de béisbol en 2D
 
 ```yaml
 type: NormalExercise
@@ -690,7 +690,7 @@ success_msg("Slick! Time to show off some killer features of multi-dimensional `
 ```
 
 ---
-## Subsetting 2D NumPy Arrays
+## Selección de array 2D con NumPy
 
 ```yaml
 type: NormalExercise
@@ -790,7 +790,7 @@ success_msg("This is going well!")
 ```
 
 ---
-## 2D Arithmetic
+## Aritmética 2D
 
 ```yaml
 type: NormalExercise
@@ -897,7 +897,7 @@ success_msg("Great job! Notice how with very little code, you can change all val
 ```
 
 ---
-## Average versus median
+## Promedio versus mediana
 
 ```yaml
 type: NormalExercise
@@ -988,7 +988,7 @@ success_msg("An average height of 1586 inches, that doesn't sound right, does it
 ```
 
 ---
-## Explore the baseball data
+## Explorando los datos de béisbol
 
 ```yaml
 type: NormalExercise
@@ -1091,7 +1091,7 @@ success_msg("Great! Time to use all of your new data science skills in the last 
 ```
 
 ---
-## Blend it all together
+## ¡Mezclando todo!
 
 ```yaml
 type: NormalExercise
