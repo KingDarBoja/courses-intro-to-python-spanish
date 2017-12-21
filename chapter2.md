@@ -81,7 +81,7 @@ test_object("bath", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("areas", incorrect_msg = "Define `areas` como una lista que contiene todas las areas, en el orden correcto: `hall`, `kit`, `liv`, `bed` and `bath`. Ten cuidado con errores tipográficos. La lista no debe tener nada más.")
 
-test_function("print", incorrect_msg = "Imprime la lista `areas` que haz creado utilizando `print(areas)`.")
+test_function("print", incorrect_msg = "Imprime la lista `areas` que has creado utilizando `print(areas)`.")
 
 success_msg("¡Bien! Una lista es mucho mejor, ¿No crees?")
 ```
@@ -748,7 +748,7 @@ x = ["a", "b", "c", "d"]
 y = x + ["e", "f"]
 ```
 
-¡Te acabas de ganar la lotería, Wohoo! Haz decidido construir en tu casa una piscina (_poolhouse_) y una cochera (_garage_). ¿Puedes agregar la información a la lista `areas`?
+¡Te acabas de ganar la lotería, Wohoo! has decidido construir en tu casa una piscina (_poolhouse_) y una cochera (_garage_). ¿Puedes agregar la información a la lista `areas`?
 
 `@instructions`
 - Utiliza el operador `+` para pegar la lista `["poolhouse", 24.5]` al final de la lista `areas`. Guarda la lista resultante como `areas_1`.

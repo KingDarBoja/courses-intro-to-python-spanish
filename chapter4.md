@@ -438,7 +438,7 @@ skills: 2
 key: fcb2a9007b
 ```
 
-Lo haz visto con tus propios ojos: las listas y los _arrays_ `numpy` a veces se comportan de manera diferente. Afortunadamente, aún existen certezas en este mundo. Por ejemplo, seleccionar (utilizando los corchetes en listas o _arrays_) funciona exactamente igual. Para que lo veas por ti mismo, prueba las siguientes líneas de código en la consola de Python:
+Lo has visto con tus propios ojos: las listas y los _arrays_ `numpy` a veces se comportan de manera diferente. Afortunadamente, aún existen certezas en este mundo. Por ejemplo, seleccionar (utilizando los corchetes en listas o _arrays_) funciona exactamente igual. Para que lo veas por ti mismo, prueba las siguientes líneas de código en la consola de Python:
 
 ```
 x = ["a", "b", "c"]
@@ -625,7 +625,7 @@ skills: 2
 key: 5df25d0b7b
 ```
 
-Haz echado otra mirada a los datos de las Grandes Ligas de Béisbol (_MLB_) y te das cuenta que tiene más sentido reestructurar toda esa información en un _array 2D_ `numpy`. Este _array_ debería tener 1015 filas, correspondientes a los 1015 jugadores de béisbol de los cuales tienes información, y dos columnas (para la altura y el peso).
+has echado otra mirada a los datos de las Grandes Ligas de Béisbol (_MLB_) y te das cuenta que tiene más sentido reestructurar toda esa información en un _array 2D_ `numpy`. Este _array_ debería tener 1015 filas, correspondientes a los 1015 jugadores de béisbol de los cuales tienes información, y dos columnas (para la altura y el peso).
 
 La MLB fue, de nuevo, muy útil y le pasó los datos en una estructura diferente, una lista de listas en Python. En esta lista de listas, cada sublista representa la altura y el peso de un solo jugador de béisbol. El nombre de esta lista embebida es `baseball`.
 
@@ -892,7 +892,7 @@ test_object("conversion", incorrect_msg = "Asigna el objeto que creaste con [`np
 
 test_function("print", 2, incorrect_msg = "Imprime el resultado de `np_baseball * conversion` utilizando `print(np_baseball * conversion)`.")
 
-success_msg("¡Buen trabajo! Observa como con pocas líneas de código, haz logrado modificar todos los valores en tus estructuras de datos `numpy` de manera específica. ¡Esto te será útil en tu futuro como científico de datos!
+success_msg("¡Buen trabajo! Observa como con pocas líneas de código, has logrado modificar todos los valores en tus estructuras de datos `numpy` de manera específica. ¡Esto te será útil en tu futuro como científico de datos!
 ```
 
 ---
@@ -997,19 +997,19 @@ skills: 2
 key: 4409948807
 ```
 
-Because the mean and median are so far apart, you decide to complain to the MLB. They find the error and send the corrected data over to you. It's again available as a 2D Numpy array `np_baseball`, with three columns.
+Debido a que la media y la mediana están lejos entre sí, decides quejarte con la MLB. Ellos encuentran el error y le envian los datos corregidos. De nuevo están disponibles como un _array 2D_ `np_baseball`, con tres columnas.
 
-The Python script on the right already includes code to print out informative messages with the different summary statistics. Can you finish the job?
+El guión de Python a su derecha ya incluye el código para imprimir los mensajes informativos de las diferentes estadisticas. ¿Puedes terminar el trabajo?
 
 `@instructions`
-- The code to print out the mean height is already included. Complete the code for the median height. Replace `None` with the correct code.
-- Use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html) on the first column of `np_baseball` to calculate `stddev`. Replace `None` with the correct code.
-- Do big players tend to be heavier? Use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) to store the correlation between the first and second column of `np_baseball` in `corr`. Replace `None` with the correct code.
+- El código para imprimir la altura media ya se encuentra incluido. Completa el código para obtener la mediana de la altura. Reemplaza `None` con el código correcto.
+- Usa [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html) en la primera columna de `np_baseball` para calcular `stddev`. Reemplaza `None` con el código correcto.
+- ¿Los jugadores mas altos tienden a ser los más pesados? Utiliza [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html) para guardar la correlación entre la primera y la segunda columna de `np_baseball` en `corr`. Reemplaza `None` con el código correcto.
 
 `@hint`
-- Use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) to calculate the median. Make sure to select to correct column first!
-- Subset the same column when calculating the standard deviation with [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).
-- Use `np_baseball[:,0]` and `np_baseball[:,1]` to select the first and second columns; these are the inputs to [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).
+- Utiliza [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html) para calcular la mediana. ¡Asegúrate de seleccionar la primera columna correctamente!
+- Selecciona la misma columna cuando calcules la desviación estándar con [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).
+- Usa `np_baseball[:,0]` y `np_baseball[:,1]` para seleccionar la primera y segunda columna respectivamente; Estos serán las entradas de [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html).
 
 `@pre_exercise_code`
 ```{python}
@@ -1020,50 +1020,50 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# np_baseball is available
+# np_baseball ya está disponible
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Print mean height (first column)
+# Imprime la altura media (primera columna)
 avg = np.mean(np_baseball[:,0])
-print("Average: " + str(avg))
+print("Media: " + str(avg))
 
-# Print median height. Replace 'None'
+# Imprime la mediana. Reemplaza 'None'
 med = None
-print("Median: " + str(med))
+print("Mediana: " + str(med))
 
-# Print out the standard deviation on height. Replace 'None'
+# Imprime la desviación estándar de la altura. Reemplaza 'None'
 stddev = None
-print("Standard Deviation: " + str(stddev))
+print("Desviación estándar: " + str(stddev))
 
-# Print out correlation between first and second column. Replace 'None'
+# Imprime la correlación entre la primera y la segunda columna. Reemplaza 'None'
 corr = None
-print("Correlation: " + str(corr))
+print("Correlación: " + str(corr))
 ```
 
 `@solution`
 ```{python}
-# np_baseball is available
+# np_baseball ya está disponible
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Print mean height (first column)
+# Imprime la altura media (primera columna)
 avg = np.mean(np_baseball[:,0])
-print("Average: " + str(avg))
+print("Media: " + str(avg))
 
-# Print median height. Replace 'None'
+# Imprime la mediana. Reemplaza 'None'
 med = np.median(np_baseball[:,0])
-print("Median: " + str(med))
+print("Mediana: " + str(med))
 
-# Print out the standard deviation on height. Replace 'None'
+# Imprime la desviación estándar de la altura. Reemplaza 'None'
 stddev = np.std(np_baseball[:,0])
-print("Standard Deviation: " + str(stddev))
+print("Desviación estándar: " + str(stddev))
 
-# Print out correlation between first and second column. Replace 'None'
+# Imprime la correlación entre la primera y la segunda columna. Reemplaza 'None'
 corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])
-print("Correlation: " + str(corr))
+print("Correlación: " + str(corr))
 ```
 
 `@sct`
@@ -1071,22 +1071,22 @@ print("Correlation: " + str(corr))
 # sct code
 test_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("avg", undefined_msg = msg, incorrect_msg = msg)
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
-test_function("numpy.median", 1, not_called_msg = "Don't forget to call [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "To assign `med`, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Make sure to pass it the correct column of `np_baseball`.")
+test_function("numpy.median", 1, not_called_msg = "No te olvides de llamar [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "Para asignar `med`, usa [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Asegúrate de pasar la columna indicada de `np_baseball`.")
 test_object("med")
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 
-test_function("numpy.std", 1, not_called_msg = "Don't forget to call [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).", incorrect_msg = "To assign `stddev`, use [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html). Make sure to pass it the correct column of `np_baseball`.")
+test_function("numpy.std", 1, not_called_msg = "No te olvides de llamar [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html).", incorrect_msg = "Para asignar `stddev`, usa [`np.std()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.std.html). Asegúrate de pasar la columna indicada de `np_baseball`.")
 test_object("stddev")
 test_function("print", 3, not_called_msg = msg, incorrect_msg = msg)
 
-test_object("corr", incorrect_msg = "To assign `corr`, use [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Make sure to pass it the correct columns of `np_baseball`. You can pass it two columns.")
+test_object("corr", incorrect_msg = "Para asignar `corr`, usa [`np.corrcoef()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.corrcoef.html). Asegúrate de pasar las columnas indicadas de `np_baseball`. Puedes pasarle dos columnas.")
 test_function("print", 4, not_called_msg = msg, incorrect_msg = msg)
 
-success_msg("Great! Time to use all of your new data science skills in the last exercise!")
+success_msg("¡Grandioso! Tiempo de usar todas tus nuevas habilidades en ciencas de datos en un último ejercicio!")
 ```
 
 ---
@@ -1100,30 +1100,30 @@ skills: 2
 key: e125cad8a5
 ```
 
-In the last few exercises you've learned everything there is to know about heights and weights of baseball players. Now it's time to dive into another sport: soccer.
+En los últimos ejercicios aprendió todo acerca de las alturas y pesos de los jugadores de béisbol. Ahora es tiempo de sumergirse en otro deporte: Fútbol.
 
-You've contacted FIFA for some data and they handed you two lists. The lists are the following:
+Has contactado a la FIFA por algunos datos y te han dado dos listas. Las listas son las siguientes:
 ```
 positions = ['GK', 'M', 'A', 'D', ...]
 heights = [191, 184, 185, 180, ...]
 ```
-Each element in the lists corresponds to a player. The first list, `positions`, contains strings representing each player's position. The possible positions are: `'GK'` (goalkeeper), `'M'` (midfield), `'A'` (attack) and `'D'` (defense). The second list, `heights`, contains integers representing the height of the player in cm. The first player in the lists is a goalkeeper and is pretty tall (191 cm).
+Cada elemento en la lista corresponde a un jugador. La primera lista, `positions`, contiene cadenas de texto representando las posiciones de cada jugador. Las posibles posiciones son: `'GK'` (Portero), `'M'` (mediocampo), `'A'` (ataque) y `'D'` (defenss). La segunda lista, `heights`, contiene enteros representando las alturas de cada jugador en centímetros. El primer jugador de las listas es un portero y es muy alto (191 cm).
 
-You're fairly confident that the median height of goalkeepers is higher than that of other players on the soccer field. Some of your friends don't believe you, so you are determined to show them using the data you received from FIFA and your newly acquired Python skills.
+Estás convencido que la mediana de los porteros es mayor que la de otros jugadores en el campo de fútbol. Algunos de tus amigos no te creen, por lo que estás decidido a mostrarles utilizando la información que recibiste de la FIFA con tus recién adquiridas habilidades en Python.
 
 `@instructions`
-- Convert `heights` and `positions`, which are regular lists, to numpy arrays. Call them `np_heights` and `np_positions`.
-- Extract all the heights of the goalkeepers. You can use a little trick here: use `np_positions == 'GK'` as an index for `np_heights`. Assign the result to `gk_heights`.
-- Extract all the heights of all the other players. This time use `np_positions != 'GK'` as an index for `np_heights`. Assign the result to `other_heights`.
-- Print out the median height of the goalkeepers using [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Replace `None` with the correct code.
-- Do the same for the other players. Print out their median height. Replace `None` with the correct code.
+- Covierte `heights` y `positions`, las cuales son listas, en _arrays_ numpy. Llamalos `np_heights` y `np_positions`.
+- Extrae todas las alturas de los porteros. Puedes usar un pequeño truco: Utiliza `np_positions == 'GK'` como índice de `np_heights`. Asigna el resultado a `gk_heights`.
+- Extrae todas las alturas de los otros jugadores. Utiliza esta vez `np_positions != 'GK'` como índice de `np_heights`. Asigna el resultado a `other_heights`.
+- Imprime la mediana de los porteros utilizando [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html). Reemplaza `None` con el código correcto.
+- Haz lo mismo para los otros jugadores. Imprime la mediana de la altura. Reemplaza `None` con el código correcto.
 
 `@hint`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to convert the lists to numpy arrays.
-- You should use `np_heights[np_positions == 'GK']` to extract the heights of all goalkeepers. Don't forget to assign the result to `gk_heights`.
-- You should use `np_heights[np_positions != 'GK']` to extract the heights of all other players. Don't forget to assign the result to `other_heights`.
-- Print out the median height of the goalkeepers using `np.median(gk_heights)`.
-- Print out the median height of the other players using `np.median(other_heights)`.
+- Usa [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) para convertir las listas a _arrays_ numpy.
+- Deberías utilizar `np_heights[np_positions == 'GK']` para extraer la altura de todos los porteros. No te olvides de asignar el resultado a `gk_heights`.
+- Deberías utilizar `np_heights[np_positions != 'GK']` para extraer la altura de todos los demás jugadores. No te olvides de asignar el resultado a `other_heights`.
+- Imprime la mediana de altura de los porteros usando `np.median(gk_heights)`.
+- Imprime la mediana de altura de los otros jugadores usando `np.median(other_heights)`.
 
 `@pre_exercise_code`
 ```{python}
@@ -1135,77 +1135,77 @@ heights = list(fifa.height)
 
 `@sample_code`
 ```{python}
-# heights and positions are available as lists
+# heights y positions están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Convert positions and heights to numpy arrays: np_positions, np_heights
+# Convierte positions y heights en arrays numpy: np_positions, np_heights
 
 
 
-# Heights of the goalkeepers: gk_heights
+# Altura de los porteros: gk_heights
 
 
-# Heights of the other players: other_heights
+# Altura de los otros jugadores: other_heights
 
 
-# Print out the median height of goalkeepers. Replace 'None'
-print("Median height of goalkeepers: " + str(None))
+# Imprime la mediana de los porteros. Reemplaza 'None'
+print("Mediana de la altura de porteros: " + str(None))
 
-# Print out the median height of other players. Replace 'None'
-print("Median height of other players: " + str(None))
+# Imprime la mediana de altura de los otros jugadores. Reemplaza 'None'
+print("Mediana de la altura de los otros jugadores: " + str(None))
 ```
 
 `@solution`
 ```{python}
-# heights and positions are available as lists
+# heights y positions están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Convert positions and heights to numpy arrays: np_positions, np_heights
+# Convierte positions y heights en arrays numpy: np_positions, np_heights
 np_positions = np.array(positions)
 np_heights = np.array(heights)
 
-# Heights of the goalkeepers: gk_heights
+# Altura de los porteros: gk_heights
 gk_heights = np_heights[np_positions == 'GK']
 
-# Heights of the other players: other_heights
+# Altura de los otros jugadores: other_heights
 other_heights = np_heights[np_positions != 'GK']
 
-# Print out the median height of goalkeepers. Replace 'None'
-print("Median height of goalkeepers: " + str(np.median(gk_heights)))
+# Imprime la mediana de los porteros. Reemplaza 'None'
+print("Mediana de la altura de porteros: " + str(np.median(gk_heights)))
 
-# Print out the median height of other players. Replace 'None'
-print("Median height of other players: " + str(np.median(other_heights)))
+# Imprime la mediana de altura de los otros jugadores. Reemplaza 'None'
+print("Mediana de la altura de los otros jugadores: " + str(np.median(other_heights)))
 ```
 
 `@sct`
 ```{python}
 test_import("numpy")
 
-msg = "Convert the regular lists to numpy lists using [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array). This function takes one argument: the regular list itself!"
+msg = "Convierte las listas en listas numpy usando [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array). Esta función solo toma un argumento: ¡la propia lista!"
 test_object("np_positions", do_eval = False)
 test_function("numpy.array", 1, not_called_msg = msg, incorrect_msg = msg)
-test_object("np_positions", incorrect_msg = "Assign the converted numpy array of `positions` to `np_positions`.")
+test_object("np_positions", incorrect_msg = "Asigna el array numpy convertido de `positions` a `np_positions`.")
 
 test_object("np_heights", do_eval = False)
 test_function("numpy.array", 2, not_called_msg = msg, incorrect_msg = msg)
-test_object("np_heights", incorrect_msg = "Assign the converted numpy array of `heights` to `np_heights`.")
+test_object("np_heights", incorrect_msg = "Asigna el array numpy convertido de `heights` a `np_heights`.")
 
-test_object("gk_heights", incorrect_msg = "You can use `[np_positions == 'GK']` as an index of `np_heights` to find the heights of all goalkeepers, `gk_heights`. You can use a hint if you're stuck!")
-test_object("other_heights", incorrect_msg = "You can use `[np_positions != 'GK']` as an index of `np_heights` to find the heights of all other players, `other_heights`. You can use a hint if you're stuck!")
+test_object("gk_heights", incorrect_msg = "Puedes utilizar `[np_positions == 'GK']` como índice de `np_heights` para encontrar la altura de todos los porteros, `gk_heights`. ¡Puedes utilizar una ayuda si estás varado!")
+test_object("other_heights", incorrect_msg = "Puedes utilizar `[np_positions != 'GK']` como índice de `np_heights` para encontrar la altura de los demás jugadores, `other_heights`. ¡Puedes utilizar una ayuda si estás varado!")
 
-msg = "Use `np.median(%s)` to find the median height of %s."
+msg = "Usa `np.median(%s)` para encontrar la mediana de %s."
 
 gk_msg = msg % ("gk_heights", "goalkeepers")
 test_function("numpy.median", 1, not_called_msg = gk_msg, incorrect_msg = gk_msg)
-test_function("print", 1, incorrect_msg = "Don't forget to print out the result for the goalkeepers.")
+test_function("print", 1, incorrect_msg = "No te olvides de imprimir el resultado para los porteros.")
 
 other_msg = msg % ("other_heights", "other players")
 test_function("numpy.median", 2, not_called_msg = other_msg, incorrect_msg = other_msg)
-test_function("print", 2, incorrect_msg = "Don't forget to print out the result for the other players.")
+test_function("print", 2, incorrect_msg = "No te olvides de imprimir el resultado para los otros jugadores.")
 
-success_msg("Wonderful! You were right and the disbelievers were wrong! This exercise marks the end of the Intro to Python for Data Science course. See you in another course!")
+success_msg("¡Maravilloso! Tenias razón y los incrédulos estaban equivocados! Este ejercicio marca el final del curso de Introducción a Python para la Ciencia de Datos. ¡Nos vemos en otro curso!")
 ```

@@ -59,7 +59,7 @@ print(7 + 10)
 msg = "No borres la primera declaración. ¡Este es un ejemplo programado para ti!"
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
-msg = "¿Haz agregado `print(7 + 10)` al guión, en adición al comando `print()` que ya se encontraba?"
+msg = "¿has agregado `print(7 + 10)` al guión, en adición al comando `print()` que ya se encontraba?"
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
