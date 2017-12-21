@@ -282,7 +282,7 @@ skills: 2
 key: ef6add980e
 ```
 
-To subset both regular Python lists and `numpy` arrays, you can use square brackets:
+Para seleccionar tanto en una lista como en un _array_ `numpy` en Python, puedes utilizar los corchetes:
 
 ```
 x = [4 , 9 , 6, 3, 1]
@@ -292,24 +292,24 @@ y = np.array(x)
 y[1]
 ```
 
-For `numpy` specifically, you can also use boolean `numpy` arrays:
+Especificamente para `numpy`, puedes utilizar también _arrays_ `numpy` booleanos:
 
 ```
 high = y > 5
 y[high]
 ```
 
-The code that calculates the BMI of all baseball players is already included. Follow the instructions and reveal interesting things from the data!
+El código que calcula el IMC de todos los jugadores de béisbol ya está incluido. ¡Sigue las instrucciones y descubre cosas interesantes de esos datos!
 
 `@instructions`
-- Create a boolean `numpy` array: the element of the array should be `True` if the corresponding baseball player's BMI is below 21. You can use the `<` operator for this. Name the array `light`.
-- Print the array `light`.
-- Print out a `numpy` array with the BMIs of all baseball players whose BMI is below 21. Use `light` inside square brackets to do a selection on the `bmi` array.
+- Crea un _array_ `numpy` booleano: el elemento del _array_ debería ser igual a `True`si el IMC del jugador correspondiente es menor a 21.Puedes utilizar el operador `<` para esto. Nombra el _array_ como `light`.
+- Imprime el _array_ `light`.
+- Imprime el _array_ `numpy` que contiene todos los IMC de los jugadores de béisbol cuyo IMC es menor a 21. Utiliza `light` dentro de los corchetes para hacer una selección en el _array_ `bmi`.
 
 `@hint`
-- `bmi > 30` will give you a boolean `numpy` array in which the elements are `True` if the corresponding player's BMI is over 30.
-- To print out a variable `x`, type `print(x)` in the Python script.
-- `bmi[light]` will return the array you need. Don't forget to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it!
+- `bmi > 30` te da un _array_ `numpy` booleano donde los elementos serán igual a `True` si el correspondiente IMC del jugador es mayor a 30.
+- Para imprimir la variable `x`, escribe `print(x)` en el guión de Python.
+- `bmi[light]` retornará el _array_ que necesitas. ¡No te olvides de encerrarlo dentro de un llamado [`print()`](https://docs.python.org/3/library/functions.html#print)!
 
 `@pre_exercise_code`
 ```{python}
@@ -322,64 +322,63 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height y weight están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Calculate the BMI: bmi
+# Calcula el IMC: bmi
 np_height_m = np.array(height) * 0.0254
 np_weight_kg = np.array(weight) * 0.453592
 bmi = np_weight_kg / np_height_m ** 2
 
-# Create the light array
+# Creaa el array light
 
 
-# Print out light
+# Imprime light
 
 
-# Print out BMIs of all baseball players whose BMI is below 21
+# Imprime el IMC de todos los jugadores de béisbol cuyo IMC es menor a 21
 
 ```
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height y weight están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Calculate the BMI: bmi
+# Calcula el IMC: bmi
 np_height_m = np.array(height) * 0.0254
 np_weight_kg = np.array(weight) * 0.453592
 bmi = np_weight_kg / np_height_m ** 2
 
-# Create the light array
+# Creaa el array light
 light = bmi < 21
 
-# Print out light
+# Imprime light
 print(light)
 
-# Print out BMIs of all baseball players whose BMI is below 21
+# Imprime el IMC de todos los jugadores de béisbol cuyo IMC es menor a 21
 print(bmi[light])
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("np_height_m", undefined_msg = msg, incorrect_msg = msg)
 test_object("np_weight_kg", undefined_msg = msg, incorrect_msg = msg)
 test_object("bmi", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("light", incorrect_msg = "Use the `<` boolean operator to define `light`. `bmi` should be smaller than `21`.")
+test_object("light", incorrect_msg = "Usa el operador booleano `<` para definir `light`. `bmi` debería ser menor a `21`.")
 
-test_function("print", 1, incorrect_msg = "Print out `light` with `print(light)`.")
+test_function("print", 1, incorrect_msg = "Imprime `light` con `print(light)`.")
 
-test_function("print", 2, incorrect_msg = "For the second printout, use `light` as an index for `bmi`.")
+test_function("print", 2, incorrect_msg = "Para la segunda impresión, utiliza `light` como el índice de `bmi`.")
 
-success_msg("Wow! It appears that only 11 of the more than 1000 baseball players have a BMI under 21!")
+success_msg("¡Wow! ¡Parece ser que solo 11 de los 1000 jugadores de béisbol tienen un IMC menor a 21!")
 ```
-
 
 ---
 ## Efectos secundarios de NumPy
@@ -392,19 +391,19 @@ skills: 2
 key: 3662ff6637
 ```
 
-As Filip explained before, `numpy` is great for doing vector arithmetic. If you compare its functionality with regular Python lists, however, some things have changed.
+Como te has dado cuenta, `numpy` es excelente para hacer aritmética de vectores. Si comparas su funcionalidad con una lista de Python, aun así notarás que algunas cosas han cambiado.
 
-First of all, `numpy` arrays cannot contain elements with different types. If you try to build such a list, some of the elements' types are changed to end up with a homogeneous list. This is known as _type coercion_.
+Primero que todo, los _arrays_ `numpy` no pueden contener elementos de diferentes tipos. Si intentas construir dicha lista, algunos de los elementos serán cambiados para obtener una lista homogenea. Esto es conocido como _coherencia de tipos_.
 
-Second, the typical arithmetic operators, such as `+`, `-`, `*` and `/` have a different meaning for regular Python lists and `numpy` arrays.
+Segundo, los operadores aritméticos tipicos como `+`, `-`, `*` y `/` tienen diferentes significados para listas y _arrays_ `numpy`.
 
-Have a look at this line of code:
+Por ejemplo, observa la siguiente línea de código:
 
 ```
 np.array([True, 1, 2]) + np.array([3, 4, False])
 ```
 
-Can you tell which code chunk builds the exact same Python object? The `numpy` package is already imported as `np`, so you can start experimenting in the IPython Shell straight away!
+¿Puedes decir cual pedazo de código construye exactamente el mismo objeto Python? El paquete `numpy` ya se encuentra importado como `np`, así que puedes comenzar a probar en la consola de Python enseguida.
 
 `@instructions`
 - `np.array([True, 1, 2, 3, 4, False])`
@@ -414,7 +413,7 @@ Can you tell which code chunk builds the exact same Python object? The `numpy` p
 
 
 `@hint`
-Copy the different code chunks and paste them in the IPython Shell. See which output matches the one generated by `np.array([True, 1, 2]) + np.array([3, 4, False])`.
+Copia los diferentes pedazos de código y pegalos en la consola de Python. Mira cual de las salidas es igual a la generada por `np.array([True, 1, 2]) + np.array([3, 4, False])`.
 
 `@pre_exercise_code`
 ```{python}
@@ -423,8 +422,8 @@ import numpy as np
 
 `@sct`
 ```{python}
-msg1 = msg3 = msg4 = "Incorrect. Try out the different code chunks and see which one matches the target code chunk."
-msg2 = "Great job! `True` is converted to 1, `False` is converted to 0."
+msg1 = msg3 = msg4 = "Incorrecto. Prueba los diferentes pedazos de código y mira cual de ellos coincide con el código objetivo."
+msg2 = "¡Buen trabajo! `True` es convertido a 1, `False` es convertido a 0."
 test_mc(2, [msg1, msg2, msg3, msg4])
 ```
 
@@ -439,7 +438,7 @@ skills: 2
 key: fcb2a9007b
 ```
 
-You've seen it with your own eyes: Python lists and `numpy` arrays sometimes behave differently. Luckily, there are still certainties in this world. For example, subsetting (using the square bracket notation on lists or arrays) works exactly the same. To see this for yourself, try the following lines of code in the IPython Shell:
+Lo haz visto con tus propios ojos: las listas y los _arrays_ `numpy` a veces se comportan de manera diferente. Afortunadamente, aún existen certezas en este mundo. Por ejemplo, seleccionar (utilizando los corchetes en listas o _arrays_) funciona exactamente igual. Para que lo veas por ti mismo, prueba las siguientes líneas de código en la consola de Python:
 
 ```
 x = ["a", "b", "c"]
@@ -449,15 +448,15 @@ np_x = np.array(x)
 np_x[1]
 ```
 
-The script on the right already contains code that imports `numpy` as `np`, and stores both the height and weight of the MLB players as `numpy` arrays.
+El guión a la derecha ya contiene el código que importa el paquete `numpy` como `np`, y guarda tanto la altura como el peso de los jugadores de béisbol como _arrays_ `numpy`.
 
 `@instructions`
-- Subset `np_weight`: print out the element at index 50.
-- Print out a sub-array of `np_height`: It contains the elements at index 100 up to **and including** index 110
+- Selecciona de `np_weight`: imprime el elemento en el índice 50.
+- Imprime un _sub-array_ de `np_height`: este contiene los elementos en el índice 100 hasta el índice 110 **incluido**.
 
 `@hint`
-- Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around your subsetting operations.
-- Use `[100:111]` to get the elements from index 100 up to and including index 110.
+- Asegúrate de usar el llamado [`print()`](https://docs.python.org/3/library/functions.html#print) en tus operaciones de selección.
+- Utiliza `[100:111]` para obtener los elementos desde el índice 100 hasta el 110 incluido.
 
 `@pre_exercise_code`
 ```{python}
@@ -470,37 +469,37 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# height and weight are available as a regular lists
+# height y weight están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Store weight and height lists as numpy arrays
+# Guarda las listas weight y height como arrays numpy
 np_weight = np.array(weight)
 np_height = np.array(height)
 
-# Print out the weight at index 50
+# Imprime el peso del índice 50
 
 
-# Print out sub-array of np_height: index 100 up to and including index 110
+# Imprime un sub-array de np_height: desde el índice 100 hasta el 110 incluido.
 
 ```
 
 `@solution`
 ```{python}
-# height and weight are available as a regular lists
+# height y weight están disponibles como listas
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Store weight and height lists as numpy arrays
+# Guarda las listas weight y height como arrays numpy
 np_weight = np.array(weight)
 np_height = np.array(height)
 
-# Print out the weight at index 50
+# Imprime el peso del índice 50
 print(np_weight[50])
 
-# Print out sub-array of np_height: index 100 up to and including index 110
+# Imprime un sub-array de np_height: desde el índice 100 hasta el 110 incluido.
 print(np_height[100:111])
 ```
 
@@ -509,17 +508,17 @@ print(np_height[100:111])
 
 test_import("numpy", same_as = False)
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("np_height", undefined_msg = msg, incorrect_msg = msg)
 test_object("np_weight", undefined_msg = msg, incorrect_msg = msg)
 
 test_function("print", 1,
-              incorrect_msg = "For the first printout, subset `np_weight` to select the 50th element.")
+              incorrect_msg = "Para la primera impresión, selecciona de `np_weight` el elemento en el índice 50.")
 
 test_function("print", 2,
-              incorrect_msg = "For the second printout, subset `np_height` to select the 100th to 110th element, included. You can use the slicing operator: `:`, just make sure to put in the correct ending index.")
+              incorrect_msg = "Para la segunda impresión, selecciona de `np_height` desde el elemento en el índice 100 hasta el 110 incluido. Puedes utilizar el operador de rebanar: `:`, solo asegúrate de colocar el índice final adecuado.")
 
-success_msg("Nice! Time to learn something new: 2D Numpy arrays!")
+success_msg("¡Bien! Es tiempo de aprender algo nuevo: ¡Arrays 2D con Numpy!")
 ```
 
 ---
