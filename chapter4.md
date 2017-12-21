@@ -799,9 +799,9 @@ skills: 2
 key: 1c2378b677
 ```
 
-Remember how you calculated the Body Mass Index for all baseball players? `numpy` was able to perform all calculations element-wise (i.e. element by element). For 2D `numpy` arrays this isn't any different! You can combine matrices with single numbers, with vectors, and with other matrices.
+¿Recuerdas como calculaste el índice de masa corporal de todos los jugadores de béisbol? `numpy` fue capaz de realizar todos los cálculos elemento por elemento. Para los _arrays 2D_ `numpy`, ¡Esto no tiene nada de diferente! Puedes combinar diferentes matrices con números, vectores, y con otras matrices.
 
-Execute the code below in the IPython shell and see if you understand:
+Ejecuta el código de abajo en la consola de Python y vea si comprende:
 
 ```
 import numpy as np
@@ -813,17 +813,17 @@ np_mat + np.array([10, 10])
 np_mat + np_mat
 ```
 
-`np_baseball` is coded for you; it's again a 2D `numpy` array with 3 columns representing height, weight and age.
+`np_baseball` ya se encuentra disponible; Este es un _array 2D_ `numpy` constituido por tres columnas: Altura, peso y edad.
 
 `@instructions`
-- You managed to get hold of the changes in weight, height and age of all baseball players. It is available as a 2D `numpy` array, `updated`. Add `np_baseball` and `updated` and print out the result.
-- You want to convert the units of height and weight. As a first step, create a `numpy` array with three values: `0.0254`, `0.453592` and `1`. Name this array `conversion`.
-- Multiply `np_baseball` with `conversion` and print out the result.
+- Lograste manejar los cambios de peso, altura y edad de todos los jugadores de béisbol. Están disponibles como un _array 2D_ `numpy` llamado `updated`. Agrega `np_baseball` y `updated` e imprime el resultado.
+- Deseas convertir las unidades de altura y peso. Como primer paso, crea un _array_ `numpy` con tres valores: `0.0254`, `0.453592` y `1`. Llama a este _array_ `conversion`.
+- Multiplica `np_baseball` por `conversion` e imprime el resultado.
 
 `@hint`
-- `np_baseball + updated` will do an element-wise summation of the two `numpy` arrays.
-- Create a `numpy` array with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); the input is a regular Python list with three elements.
-- `np_baseball * conversion` will work, without extra work. Try out it! Make sure to wrap it in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
+- `np_baseball + updated` hará una suma elemento a elemento de los dos _arrays_.
+- Crea un _array_ `numpy` con [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array); La entrada es una lista de tres elementos.
+- `np_baseball * conversion` funcionará, sin trabajo extra. ¡Intentalo! Asegúrate de encerrarlo en un llamado [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@pre_exercise_code`
 ```{python}
@@ -837,43 +837,43 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
-# updated is available as 2D numpy array
+# baseball está disponible como una lista de listas
+# updated está disponible como un array 2D
 
-# Import numpy package
+# Importa el paquete numpy
 import numpy as np
 
-# Create np_baseball (3 cols)
+# Crea np_baseball (3 columnas)
 np_baseball = np.array(baseball)
 
-# Print out addition of np_baseball and updated
+# Imprime la suma de np_baseball y updated
 
 
-# Create numpy array: conversion
+# Crea un array numpy: conversion
 
 
-# Print out product of np_baseball and conversion
+# Imprime el producto de np_baseball y conversion
 
 ```
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
-# updated is available as 2D numpy array
+# baseball está disponible como una lista de listas
+# updated está disponible como un array 2D
 
-# Import numpy package
+# Importa el paquete numpy
 import numpy as np
 
-# Create np_baseball (3 cols)
+# Crea np_baseball (3 columnas)
 np_baseball = np.array(baseball)
 
-# Print out addition of np_baseball and updated
+# Imprime la suma de np_baseball y updated
 print(np_baseball + updated)
 
-# Create numpy array: conversion
+# Crea un array numpy: conversion
 conversion = np.array([0.0254, 0.453592, 1])
 
-# Print out product of np_baseball and conversion
+# Imprime el producto de np_baseball y conversion
 print(np_baseball * conversion)
 ```
 
@@ -881,22 +881,22 @@ print(np_baseball * conversion)
 ```{python}
 test_import("numpy")
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "Print out the result of `np_baseball + updated` using `print(np_baseball + updated)`.")
+test_function("print", 1, incorrect_msg = "Imprime el resultado de `np_baseball + updated` utilizando `print(np_baseball + updated)`.")
 
-msg = "Create the `conversion` object using `np.array(...)`. Fill in the correct list on the dots."
+msg = "Crea el objeto `conversion` utilizando `np.array(...)`. Coloca la lista correcta donde están los puntos."
 test_function("numpy.array", not_called_msg = msg, incorrect_msg = msg)
-test_object("conversion", incorrect_msg = "Assign the object you created with [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to `conversion`.")
+test_object("conversion", incorrect_msg = "Asigna el objeto que creaste con [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) a `conversion`.")
 
-test_function("print", 2, incorrect_msg = "Print out the result of `np_baseball * conversion` using `print(np_baseball * conversion)`.")
+test_function("print", 2, incorrect_msg = "Imprime el resultado de `np_baseball * conversion` utilizando `print(np_baseball * conversion)`.")
 
-success_msg("Great job! Notice how with very little code, you can change all values in your `numpy` data structure in a very specific way. This will be very useful in your future as a data scientist!")
+success_msg("¡Buen trabajo! Observa como con pocas líneas de código, haz logrado modificar todos los valores en tus estructuras de datos `numpy` de manera específica. ¡Esto te será útil en tu futuro como científico de datos!
 ```
 
 ---
-## Promedio versus mediana
+## Promedio contra mediana
 
 ```yaml
 type: NormalExercise
@@ -906,7 +906,7 @@ skills: 2
 key: 509c588eb6
 ```
 
-You now know how to use `numpy` functions to get a better feeling for your data. It basically comes down to importing `numpy` and then calling several simple functions on the `numpy` arrays:
+Ya conoces como utilizar las funciones de `numpy` para tener una mejor idea de sus datos. Se trata de básicamente importar el paquere `numpy` y luego llamar varias funciones en los _arrays_ `numpy`.
 
 ```
 import numpy as np
@@ -915,17 +915,17 @@ np.mean(x)
 np.median(x)
 ```
 
-The baseball data is available as a 2D `numpy` array with 3 columns (height, weight, age) and 1015 rows. The name of this `numpy` array is `np_baseball`. After restructuring the data, however, you notice that some height values are abnormally high. Follow the instructions and discover which summary statistic is best suited if you're dealing with so-called _outliers_.
+Los datos de béisbol están disponibles como un _array 2D_ `numpy` con tres columnas (altura, peso, edad) y 1015 filas. El nombre de este _array_ `numpy` es `np_baseball`. Sin embargo, después de reestructurar los datos, te das cuenta que algunas alturas son anormalmente elevados. Sigue las instrucciones y descubre cual sumario de estadísticas es la más adecuada para lidiar con los denominados _valores atípicos_.
 
 `@instructions`
-- Create `numpy` array `np_height` that is equal to first column of `np_baseball`.
-- Print out the mean of `np_height`.
-- Print out the median of `np_height`.
+- Crea un _array_ `numpy` llamado `np_height`, el cual es igual a la primera columna de `np_baseball`.
+- Imprime la media de `np_height`.
+- Imprime la mediana de `np_height`.
 
 `@hint`
-- Use 2D `numpy` subsetting: `[:,0]` is a part of the solution.
-- If `numpy` is imported as `np`, you can use [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html) to get the mean of a Numpy array. Don't forget to throw in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
-- For the last instruction, use [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
+- Utiliza la selección de `numpy`: `[:,0]` es parte de la solución.
+- Si el paquete `numpy` es importado como `np`, puedes usar [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html) para obtener la media de un _array_ Numpy. No te olvides de usar un llamado [`print()`](https://docs.python.org/3/library/functions.html#print).
+- Para la última instrucción, utiliza [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).
 
 `@pre_exercise_code`
 ```{python}
@@ -937,35 +937,35 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# np_baseball is available
+# np_baseball ya está disponible
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create np_height from np_baseball
+# Crea np_height de np_baseball
 
 
-# Print out the mean of np_height
+# Imprime la media de np_height
 
 
-# Print out the median of np_height
+# Imprime la mediana de np_height
 
 ```
 
 `@solution`
 ```{python}
-# np_baseball is available
+# np_baseball ya está disponible
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create np_height from np_baseball
+# Crea np_height de np_baseball
 np_height = np_baseball[:,0]
 
-# Print out the mean of np_height
+# Imprime la media de np_height
 print(np.mean(np_height))
 
-# Print out the median of np_height
+# Imprime la mediana de np_height
 print(np.median(np_height))
 ```
 
@@ -973,17 +973,17 @@ print(np.median(np_height))
 ```{python}
 test_import("numpy", same_as = False)
 
-test_object("np_height", incorrect_msg = "Make sure to use the correct subsetting operation to define `np_height`.")
+test_object("np_height", incorrect_msg = "Asegúrate de utilizar las operaciones correctas de selección en `np_height`.")
 
-test_function("numpy.mean", not_called_msg = "Don't forget to call [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html).", incorrect_msg = "Pass `np_height` as an argument to the `mean` function of `np` to print out the correct value for the first printout. Don't forget to use the dot notation: `.`.")
+test_function("numpy.mean", not_called_msg = "No te olvides de llamar [`np.mean()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.mean.html).", incorrect_msg = "Pasa `np_height` como el argumento de la función `mean` de `np` para imprimir el valor correcto de la primera impresión. No olvides la notación de puntos: `.`.")
 
-test_function("print", 1, incorrect_msg = "Print out the result of your calculations using `print(np.mean(np_height))`.")
+test_function("print", 1, incorrect_msg = "Imprime el resultado de tus cálculos con `print(np.mean(np_height))`.")
 
-test_function("numpy.median", not_called_msg = "Don't forget to call [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "Pass `np_height` as an argument to the `median` function of `np` to print out the correct value for the second printout. Don't forget to use the dot notation: `.`.")
+test_function("numpy.median", not_called_msg = "No te olvides de llamar [`np.median()`](http://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.median.html).", incorrect_msg = "Pasa `np_height` como el argumento de la función `median` de `np` para imprimir el valor correcto de la segunda impresión. No olvides la notación de puntos: `.`.")
 
-test_function("print", 2, incorrect_msg = "Print out the result of your calculations using `print(np.median(np_height))`.")
+test_function("print", 2, incorrect_msg = "Imprime el resultado de tus cálculos con `print(np.median(np_height))`.")
 
-success_msg("An average height of 1586 inches, that doesn't sound right, does it? However, the median does not seem affected by the outliers: 74 inches makes perfect sense. It's always a good idea to check both the median and the mean, to get a first hunch for the overall distribution of the entire dataset.")
+success_msg("Una altura promedio de 1586 pulgadas, eso no suena nada bien, ¿cierto? Aún así, la mediana no parece ser afectada por los valores atípicos: 74 pulgadas tiene mucho sentido. Siempre es buena idea revisar tanto la media como la mediana, para obtener un primer vistazo general de la distribución de los datos.")
 ```
 
 ---
