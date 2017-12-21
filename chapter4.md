@@ -892,7 +892,7 @@ test_object("conversion", incorrect_msg = "Asigna el objeto que creaste con [`np
 
 test_function("print", 2, incorrect_msg = "Imprime el resultado de `np_baseball * conversion` utilizando `print(np_baseball * conversion)`.")
 
-success_msg("¡Buen trabajo! Observa como con pocas líneas de código, has logrado modificar todos los valores en tus estructuras de datos `numpy` de manera específica. ¡Esto te será útil en tu futuro como científico de datos!
+success_msg("¡Buen trabajo! Observa como con pocas líneas de código, has logrado modificar todos los valores en tus estructuras de datos `numpy` de manera específica. ¡Esto te será útil en tu futuro como científico de datos!")
 ```
 
 ---
