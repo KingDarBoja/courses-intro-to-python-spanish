@@ -532,19 +532,19 @@ skills: 2
 key: 5cb045bb13
 ```
 
-Before working on the actual MLB data, let's try to create a 2D `numpy` array from a small list of lists.
+Antes de trabajar con los datos de las Grandes Ligas de Béisbol, vamos a intentar crear un _array 2D_ `numpy` de una pequeña lista de listas.
 
-In this exercise, `baseball` is a list of lists. The main list contains 4 elements. Each of these elements is a list containing the height and the weight of 4 baseball players, in this order. `baseball` is already coded for you in the script.
+En este ejercicio, `baseball` es una lista de listas. La lista principal contiene cuatro elementos. Cada uno de estos elementos es una lista que contiene la altura y el peso de cuatro jugadores de béisbol, en ese orden. `baseball` ya se encuentra definida para ti en el guión.
 
 `@instructions`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the type of `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`. Use `np_baseball.shape`.
+- Usa [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) para crear un _array 2D_ `numpy` de `baseball`. Llamalo `np_baseball`.
+- Imprime el tipo de `np_baseball`.
+- Imprime el atributo `shape` de `np_baseball`. Utiliza `np_baseball.shape`.
 
 `@hint`
-- `baseball` is already coded for you in the script. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
-- Use [`print()`](https://docs.python.org/3/library/functions.html#print) in combination with [`type()`](https://docs.python.org/3/library/functions.html#type) for the second instruction.
-- `np_baseball.shape` will give you the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
+- `baseball` ya se encuentra definida en el código. Llama [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) sobre ella y guarda el correspondiente _array 2D_ en `np_baseball`.
+- Utiliza [`print()`](https://docs.python.org/3/library/functions.html#print) en combinación con [`type()`](https://docs.python.org/3/library/functions.html#type) para la segunda instrucción.
+- `np_baseball.shape` te dará las dimensiones de `np_baseball`.Asegúrate de encerrarlo dentro de un llamado [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@pre_exercise_code`
 ```{python}
@@ -553,65 +553,65 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# Create baseball, a list of lists
+# Crea baseball, una lista de listas
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create a 2D numpy array from baseball: np_baseball
+# Crea un array 2D numpy de baseball: np_baseball
 
 
-# Print out the type of np_baseball
+# Imprime el tipo de np_baseball
 
 
-# Print out the shape of np_baseball
+# Imprime las dimensiones de np_baseball
 
 ```
 
 `@solution`
 ```{python}
-# Create baseball, a list of lists
+# Crea baseball, una lista de listas
 baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
 
-# Import numpy
+# Importa el paquete numpy
 import numpy as np
 
-# Create a 2D numpy array from baseball: np_baseball
+# Crea un array 2D numpy de baseball: np_baseball
 np_baseball = np.array(baseball)
 
-# Print out the type of np_baseball
+# Imprime el tipo de np_baseball
 print(type(np_baseball))
 
-# Print out the shape of np_baseball
+# Imprime las dimensiones de np_baseball
 print(np_baseball.shape)
 ```
 
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("baseball", undefined_msg = msg, incorrect_msg = msg)
 
 test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                             incorrect_msg = "You should call `np.array(baseball)` to make a 2D `numpy` array out of `baseball`.")
-test_object("np_baseball", incorrect_msg = "Assign the correct value to `np_baseball`.")
+test_function("numpy.array", not_called_msg = "Asegúrate de llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                             incorrect_msg = "Deberías llamar `np.array(baseball)` para crear un array 2D `numpy` de la lista `baseball`.")
+test_object("np_baseball", incorrect_msg = "Asigna el valor correcto a `np_baseball`.")
 
-msg = "Make sure to print out the type of `np_baseball` like this: `print(type(np_baseball))`."
+msg = "Asegúrate de imprimir el tipo de dato de `np_baseball` de esta manera: `print(type(np_baseball))`."
 test_function("type", 1, incorrect_msg = msg)
 test_function("print", 1, incorrect_msg = msg)
 
-test_function("print", 2, incorrect_msg = "You can print the shape of `np_baseball` like this: `np_baseball.shape`.")
+test_function("print", 2, incorrect_msg = "Puedes imprimir las dimensiones de `np_baseball` de esta forma: `np_baseball.shape`.")
 
-success_msg("Great! You're ready to convert the actual MLB data to a 2D `numpy` array now!")
+success_msg("¡Genial! Estas listo para convertir los datos actuales de las Grandes Ligas de Béisbol en arrays 2D `numpy`.")
 ```
 
 ---
@@ -625,19 +625,19 @@ skills: 2
 key: 5df25d0b7b
 ```
 
-You have another look at the MLB data and realize that it makes more sense to restructure all this information in a 2D `numpy` array. This array should have 1015 rows, corresponding to the 1015 baseball players you have information on, and 2 columns (for height and weight).
+Haz echado otra mirada a los datos de las Grandes Ligas de Béisbol (_MLB_) y te das cuenta que tiene más sentido reestructurar toda esa información en un _array 2D_ `numpy`. Este _array_ debería tener 1015 filas, correspondientes a los 1015 jugadores de béisbol de los cuales tienes información, y dos columnas (para la altura y el peso).
 
-The MLB was, again, very helpful and passed you the data in a different structure, a Python list of lists. In this list of lists, each sublist represents the height and weight of a single baseball player. The name of this embedded list is `baseball`.
+La MLB fue, de nuevo, muy útil y le pasó los datos en una estructura diferente, una lista de listas en Python. En esta lista de listas, cada sublista representa la altura y el peso de un solo jugador de béisbol. El nombre de esta lista embebida es `baseball`.
 
-Can you store the data as a 2D array to unlock `numpy`'s extra functionality?
+¿Puedes almacenar la información como un _array 2D_ para desbloquear las funcionalidades extras de `numpy`?
 
 `@instructions`
-- Use [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) to create a 2D `numpy` array from `baseball`. Name it `np_baseball`.
-- Print out the `shape` attribute of `np_baseball`.
+- Utiliza [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) para crear un _array 2D_ `numpy` de la lista `baseball`. Llamalo `np_baseball`.
+- Imprime el atributo `shape` de `np_baseball`.
 
 `@hint`
-- `baseball` is already available in the Python environment. Call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) on it and store the resulting 2D `numpy` array in `np_baseball`.
-- `np_baseball.shape` will give the dimensions of the `np_baseball`. Make sure to wrap a [`print()`](https://docs.python.org/3/library/functions.html#print) call around it.
+- `baseball` ya se encuentra disponible en el entorno de Python. Llama [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array) sobre ella y almacena el _array 2D_ resultante en `np_baseball`.
+- `np_baseball.shape` da las dimensiones de `np_baseball`. Asegúrate de llamar [`print()`](https://docs.python.org/3/library/functions.html#print) sobre ella.
 
 `@pre_exercise_code`
 ```{python}
@@ -648,29 +648,29 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
+# baseball esta disponible como una lista de listas
 
-# Import numpy package
+# Importa el paquete numpy
 import numpy as np
 
-# Create a 2D numpy array from baseball: np_baseball
+# Crea un array 2D numpy de baseball: np_baseball
 
 
-# Print out the shape of np_baseball
+# Imprime las dimensiones de np_baseball
 
 ```
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
+# baseball esta disponible como una lista de listas
 
-# Import numpy package
+# Importa el paquete numpy
 import numpy as np
 
-# Create a 2D numpy array from baseball: np_baseball
+# Crea un array 2D numpy de baseball: np_baseball
 np_baseball = np.array(baseball)
 
-# Print out the shape of np_baseball
+# Imprime las dimensiones de np_baseball
 print(np_baseball.shape)
 ```
 
@@ -679,13 +679,13 @@ print(np_baseball.shape)
 test_import("numpy", same_as = False)
 
 test_object("np_baseball", do_eval = False)
-test_function("numpy.array", not_called_msg = "Be sure to call [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
-                             incorrect_msg = "You should call `np.array(baseball)` to make a 2D `numpy` array out of `baseball`.")
-test_object("np_baseball", incorrect_msg = "Assign the `numpy` array you created to `np_baseball`.")
+test_function("numpy.array", not_called_msg = "Asegúrate de llamar [`np.array()`](http://docs.scipy.org/doc/numpy-1.10.0/glossary.html#term-array).",
+                             incorrect_msg = "Deberías utilizar `np.array(baseball)` para crear un array 2D `numpy` de `baseball`.")
+test_object("np_baseball", incorrect_msg = "Asigna el array `numpy` que creaste a `np_baseball`.")
 
-test_function("print", incorrect_msg = "Print the `shape` field of the `np_baseball` object using the dot notation: `.`.")
+test_function("print", incorrect_msg = "Imprime el atributo `shape` del objeto `np_baseball` utilizando la notación de puntos: `.`.")
 
-success_msg("Slick! Time to show off some killer features of multi-dimensional `numpy` arrays!")
+success_msg("¡Astuto! Es hora de presumir algunas características sorprendentes de un array `numpy` multidimensional.")
 ```
 
 ---
@@ -699,10 +699,10 @@ skills: 2
 key: aeca4977f0
 ```
 
-If your 2D `numpy` array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements `"a"` and `"c"` are extracted from a list of lists.
+Si tu _array_ `numpy` tiene una estructura regular, por ejemplo, cada fila y columna tiene un valor fijo de valores, formas complicadas de selección se vuelven muy fáciles. Mira el código de abajo, donde los elementos `"a"` y `"c"` son extraídos de una lista de listas.
 
 ```
-# regular list of lists
+# Una lista de listas común
 x = [["a", "b"], ["c", "d"]]
 [x[0][0], x[1][0]]
 
@@ -712,19 +712,19 @@ np_x = np.array(x)
 np_x[:,0]
 ```
 
-For regular Python lists, this is a real pain. For 2D `numpy` arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The `:` is for slicing; in this example, it tells Python to include all rows.
+Para una lista común de Python, esto es un dolor de cabeza. Para _arrays 2D_ `numpy`, ¡El tema se vuelve más intuitivo!. Los índices antes de la coma se refieren a las filas mientras que los que le siguen se refieren a las columnas. El `:` es utilizado para seleccionar; en este ejemplo, le dice a Python que selecciona todas las filas.
 
-The code that converts the pre-loaded `baseball` list to a 2D `numpy` array is already in the script. The first column contains the players' height in inches and the second column holds player weight, in pounds. Add some lines to make the correct selections. Remember that in Python, the first element is at index 0!
+El código que convierte la lista precargada `baseball` en un _array 2D_ `numpy` ya se encuentra disponible en el guión. La primera columna contiene la altura de los jugadores en pulgadas y la segunda columna contiene el peso de los jugadores en libras. Agrega algunas líneas de código para hacer las respectivas correciones. Recuerda que en Python, ¡El primer elemento está en el índice 0!
 
 `@instructions`
-- Print out the 50th row of `np_baseball`.
-- Make a new variable, `np_weight`, containing the entire second column of `np_baseball`.
-- Select the height (first column) of the 124th baseball player in `np_baseball` and print it out.
+- Imprime la fila N°50 de `np_baseball`.
+- Crea una nueva variable, `np_weight`, la cual contiene toda la segunda columna de `np_baseball`.
+- Selecciona la altura (primera columna) del jugador N°124 en `np_baseball` e imprimelo.
 
 `@hint`
-- You need row index 49 in the first instruction! More specifically, you'll want to use `[49,:]`.
-- To select the entire second column, you'll need `[:,1]`.
-- For the last instruction, use `[123, 0]`; don't forget to wrap it all in a [`print()`](https://docs.python.org/3/library/functions.html#print) statement.
+- ¡Necesitas la fila con el índice 49 en la primera instrucción! Siendo más especificos, necesitas utilizar `[49,:]`.
+- Para seleccionar la segunda columna completa, utiliza `[:,1]`.
+- Para la última instrucción, usa `[123, 0]`; no te olvides de encerrarlo dentro de una sentencia [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@pre_exercise_code`
 ```{python}
@@ -735,41 +735,41 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-# baseball is available as a regular list of lists
+# baseball está disponible como una lista de listas.
 
-# Import numpy package
+# Importa el paquete numpy
 import numpy as np
 
-# Create np_baseball (2 cols)
+# Crea np_baseball (2 columnas)
 np_baseball = np.array(baseball)
 
-# Print out the 50th row of np_baseball
+# Imprime la fila N°50 de np_baseball
 
 
-# Select the entire second column of np_baseball: np_weight
+# Selecciona toda la segunda columna de np_baseball: np_weight
 
 
-# Print out height of 124th player
+# Imprime la altura del jugador N°124
 
 ```
 
 `@solution`
 ```{python}
-# baseball is available as a regular list of lists
+# baseball está disponible como una lista de listas.
 
-# Import numpy package
+# Importa el paquete numpy
 import numpy as np
 
-# Create np_baseball (2 cols)
+# Crea np_baseball (2 columnas)
 np_baseball = np.array(baseball)
 
-# Print out the 50th row of np_baseball
+# Imprime la fila N°50 de np_baseball
 print(np_baseball[49,:])
 
-# Select the entire second column of np_baseball: np_weight
+# Selecciona toda la segunda columna de np_baseball: np_weight
 np_weight = np_baseball[:,1]
 
-# Print out height of 124th player
+# Imprime la altura del jugador N°124
 print(np_baseball[123, 0])
 ```
 
@@ -777,15 +777,15 @@ print(np_baseball[123, 0])
 ```{python}
 test_import("numpy", same_as = False)
 
-msg = "You don't have to change or remove the predefined variables."
+msg = "No tienes que modificar o eliminar las variables predefinidas."
 test_object("np_baseball", undefined_msg = msg, incorrect_msg = msg)
 
-test_function("print", 1, incorrect_msg = "For the first printout, subset the `np_baseball` object using `[49,:]`. This will select the 50th row completely.")
+test_function("print", 1, incorrect_msg = "Para la primera impresión, selecciona del objeto `np_baseball` utilizando `[49,:]`. Esto seleccionará completamente la fila N°50.")
 
-test_object("np_weight", incorrect_msg = "Define `np_weight` by subsetting the `np_baseball` object with `[:,1]`. This will select the first column, completely.")
+test_object("np_weight", incorrect_msg = "Define `np_weight` seleccionando del objeto `np_baseball` utilizando `[:,1]`. Esto seleccionará completamente la primera columna.")
 
-test_function("print", 2, incorrect_msg = "For the second printout, subset the `np_baseball` object using `[123,0]`. This will select the first column of the 124th row.")
-success_msg("This is going well!")
+test_function("print", 2, incorrect_msg = "Para la segunda impresión, selecciona del objeto `np_baseball` utilizando `[123,0]`. Esto seleccionará la primera columna de la fila N°124.")
+success_msg("¡Vamos por buen camino!")
 ```
 
 ---
