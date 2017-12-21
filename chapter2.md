@@ -22,10 +22,10 @@ b = "buena"
 my_list = ["mi", "lista", a, b]
 ```
 
-después de medir la estatura de tu familia, decides coleccionar información sobre la casa donde vives. Las áreas de las diferentes partes de tu casa están guardadas en variables diferentes por ahora, como puedes notar en el código.
+Después de medir la estatura de tu familia, decides coleccionar información sobre la casa donde vives. Las áreas de las diferentes partes de tu casa están guardadas en variables diferentes por ahora, como puedes notar en el código.
 
 `@instructions`
-- Crea una lista llamada `areas`, la cual contien el área del vestíbulo (`hall`), la cocina (`kit`), la sala (`liv`), el cuarto (`bed`) y el baño (`bath`), en ese orden. Usa las variables predefinidas.
+- Crea una lista llamada `areas`, la cual contiene el área del vestíbulo (`hall`), la cocina (`kit`), la sala (`liv`), el cuarto (`bed`) y el baño (`bath`), en ese orden. Usa las variables predefinidas.
 - Imprime `areas` con la función [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@hint`
@@ -50,7 +50,6 @@ bath = 9.50
 
 
 # Imprime la lista areas
-
 
 ```
 
@@ -204,10 +203,10 @@ Prueba cada una de las diferentes líneas en la consola de Python y mira cuál d
 
 `@sct`
 ```{python}
-msg1 = "¡Correcto! Tan gracioso como parece, todos estos comandos son formas validas de construir una lista en Python."
-msg2 = "Comando B es válido, ¡Pero no es el único!"
+msg1 = "¡Correcto! Tan gracioso como parezca, todos estos comandos son formas válidas de construir una lista en Python."
+msg2 = "El comando B es válido, ¡Pero no es el único!"
 msg3 = "Tanto B como C son comandos válidos; ¿Y qué hay acerca del A? Pruébalo en la consola."
-msg4 = "Comando C es válido, ¡Pero no es el único!"
+msg4 = "El comando C es válido, ¡Pero no es el único!"
 test_mc(1,[msg1,msg2,msg3,msg4])
 ```
 
@@ -224,7 +223,7 @@ key: 9158c577b0
 
 Como un científico de los datos, te encontrarás con muchos datos y tendrá sentido agrupar parte de esos datos.
 
-En vez de crear una lista plana que contenga solo cadenas y flotantes, representando los nombres y las áreas de los cuartos en tu casa, tu puedes crear una lista de listas. El código a tu derecha te dará una idea.
+En vez de crear una lista plana que contenga solo cadenas y flotantes, representando los nombres y las áreas de los cuartos en tu casa, puedes crear una lista de listas. El código a tu derecha te dará una idea.
 
 No te confundas: `"hallway"` es una cadena mientras que `hall` es una variable que representa un flotante `11.25` que especificaste con anterioridad.
 
@@ -396,7 +395,7 @@ skills: 2
 key: 58c969f11f
 ```
 
-Después de extraer los valores de una lista, también puedes hacer cálculos adicionales. Toma este ejemplo, donde el segundo y cuarto elemento de una lista `x` son extraídos. Las cadenas resultantes son juntadas utilizando el operador `+`:
+Después de extraer los valores de una lista, también puedes hacer cálculos adicionales. Toma este ejemplo, donde el segundo y el cuarto elemento de una lista `x` son extraídos. Las cadenas resultantes son juntadas utilizando el operador `+`:
 
 ```
 x = ["a", "b", "c", "d"]
@@ -404,7 +403,7 @@ print(x[1] + x[3])
 ```
 
 `@instructions`
-- Utilizando una combinación de selecciones de lista y asignación de variables, crea una nueva variable llamada `eat_sleep_area`, la cual contiene la suma de las áreas de la cocina y el área del dormitorio.
+- Utilizando una combinación de selectores en una lista y asignación de variables, crea una nueva variable llamada `eat_sleep_area`, la cual contiene la suma de las áreas de la cocina y el área del dormitorio.
 - Imprime la nueva variable `eat_sleep_area`.
 
 `@hint`
@@ -444,7 +443,7 @@ print(eat_sleep_area)
 ```{python}
 msg = "No modifiques o elimines la lista predefinida `areas`."
 test_object("areas", undefined_msg = msg, incorrect_msg = msg)
-test_object("eat_sleep_area", incorrect_msg = "Asegúrate de asignar el valor correcto a `eat_sleep_area`. necesitarás los indices `3` and `-3`.")
+test_object("eat_sleep_area", incorrect_msg = "Asegúrate de asignar el valor correcto a `eat_sleep_area`. necesitarás los indices `3` y `-3`.")
 test_function("print", incorrect_msg = "Imprime el valor obtenido, guardado en `eat_sleep_area`. Usa `print(eat_sleep_area)`.")
 success_msg("¡Bellíssimo!")
 ```
@@ -479,7 +478,7 @@ Los elementos con indices 1 y 2 son incluidos mientras que el indice 3 no lo es.
 
 `@instructions`
 - Utiliza el concepto de _rebanar_ para crear una lista llamada `downstairs`, la cual contiene los primeros seis (6) elementos de `areas`.
-- Haz lo mismo para crear una nueva variable llamada `upstairs`, la cual contiene los útlimos cuatro (4) elementos de `areas`.
+- Haz lo mismo para crear una nueva variable llamada `upstairs`, la cual contiene los últimos cuatro (4) elementos de `areas`.
 - Imprime tanto `downstairs` como `upstairs` usando [`print()`](https://docs.python.org/3/library/functions.html#print).
 
 `@hint`
@@ -550,10 +549,10 @@ key: dfc9a168a3
 Anteriormente mencionamos la sintaxis para especificar tanto el comienzo como el fin de una rebanada de tu lista:
 
 ```
-my_list[begin:end]
+my_list[comienzo:fin]
 ```
 
-Sin embargo, también es posible no especificar esos indices. Si no especificas el indice `begin`, Python determina que deseas comenzar tu rebanada al comienzo de la lista. Si no especificas el indice `final`, la rebanada ira hasta el último elemento de la lista. Para experimentar con esto, intenta los siguientes comandos en la consola de Python:
+Sin embargo, también es posible no especificar esos indices. Si no especificas el indice `comienzo`, Python determina que deseas comenzar tu rebanada al comienzo de la lista. Si no especificas el indice `fin`, la rebanada irá hasta el último elemento de la lista. Para experimentar con esto, intenta los siguientes comandos en la consola de Python:
 
 ```
 x = ["a", "b", "c", "d"]
