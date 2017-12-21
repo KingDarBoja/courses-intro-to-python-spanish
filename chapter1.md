@@ -26,7 +26,7 @@ También puedes usar la consola de Python simplemente escribiendo comandos y pre
 - Haz click en _Submit Answer_ para ejecutar el código python y recibir realimentación.
 
 `@hint`
-Simplemente agrega `print(7 + 10)` al guión de la derecga y haz click en `Submit Answer`.
+Simplemente agrega `print(7 + 10)` al guión de la derecha y haz click en `Submit Answer`.
 
 `@pre_exercise_code`
 ```{python}
@@ -59,7 +59,7 @@ print(7 + 10)
 msg = "No borres la primera declaración. ¡Este es un ejemplo programado para ti!"
 test_function("print", 1, not_called_msg = msg, incorrect_msg = msg)
 
-msg = "¿has agregado `print(7 + 10)` al guión, en adición al comando `print()` que ya se encontraba?"
+msg = "¿Has agregado `print(7 + 10)` al guión, en adición al comando `print()` que ya se encontraba?"
 test_function("print", 2, not_called_msg = msg, incorrect_msg = msg)
 success_msg("Great!")
 ```
@@ -170,7 +170,7 @@ Python es perfectamente adecuado para hacer cálculos básicos. Aparte de la adi
 El código en el guión a la derecha muestra algunos ejemplos.
 
 `@instructions`
-Supongamos que tienes $100, de los cuales puedes invertir con un retorno del 10% cada año. Después de un año, este será de $100 multiplicado por 1.1 = $110 dólares, y después de dos años será de $100 multiplicado por 1.1 multiplicado por 1.1 = $121 dólares. Agrega código a la derecha para calcular cuanto dinero tendrás despúes de 7 años.
+Supongamos que tienes $100, de los cuales puedes invertir con un retorno del 10% cada año. Después de un año, este será de $100 multiplicado por 1.1 = $110, y después de dos años será de $100 multiplicado por 1.1 multiplicado por 1.1 = $121. Agrega código a la derecha para calcular cuanto dinero tendrás despúes de 7 años.
 
 `@hint`
 Después de dos años tendrás $100 multiplicado por 1.1 multiplicado por 1.1 = 100 multiplicado por 1.1^2 dólares. ¿Cuánto tienes después de 7 años? Utiliza `*` y `**`.
@@ -223,7 +223,7 @@ print(100 * 1.1 ** 7)
 `@sct`
 ```{python}
 test_output_contains("194\\.8", no_output_msg = "¿Utilizaste la operación `100 * 1.1 ** 7` dentro de un comando `print()`?")
-success_msg("Time for another video!")
+success_msg("¡Tiempo de otro ejercicio!")
 ```
 
 ---
@@ -296,13 +296,13 @@ skills: 2
 key: 38dec2b0b8
 ```
 
-¿Recuerdas cómo calculaste el dinero que obtendrias después de 7 años al invertir $100 dólares? Hiciste algo más o menos así:
+¿Recuerdas cómo calculaste el dinero que obtendrias después de 7 años al invertir $100? Hiciste algo más o menos así:
 
 ```
 100 * 1.10 ** 7
 ```
 
-En vez de calcular con los valores actuales, puedes utilizar variables en su lugar. La variable `savings` que creaste en el ejercicio anterior representa los $100 iniciales. Depende de ti crear una nueva variable para representar `1.10` y luego ¡rehacer los cálculos!
+En vez de calcular con los valores actuales, puedes utilizar variables en su lugar. La variable `savings` que creaste en el ejercicio anterior representa los $100 iniciales. Depende de ti crear una nueva variable para representar `1.10` y luego ¡rehaces los cálculos!
 
 `@instructions`
 - Crea una variable `factor` igual a `1.10`.
@@ -351,7 +351,7 @@ print(result)
 `@sct`
 ```{python}
 test_object("savings", undefined_msg = "La variable `savings` la definistes tú, ¡No la borres!",
-                       incorrect_msg = "La variable `savings` debería ser `100`, como la habias definido.")
+                       incorrect_msg = "La variable `savings` debería ser igual a `100`, como la habías definido.")
 test_object("factor", incorrect_msg = "El valor de `factor` debería ser `1.1`.")
 test_object("result", incorrect_msg = "¿Haz utilizado `*` y `**` para calcular `result`?")
 msg = "No te olvides de imprimir `result` después de asignarlo."
@@ -481,7 +481,7 @@ En el guión, algunas variables han sido creadas con diferentes tipos. Depende d
 
 `@instructions`
 - Calcula el producto de `savings` y `factor`. Guarda el resultado en `year1`.
-- ¿Cuál crees que será el tipo de dato resultante? Averigualo imprimiendo el tipo de `year1`.
+- ¿Cuál crees que será el tipo de dato resultante? Averígualo imprimiendo el tipo de `year1`.
 - Calcula la suma de `desc` y `desc`. Almacena el resultado en una nueva variable llamada `doubledesc`.
 - Imprime `doubledesc`. ¿Se esperaba esto?
 
@@ -562,9 +562,9 @@ skills: 2
 key: ebc6a5f1d2
 ```
 
-Usando el operador `+` para juntar dos cadenas de texto puede ser muy útil a la hora de construir mensajes.
+Usar el operador `+` para juntar dos cadenas de texto puede ser muy útil a la hora de construir mensajes.
 
-Supóngase, por ejemplo, que has calculado el retorno de tu inversión y quieres resumir los resultados en una cadena. Asumiendo que los las variables flotantes `savings` y `result` están definidas, puedes intentar algo como esto:
+Supóngase, por ejemplo, que has calculado el retorno de tu inversión y quieres resumir los resultados en una cadena. Asumiendo que las variables flotantes `savings` y `result` están definidas, puedes intentar algo como esto:
 
 ```
 print("Yo comencé con $" + savings + " y ahora tengo $" + result + ". ¡Impresionante!")
@@ -651,7 +651,7 @@ success_msg("¡Genial! Tienes un beneficio alrededor de $95; ¡Muy impresionante
 ```
 
 ---
-## ¿Python puede manejar todo?
+## ¿Python puede manejarlo todo?
 
 ```yaml
 type: MultipleChoiceExercise
@@ -662,7 +662,7 @@ key: cfe0587ac9
 ```
 
 Ahora que sabes algo sobre combinar diferentes fuentes de información, revisa las cuatro expresiones de Python de abajo.
-¿cuál de ellas arrojará un error? Recuerda que puedes copiar y pegar este código en la consola de Python para probar.
+¿Cuál de ellas arrojará un error? Recuerda que puedes copiar y pegar este código en la consola de Python para probar.
 
 `@instructions`
 - `"Yo puedo sumar enteros como "  + str(5) + " a cadenas."`
