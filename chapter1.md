@@ -132,7 +132,7 @@ Para este ejercicio, debes simplemente agregar una linea de comentario. No se ej
 # Probando la division
 print(5 / 8)
 
-
+# Adicion funciona tambien
 print(7 + 10)
 ```
 
