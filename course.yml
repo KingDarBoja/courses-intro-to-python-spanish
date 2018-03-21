@@ -11,6 +11,8 @@ university: DataCamp
 difficulty_level: 1
 time_needed: 4 horas
 programming_language: python
+from: "python-base-prod:20"
 datasets:
   baseball.csv: Baseball
   fifa.csv: Fifa
+
