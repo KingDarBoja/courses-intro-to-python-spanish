@@ -350,12 +350,14 @@ print(result)
 
 `@sct`
 ```{python}
-test_object("savings", undefined_msg = "La variable `savings` la definistes tú, ¡No la borres!",
-                       incorrect_msg = "La variable `savings` debería ser igual a `100`, como la habías definido.")
-test_object("factor", incorrect_msg = "El valor de `factor` debería ser `1.1`.")
-test_object("result", incorrect_msg = "¿Haz utilizado `*` y `**` para calcular `result`?")
-msg = "No te olvides de imprimir `result` después de asignarlo."
-test_print(not_called_msg = msg, incorrect_msg = msg)
+Ex().test_correct(
+  check_object("result", expand_msg="").has_equal_value(incorrect_msg = "¿Haz utilizado `*` y `**` para calcular `result`?"),
+  multi(
+    check_object("savings", missing_msg="La variable `savings` la definistes tú, ¡No la borres!", expand_msg="").has_equal_value(incorrect_msg="La variable `savings` debería ser igual a `100`, como la habías definido."),
+    check_object("factor", expand_msg="").has_equal_value(incorrect_msg="El valor de `factor` debería ser `1.1`.")
+  )
+)
+Ex().has_printout(0, not_printed_msg="No te olvides de imprimir `result` después de asignarlo.")
 success_msg("¡Genial!")
 ```
 
