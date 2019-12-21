@@ -1,17 +1,17 @@
 ---
-title_meta  : Capítulo 4
-title       : NumPy
-description : NumPy es un poderoso paquete de Python para hacer ciencia de datos eficientemente. Aprende como trabajar con arrays de NumPy, una alternativa más rápida y poderosa a las listas, y toma tus primeros pasos en la exploración de datos.
-
+title_meta: 'Capítulo 4'
+title: NumPy
+description: 'NumPy es un poderoso paquete de Python para hacer ciencia de datos eficientemente. Aprende como trabajar con arrays de NumPy, una alternativa más rápida y poderosa a las listas, y toma tus primeros pasos en la exploración de datos.'
 ---
+
 ## Tu primer array NumPy
 
 ```yaml
 type: NormalExercise
+key: 84cab9d170
 lang: python
 xp: 100
 skills: 2
-key: 84cab9d170
 ```
 
 En este capítulo, vamos a adentrarnos en el mundo del béisbol. En el camino, te sentirás cómodo con los aspectos básicos de `Numpy`, un poderoso paquete de Python para la ciencia de datos.
@@ -83,14 +83,15 @@ success_msg("¡Buen trabajo!")
 ```
 
 ---
+
 ## Altura de los jugadores de béisbol
 
 ```yaml
 type: NormalExercise
+key: e7e25a89ea
 lang: python
 xp: 100
 skills: 2
-key: e7e25a89ea
 ```
 
 Eres un gran fan del béisbol y decidiste llamar a la MLB (Grandes Ligas de Béisbol) para preguntar sobre algunas estadisticas referentes a la altura de los jugadores principales. Ellos te pasan información sobre más de mil jugadores, los cuales están almacenados como una lista de Python: `height`. La altura está expresada en pulgadas. ¿Puedes crear un _array_ `numpy` de la lista y convertir las unidades a metros?
@@ -177,14 +178,15 @@ success_msg("¡Bien! En un pestañeo, `numpy` realizó más de 1000 cálculos de
 ```
 
 ---
+
 ## IMC de los jugadores de béisbol
 
 ```yaml
 type: NormalExercise
+key: 689fdbc950
 lang: python
 xp: 100
 skills: 2
-key: 689fdbc950
 ```
 
 La MLB también ofrece los datos de pesos de sus jugadores. De nuevo, ambos están disponibles como listas de Python: `height` y `weight`. `height` está en pulgadas y `weight` en libras.
@@ -272,14 +274,15 @@ success_msg("¡Cool! ¡Es hora de hacer más interesante tu juego!")
 ```
 
 ---
+
 ## Jugadores de béisbol livianos
 
 ```yaml
 type: NormalExercise
+key: ef6add980e
 lang: python
 xp: 100
 skills: 2
-key: ef6add980e
 ```
 
 Para seleccionar tanto en una lista como en un _array_ `numpy` en Python, puedes utilizar los corchetes:
@@ -381,14 +384,15 @@ success_msg("¡Wow! ¡Parece ser que solo 11 de los 1000 jugadores de béisbol t
 ```
 
 ---
+
 ## Efectos secundarios de NumPy
 
 ```yaml
 type: MultipleChoiceExercise
+key: 3662ff6637
 lang: python
 xp: 50
 skills: 2
-key: 3662ff6637
 ```
 
 Como te has dado cuenta, `numpy` es excelente para hacer aritmética de vectores. Si comparas su funcionalidad con una lista de Python, aun así notarás que algunas cosas han cambiado.
@@ -405,12 +409,11 @@ np.array([True, 1, 2]) + np.array([3, 4, False])
 
 ¿Puedes decir cual pedazo de código construye exactamente el mismo objeto Python? El paquete `numpy` ya se encuentra importado como `np`, así que puedes comenzar a probar en la consola de Python enseguida.
 
-`@instructions`
+`@possible_answers`
 - `np.array([True, 1, 2, 3, 4, False])`
 - `np.array([4, 3, 0]) + np.array([0, 2, 2])`
 - `np.array([1, 1, 2]) + np.array([3, 4, -1])`
 - `np.array([0, 1, 2, 3, 4, 5])`
-
 
 `@hint`
 Copia los diferentes pedazos de código y pegalos en la consola de Python. Mira cual de las salidas es igual a la generada por `np.array([True, 1, 2]) + np.array([3, 4, False])`.
@@ -428,14 +431,15 @@ test_mc(2, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Selección en arreglos NumPy
 
 ```yaml
 type: NormalExercise
+key: fcb2a9007b
 lang: python
 xp: 100
 skills: 2
-key: fcb2a9007b
 ```
 
 Lo has visto con tus propios ojos: las listas y los _arrays_ `numpy` a veces se comportan de manera diferente. Afortunadamente, aún existen certezas en este mundo. Por ejemplo, seleccionar (utilizando los corchetes en listas o _arrays_) funciona exactamente igual. Para que lo veas por ti mismo, prueba las siguientes líneas de código en la consola de Python:
@@ -522,14 +526,15 @@ success_msg("¡Bien! Es tiempo de aprender algo nuevo: ¡Arrays 2D con Numpy!")
 ```
 
 ---
+
 ## Tu primer array 2D con NumPy
 
 ```yaml
 type: NormalExercise
+key: 5cb045bb13
 lang: python
 xp: 100
 skills: 2
-key: 5cb045bb13
 ```
 
 Antes de trabajar con los datos de las Grandes Ligas de Béisbol, vamos a intentar crear un _array 2D_ `numpy` de una pequeña lista de listas.
@@ -615,14 +620,15 @@ success_msg("¡Genial! Estas listo para convertir los datos actuales de las Gran
 ```
 
 ---
+
 ## Datos de béisbol en 2D
 
 ```yaml
 type: NormalExercise
+key: 5df25d0b7b
 lang: python
 xp: 100
 skills: 2
-key: 5df25d0b7b
 ```
 
 has echado otra mirada a los datos de las Grandes Ligas de Béisbol (_MLB_) y te das cuenta que tiene más sentido reestructurar toda esa información en un _array 2D_ `numpy`. Este _array_ debería tener 1015 filas, correspondientes a los 1015 jugadores de béisbol de los cuales tienes información, y dos columnas (para la altura y el peso).
@@ -689,14 +695,15 @@ success_msg("¡Astuto! Es hora de presumir algunas características sorprendente
 ```
 
 ---
+
 ## Selección de array 2D con NumPy
 
 ```yaml
 type: NormalExercise
+key: aeca4977f0
 lang: python
 xp: 100
 skills: 2
-key: aeca4977f0
 ```
 
 Si tu _array_ `numpy` tiene una estructura regular, por ejemplo, cada fila y columna tiene un valor fijo de valores, formas complicadas de selección se vuelven muy fáciles. Mira el código de abajo, donde los elementos `"a"` y `"c"` son extraídos de una lista de listas.
@@ -789,14 +796,15 @@ success_msg("¡Vamos por buen camino!")
 ```
 
 ---
+
 ## Aritmética 2D
 
 ```yaml
 type: NormalExercise
+key: 1c2378b677
 lang: python
 xp: 100
 skills: 2
-key: 1c2378b677
 ```
 
 ¿Recuerdas como calculaste el índice de masa corporal de todos los jugadores de béisbol? `numpy` fue capaz de realizar todos los cálculos elemento por elemento. Para los _arrays 2D_ `numpy`, ¡Esto no tiene nada de diferente! Puedes combinar diferentes matrices con números, vectores, y con otras matrices.
@@ -896,14 +904,15 @@ success_msg("¡Buen trabajo! Observa como con pocas líneas de código, has logr
 ```
 
 ---
+
 ## Promedio contra mediana
 
 ```yaml
 type: NormalExercise
+key: 509c588eb6
 lang: python
 xp: 100
 skills: 2
-key: 509c588eb6
 ```
 
 Ya conoces como utilizar las funciones de `numpy` para tener una mejor idea de sus datos. Se trata de básicamente importar el paquere `numpy` y luego llamar varias funciones en los _arrays_ `numpy`.
@@ -987,14 +996,15 @@ success_msg("Una altura promedio de 1586 pulgadas, eso no suena nada bien, ¿cie
 ```
 
 ---
+
 ## Explorando los datos de béisbol
 
 ```yaml
 type: NormalExercise
+key: 4409948807
 lang: python
 xp: 100
 skills: 2
-key: 4409948807
 ```
 
 Debido a que la media y la mediana están lejos entre sí, decides quejarte con la MLB. Ellos encuentran el error y le envian los datos corregidos. De nuevo están disponibles como un _array 2D_ `np_baseball`, con tres columnas.
@@ -1090,14 +1100,15 @@ success_msg("¡Grandioso! Tiempo de usar todas tus nuevas habilidades en ciencas
 ```
 
 ---
+
 ## ¡Mezclando todo!
 
 ```yaml
 type: NormalExercise
+key: e125cad8a5
 lang: python
 xp: 100
 skills: 2
-key: e125cad8a5
 ```
 
 En los últimos ejercicios aprendió todo acerca de las alturas y pesos de los jugadores de béisbol. Ahora es tiempo de sumergirse en otro deporte: Fútbol.

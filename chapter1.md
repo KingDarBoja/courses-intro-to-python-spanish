@@ -1,17 +1,17 @@
 ---
-title_meta: Capítulo 1
-title       : Conceptos básicos de Python
-description : Una introducción a los conceptos básicos de Python. Aprende como utilizar Python de forma interactiva y a tráves de una consola. Crea tus primeras variables y familiarícese con los tipos de datos básicos en Python.
-
+title_meta: 'Capítulo 1'
+title: 'Conceptos básicos de Python'
+description: 'Una introducción a los conceptos básicos de Python. Aprende como utilizar Python de forma interactiva y a tráves de una consola. Crea tus primeras variables y familiarícese con los tipos de datos básicos en Python.'
 ---
+
 ## La interfaz de Python
 
 ```yaml
 type: NormalExercise
+key: 540b31442f
 lang: python
 xp: 100
 skills: 2
-key: 540b31442f
 ```
 
 En el editor de Python a la derecha, puedes escribir código para resolver los ejercicios. Al hacer click en _Submit Answer_ (Enviar respuesta), tu código python (`script.py`) se ejecutará y la salida se muestra en la consola de Python (IPython Shell). Datacamp revisa si tu respuesta fue correcta o no y te dará una realimentación.
@@ -65,19 +65,20 @@ success_msg("Great!")
 ```
 
 ---
+
 ## ¿Cuándo utilizar Python?
 
 ```yaml
 type: MultipleChoiceExercise
+key: dd9fbad3d7
 lang: python
 xp: 50
 skills: 2
-key: dd9fbad3d7
 ```
 
 Python es un lenguaje  de programación muy versatil. ¿Para cuáles aplicaciones puedes utilizar Python?
 
-`@instructions`
+`@possible_answers`
 - Quieres hacer algunos cálculos rápidos.
 - Para su nuevo negocio, desea desarrollar un sitio web basado en bases de datos.
 - Su jefe le solicita limpiar y analizar los resultados de la última encuesta de satisfacción.
@@ -102,14 +103,15 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## ¿Algún comentario?
 
 ```yaml
 type: NormalExercise
+key: 1ec47310f6
 lang: python
 xp: 100
 skills: 2
-key: 1ec47310f6
 ```
 
 Algo que no hemos mencionado hasta ahora es la habilidad de agregar **comentarios** a tus códigos en Python. Los comentarios son importantes porque permiten tanto para ti como a los demás entender la funcionalidad del código.
@@ -152,14 +154,15 @@ success_msg("¡Excelente!")
 ```
 
 ---
+
 ## Python como calculadora
 
 ```yaml
 type: NormalExercise
+key: b133ea8ea2
 lang: python
 xp: 100
 skills: 2
-key: b133ea8ea2
 ```
 
 Python es perfectamente adecuado para hacer cálculos básicos. Aparte de la adicción, la substracción, la multiplicación y la división, también hay soporte para funciones más avanzadas como:
@@ -227,14 +230,15 @@ success_msg("¡Tiempo de otro ejercicio!")
 ```
 
 ---
+
 ## Asignación de variables
 
 ```yaml
 type: NormalExercise
+key: 1ad048e471
 lang: python
 xp: 100
 skills: 2
-key: 1ad048e471
 ```
 
 En Python, una variable permite referirnos a un valor con un nombre. Para crear una variable, utiliza `=`, como en el siguiente ejemplo:
@@ -286,14 +290,15 @@ success_msg("¡Fabuloso! Vamos a probar algunos cálculos con esta variable a co
 ```
 
 ---
+
 ## Cálculos con variables
 
 ```yaml
 type: NormalExercise
+key: 38dec2b0b8
 lang: python
 xp: 100
 skills: 2
-key: 38dec2b0b8
 ```
 
 ¿Recuerdas cómo calculaste el dinero que obtendrias después de 7 años al invertir $100? Hiciste algo más o menos así:
@@ -362,14 +367,15 @@ success_msg("¡Genial!")
 ```
 
 ---
+
 ## Otros tipos de variable
 
 ```yaml
 type: NormalExercise
+key: a67d0ce6b2
 lang: python
 xp: 100
 skills: 2
-key: a67d0ce6b2
 ```
 
 En los ejercicios anteriores, trabajaste con dos tipos de datos en Python:
@@ -379,7 +385,7 @@ En los ejercicios anteriores, trabajaste con dos tipos de datos en Python:
 
 Seguido de los datos de tipo númerico, hay otros dos tipos de datos muy comunes:
 - `str`, o cadena de caracteres: Un tipo usado para representar texto. Puedes utilizar comillas simples ('') o dobles ("") para construir una cadena (o _string_ en inglés).
-- `bool`, o booleano: Un tipo utilizado para representar valores lógicos. Solamente pueden ser `True` o `False` (¡La capitalización es importante!).  
+- `bool`, o booleano: Un tipo utilizado para representar valores lógicos. Solamente pueden ser `True` o `False` (¡La capitalización es importante!).
 
 `@instructions`
 - Crea una nueva cadena, `desc`, con el valor `"interes compuesto"`.
@@ -421,14 +427,15 @@ success_msg("¡Bien!")
 ```
 
 ---
+
 ## Adivina el tipo
 
 ```yaml
 type: MultipleChoiceExercise
+key: e6f71d65dc
 lang: python
 xp: 50
 skills: 2
-key: e6f71d65dc
 ```
 
 Para saber el tipo de dato de un valor o una variable referida a ese valor, puedes utilizar la función [`type()`](https://docs.python.org/3/library/functions.html#type). Supongamos que has definido la variable `a`, pero olvidaste el tipo de la variable. Para determinar el tipo de `a`, simplemente ejecuta:
@@ -439,7 +446,7 @@ type(a)
 
 Nosotros ya nos adelantamos y hemos creado tres variables: `a`, `b` y `c`. Puedes utilizar la consola de Python a tu derecha para descubrir su tipo. ¿Cuál de las siguientes opciones es la correcta?
 
-`@instructions`
+`@possible_answers`
 - `a` es de tipo `int`, `b` es de tipo `str`, `c` es de tipo `bool`
 - `a` es de tipo `float`, `b` es de tipo `bool`, `c` es de tipo `str`
 - `a` es de tipo `float`, `b` es de tipo `str`, `c` es de tipo `bool`
@@ -465,14 +472,15 @@ test_mc(3,[msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Operaciones con otros tipos
 
 ```yaml
 type: NormalExercise
+key: 1cf2d880b2
 lang: python
 xp: 100
 skills: 2
-key: 1cf2d880b2
 ```
 
 Cabe mencionar que los diferentes tipos de variables se comportan de diferentes maneras en Python.
@@ -554,14 +562,15 @@ success_msg("¡Bien!. Date cuenta como `desc + desc` causa que `\"compound inter
 ```
 
 ---
+
 ## Conversión de tipos
 
 ```yaml
 type: NormalExercise
+key: ebc6a5f1d2
 lang: python
 xp: 100
 skills: 2
-key: ebc6a5f1d2
 ```
 
 Usar el operador `+` para juntar dos cadenas de texto puede ser muy útil a la hora de construir mensajes.
@@ -653,20 +662,21 @@ success_msg("¡Genial! Tienes un beneficio alrededor de $95; ¡Muy impresionante
 ```
 
 ---
+
 ## ¿Python puede manejarlo todo?
 
 ```yaml
 type: MultipleChoiceExercise
+key: cfe0587ac9
 lang: python
 xp: 50
 skills: 2
-key: cfe0587ac9
 ```
 
 Ahora que sabes algo sobre combinar diferentes fuentes de información, revisa las cuatro expresiones de Python de abajo.
 ¿Cuál de ellas arrojará un error? Recuerda que puedes copiar y pegar este código en la consola de Python para probar.
 
-`@instructions`
+`@possible_answers`
 - `"Yo puedo sumar enteros como "  + str(5) + " a cadenas."`
 - `"Yo dije " + ("Oye " * 2) + "Oye!"`
 - `"La respuesta correcta a este ejercicio es la número " + 2`

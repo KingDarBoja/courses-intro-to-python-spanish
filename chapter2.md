@@ -1,17 +1,17 @@
 ---
-title_meta  : Capítulo 2
-title       : Listas de Python
-description : "Aprende a almacenar, acceder y manipular datos en una lista: el primer paso hacia un trabajo eficiente con gran cantidad de datos."
-
+title_meta: 'Capítulo 2'
+title: 'Listas de Python'
+description: 'Aprende a almacenar, acceder y manipular datos en una lista: el primer paso hacia un trabajo eficiente con gran cantidad de datos.'
 ---
+
 ## Crea una lista
 
 ```yaml
 type: NormalExercise
+key: e6c527bf41
 lang: python
 xp: 100
 skills: 2
-key: e6c527bf41
 ```
 
 Contrario a `int`, `bool`, etc., una lista es un **tipo de dato compuesto**; donde puedes agrupar valores:
@@ -86,14 +86,15 @@ success_msg("¡Bien! Una lista es mucho mejor, ¿No crees?")
 ```
 
 ---
+
 ## Creando una lista con diferentes tipos
 
 ```yaml
 type: NormalExercise
+key: 1702a8bcdc
 lang: python
 xp: 100
 skills: 2
-key: 1702a8bcdc
 ```
 
 Una lista puede contener cualquier tipo de dato de Python. Aun cuando no es muy común, una lista también puede contener una mezcla de tipos incluyendo cadenas, flotantes, booleanos, etc.
@@ -164,14 +165,15 @@ success_msg("¡Muy bien! Esta lista contiene tanto cadenas como flotantes, pero 
 ```
 
 ---
+
 ## Selecciona la lista correcta
 
 ```yaml
 type: MultipleChoiceExercise
+key: 416b80a405
 lang: python
 xp: 50
 skills: 2
-key: 416b80a405
 ```
 
 Una lista puede contener cualquier tipo de dato. Pero una lista también es un tipo de dato en Python. Eso significa que una lista ¡También puede contener una lista! Python se esta volviendo complicado en el momento, pero no temas, solo recuerda la sintaxis de una lista:
@@ -186,8 +188,7 @@ A. `[1, 3, 4, 2]`
 B. `[[1, 2, 3], [4, 5, 7]]`
 C. `[1 + 2, "a" * 5, 3]`
 
-
-`@instructions`
+`@possible_answers`
 - A, B y C
 - B
 - B y C
@@ -211,14 +212,15 @@ test_mc(1,[msg1,msg2,msg3,msg4])
 ```
 
 ---
+
 ## Lista de listas
 
 ```yaml
 type: NormalExercise
+key: 9158c577b0
 lang: python
 xp: 100
 skills: 2
-key: 9158c577b0
 ```
 
 Como un científico de los datos, te encontrarás con muchos datos y tendrá sentido agrupar parte de esos datos.
@@ -309,14 +311,15 @@ success_msg("¡Genial! ¡Prepárate para conocer sobre subconjuntos de listas!")
 ```
 
 ---
+
 ## Selecciona y vencerás
 
 ```yaml
 type: NormalExercise
+key: c3ce582e32
 lang: python
 xp: 100
 skills: 2
-key: c3ce582e32
 ```
 
 La selección de listas en Python son una maravilla. Mira el código debajo, el cual crea una lista `x` y entonces selecciona "b" de ella. Recuerda que si es el segundo elemento, este tiene un indice de 1. También puedes utilizar indices negativos.
@@ -385,14 +388,15 @@ success_msg("¡Buen trabajo!")
 ```
 
 ---
+
 ## Selecciona y calcula
 
 ```yaml
 type: NormalExercise
+key: 58c969f11f
 lang: python
 xp: 100
 skills: 2
-key: 58c969f11f
 ```
 
 Después de extraer los valores de una lista, también puedes hacer cálculos adicionales. Toma este ejemplo, donde el segundo y el cuarto elemento de una lista `x` son extraídos. Las cadenas resultantes son juntadas utilizando el operador `+`:
@@ -449,14 +453,15 @@ success_msg("¡Bellíssimo!")
 ```
 
 ---
+
 ## Rebanando y cortando
 
 ```yaml
 type: NormalExercise
+key: 7f08642d18
 lang: python
 xp: 100
 skills: 2
-key: 7f08642d18
 ```
 
 La selección de valores individuales de una lista es solo una parte de la historia. También es posible _rebanar_ tu lista, lo cual significa seleccionar múltiples elementos de una lista. Utiliza la siguiente sintaxis:
@@ -536,14 +541,15 @@ success_msg("¡Estupendo!")
 ```
 
 ---
+
 ## Rebanando y cortando (2)
 
 ```yaml
 type: NormalExercise
+key: dfc9a168a3
 lang: python
 xp: 100
 skills: 2
-key: dfc9a168a3
 ```
 
 Anteriormente mencionamos la sintaxis para especificar tanto el comienzo como el fin de una rebanada de tu lista:
@@ -612,14 +618,15 @@ success_msg("¡Maravilloso!")
 ```
 
 ---
+
 ## Seleccionando lista de listas
 
 ```yaml
 type: MultipleChoiceExercise
+key: dbbbd306cf
 lang: python
 xp: 50
 skills: 2
-key: dbbbd306cf
 ```
 
 Anteriormente viste como una lista en Python puede contener prácticamente cualquier cosa; ¡Incluso otras listas! Para seleccionar listas de listas, puedes utilizar la misma técnica de antes: corchetes. Prueba los siguientes comandos de ejemplo en la consola de Python:
@@ -636,7 +643,7 @@ x[2][:2]
 
 ¿Qué resultado arrojará `house[-1][1]`? `house`, la lista de listas que creaste anteriormente, ya esta definida en el espacio de trabajo (_workspace_ en inglés). Puedes probarlo en la consola de Python.
 
-`@instructions`
+`@possible_answers`
 - Un flotante: el area de la cocina (_kitchen_)
 - Una cadena: `"kitchen"`
 - Un flotante: el area del baño (_bathroom_)
@@ -663,14 +670,15 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Reemplazando elementos en la lista
 
 ```yaml
 type: NormalExercise
+key: 4e1bba1b55
 lang: python
 xp: 100
 skills: 2
-key: 4e1bba1b55
 ```
 
 Reemplazar elementos en una lista es muy sencillo. Simplemente _rebana_ la lista y asigna nuevos valores a esa selección. Puedes seleccionar un elemento o modificar pedazos enteros de la lista de una sola vez.
@@ -730,14 +738,15 @@ success_msg("¡Cool! Como en el código de ejemplo, también puedes rebanar una 
 ```
 
 ---
+
 ## Extiende una lista
 
 ```yaml
 type: NormalExercise
+key: ff0fe8d967
 lang: python
 xp: 100
 skills: 2
-key: ff0fe8d967
 ```
 
 Si puedes modificar elementos en una lista, también puedes agregar elementos a ella, ¿cierto? Puedes utilizar el operador `+`:
@@ -798,14 +807,15 @@ success_msg("¡Cool! ¡La lista se está perfilando muy bien!")
 ```
 
 ---
+
 ## Elimina elementos de una lista
 
 ```yaml
 type: MultipleChoiceExercise
+key: 85f792356e
 lang: python
 xp: 50
 skills: 2
-key: 85f792356e
 ```
 
 Finalmente, puedes eliminar elementos de una lista. Puedes hacerlo con la declaración `del`:
@@ -841,7 +851,7 @@ command2
 
 ¿Cuál de los siguientes pedazos de código hará nuestro trabajo?
 
-`@instructions`
+`@possible_answers`
 - `del(areas[10]); del(areas[11])`
 - `del(areas[10:11])`
 - `del(areas[-4:-2])`
@@ -866,14 +876,15 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Funcionamiento interno de listas
 
 ```yaml
 type: NormalExercise
+key: af72db9915
 lang: python
 xp: 100
 skills: 2
-key: af72db9915
 ```
 
 En este último tema del capítulo aprenderás como las listas de Python funcionan detrás de escena.

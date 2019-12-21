@@ -1,17 +1,17 @@
 ---
-title_meta  : Capítulo 3
-title       : Funciones y paquetes
-description : Para aprovechar el código que los desarrolladores de Python han escrito, aprenderás sobre funciones, métodos y paquetes. ¡Esto te ayudará a reducir la cantidad de código que necesitas para resolver problemas!
-
+title_meta: 'Capítulo 3'
+title: 'Funciones y paquetes'
+description: 'Para aprovechar el código que los desarrolladores de Python han escrito, aprenderás sobre funciones, métodos y paquetes. ¡Esto te ayudará a reducir la cantidad de código que necesitas para resolver problemas!'
 ---
+
 ## Funciones familiares
 
 ```yaml
 type: NormalExercise
+key: c422ee929b
 lang: python
 xp: 100
 skills: 2
-key: c422ee929b
 ```
 
 Fuera de la caja, Python ofrece un conjunto de funciones integradas para hacer tu vida más fácil como científico de datos. Ya conoces dos de esas funciones: [`print()`](https://docs.python.org/3/library/functions.html#print) y [`type()`](https://docs.python.org/3/library/functions.html#type). También has utilizado las funciones [`str()`](https://docs.python.org/3/library/functions.html#func-str), [`int()`](https://docs.python.org/3/library/functions.html#int), [`bool()`](https://docs.python.org/3/library/functions.html#bool) y [`float()`](https://docs.python.org/3/library/functions.html#float) para convertir entre los distintos tipos de datos. Estas también son funciones integradas en Python.
@@ -98,16 +98,16 @@ test_object("out2", incorrect_msg = "Asegúrate de asignar el valor correcto a `
 success_msg("¡Buen trabajo! La función [`len()`](https://docs.python.org/3/library/functions.html#len) es extremadamente útil; ¡También funciona con cadenas para contar el número de caracteres!")
 ```
 
-
 ---
+
 ## ¡Ayuda!
 
 ```yaml
 type: MultipleChoiceExercise
+key: 679b852978
 lang: python
 xp: 50
 skills: 2
-key: 679b852978
 ```
 
 Quizás ya conoces el nombre de una función en Python, pero aún asi debes saber como utilizarla. Ironicamente, para pedir información respecto a una función necesitas utilizar otra función: [`help()`](https://docs.python.org/3/library/functions.html#help). Especificamente en Python, también puedes utilizar `?` antes del nombre de la función.
@@ -121,7 +121,7 @@ help(max)
 
 Utiliza la consola a tu derecha para abrir la documentación de [`complex()`](https://docs.python.org/3/library/functions.html#complex). ¿Cuál de los siguientes enunciados es cierto?
 
-`@instructions`
+`@possible_answers`
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma exactamente dos argumentos: `real` e `[, imag]`.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma dos argumentos: `real` e `imag`. Ambos son requeridos.
 - [`complex()`](https://docs.python.org/3/library/functions.html#complex) toma dos argumentos: `real` e `imag`. `real` es requerido, `imag` es opcional.
@@ -145,14 +145,15 @@ test_mc(3, [msg1, msg2, msg3, msg4])
 ```
 
 ---
+
 ## Multiples argumentos
 
 ```yaml
 type: NormalExercise
+key: e30486d7c1
 lang: python
 xp: 100
 skills: 2
-key: e30486d7c1
 ```
 
 En los ejercicios anteriores, los corchetes alrededor de `imag` en la documentaciín nos mostraron que el argumento `imag` es opcional. Pero Python también utiliza otra forma de decirle al usuario sobre argumentos opcionales.
@@ -232,14 +233,15 @@ success_msg("¡Cool! Continúa aprendiendo sobre los métodos en Python.")
 ```
 
 ---
+
 ## Métodos de cadenas
 
 ```yaml
 type: NormalExercise
+key: 4039302ee0
 lang: python
 xp: 100
 skills: 2
-key: 4039302ee0
 ```
 
 Las cadenas vienen con un montón de métodos. Sigue las instrucciones al pie de la letra para descubrir algunas de ellas. Si quieres descubrirlas con mayor detalle, siempre puedes escribir `help(str)` en la consola de Python.
@@ -316,14 +318,15 @@ success_msg("¡Bien! Date cuenta de como el método [`upper()`](https://docs.pyt
 ```
 
 ---
+
 ## Métodos de listas
 
 ```yaml
 type: NormalExercise
+key: 0dbe8ed695
 lang: python
 xp: 100
 skills: 2
-key: 0dbe8ed695
 ```
 
 Las cadenas no son el único tipo de datos en Python que tienen métodos asociados a ellas. listas, flotantes, enteros y booleanos también son tipos que poseen una gran cantidad de métodos útiles. En este ejercicio, experimentarás con:
@@ -392,14 +395,15 @@ success_msg("¡Grandioso! Estos fueron ejemplos de métodos de listas (`list`) q
 ```
 
 ---
+
 ## Métodos de listas (2)
 
 ```yaml
 type: NormalExercise
+key: 1fbeab82d0
 lang: python
 xp: 100
 skills: 2
-key: 1fbeab82d0
 ```
 
 Más de un método de listas modifican la lista en las que son utilizados. Por ejemplo:
@@ -491,14 +495,15 @@ success_msg("¡Genial!")
 ```
 
 ---
+
 ## Importando paquetes
 
 ```yaml
 type: NormalExercise
+key: 7432a6376f
 lang: python
 xp: 100
 skills: 2
-key: 7432a6376f
 ```
 
 Como un científico de datos, algunas nociones de geometría nunca caen mal. Vamos a repasar algunas de las básicas.
@@ -577,14 +582,15 @@ success_msg("¡Bien!")
 ```
 
 ---
+
 ## Importación selectiva
 
 ```yaml
 type: NormalExercise
+key: fe65eff50a
 lang: python
 xp: 100
 skills: 2
-key: fe65eff50a
 ```
 
 Importaciones genéricas como `import math`, permiten disponder de **todas** las funcionalidades del paquete `math`. Sin embargo, si tu decides utilizar solo una parte en especifico de un paquete, siempre puedes hacer tu importación más selectiva:
@@ -657,14 +663,15 @@ success_msg("¡Bien! Dirígete al siguiente ejercicio.")
 ```
 
 ---
+
 ## Diferentes maneras de importar
 
 ```yaml
 type: MultipleChoiceExercise
+key: f1b2675a2a
 lang: python
 xp: 50
 skills: 2
-key: f1b2675a2a
 ```
 
 Hay diferentes maneras de importando paquetes y módulos en Python. Dependiendo del llamado para importar, tendrás que utilizar diferentes códigos de Python.
@@ -677,7 +684,7 @@ my_inv([[1,2], [3,4]])
 
 ¿Cuál sentencia `import` necesitas para ejecutar el código de arriba sin errores?
 
-`@instructions`
+`@possible_answers`
 - `import scipy`
 - `import scipy.linalg`
 - `from scipy.linalg import my_inv`
